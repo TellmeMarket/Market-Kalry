@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "멋쟁이 사자처럼 바닐라 프로젝트",
   "main": "main.js",
-  "scripts": {},
+  "scripts": {
+    "start": "npx live-server client --host=localhost --port=5500"
+  },
   "keywords": [
     "html",
     "css",
