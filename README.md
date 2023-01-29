@@ -18,9 +18,7 @@
 [커밋컨벤션](https://longing-polka-2df.notion.site/Commit-Convention-f85a4e18385a4a7a9acc7d04b36ecafd)
 
 
-|뷰|
+|cording convention|
 |:---:|
 <img src='https://velog.velcdn.com/images/leejh4197/post/3da77b30-4183-4f37-8a1b-69c50816a3a7/image.png'/>
 
-# Market-Kalry
-# Market-Kalry
