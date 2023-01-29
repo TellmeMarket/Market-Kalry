@@ -1,0 +1,134 @@
+body{
+  max-width: 1050px;
+  margin: 0 auto;
+}
+.product-information{
+  display: flex;
+  justify-content: center;
+}
+.product-thumbnail{
+  margin-right: 90px;
+}
+.product-thumbnail img{
+  width: 400px;
+  height: 514px;
+}
+.delivery-company{
+  font-size: 21px;
+  font-weight: 700;
+  color: #6B6B6B;
+}
+.product-name{
+  font-size: 28px;
+  font-weight: 600;
+  color: #333333;
+}
+.product-slogan{
+  font-size: 16px;
+  color: #898989;
+}
+.product-price{
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+.login-recommended{
+  font-size: 16px;
+  font-weight: 600;
+  color: #5F0080;
+}
+.product-price span{
+  font-size: 16px;
+}
+.product-information-box{
+  border-top: 1px solid #E1E1E1;
+  border-bottom: 1px solid #E1E1E1;
+  padding: 16px 0;
+}
+.product-info-title{
+  width: 128px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6B6B6B;
+}
+.line{
+  display: flex;
+  align-items: center;
+  width: 560px;
+  border-bottom: 1px solid #E1E1E1 ;
+  padding: 16px 0 24px 0;
+}
+.allergy-info{
+  width: 432px;
+}
+.product-choice-wrap{
+  display: flex;
+  margin-top: 16px;
+}
+.product-purchase-box{
+  position: relative;
+  border: 1px solid #C4C4C4;
+  padding: 10px;
+  width: 432px;
+
+}
+.product-quantity{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5   px 0 5px;
+  align-items: center;
+  width: 84px;
+  height: 30px;
+  border: 1px solid #C4C4C;
+}
+.total-price{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-10%,-30%);
+}
+.total-price-result{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.login-benefits{
+  display: flex;
+  align-items: center;
+}
+.accumulate-label{
+  width: 34px;
+  height: 24px;
+  background-color: #FA622F;
+  border-radius: 20px;
+  padding: 4px 8px;
+  align-items: center;
+  color: white;
+}
+.button{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.icons{
+  padding: 30px;
+  border: 1px solid #E1E1E1;
+  position: relative;
+  margin-right: 12px;
+  border-radius: 4px;
+}
+.icons img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cart{
+  text-align: center;
+  padding: 20px 0;
+  width: 424px;
+  background-color: #5F0080;
+  color: white;
+  border-radius: 4px;
+}
