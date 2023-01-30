@@ -12,7 +12,6 @@
 
 **코드컨벤션**
 [codeConvention](https://longing-polka-2df.notion.site/Code-Convention-1466b008b0a945ab8ada276654dd9357)
-[BEM방식](https://nykim.work/15)
 
 **커밋컨벤션**
 [커밋컨벤션](https://longing-polka-2df.notion.site/Commit-Convention-f85a4e18385a4a7a9acc7d04b36ecafd)
