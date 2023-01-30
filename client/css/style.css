@@ -1,0 +1,41 @@
+@import url(./reset.css);
+@import url(./normalize.css);
+@import url(./a11y.css);
+@import url(./theme.css);
+
+.swiper-1 {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.swiper1-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+  background: url("../assets/icons/Icon/main_arrow.png")
+    no-repeat;
+  position: absolute;
+  z-index: 50;
+  top: 160px;
+  transition: all 0.5s ease 0s;
+}
+
+.swiper1-button-prev {
+  z-index: 50;
+  left: 50px;
+}
+
+.swiper1-button-next {
+  transform: scaleX(-1);
+  right: 50px;
+}
