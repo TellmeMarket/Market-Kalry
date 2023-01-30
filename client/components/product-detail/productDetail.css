@@ -1,0 +1,499 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+  font-family:'Pretendard-Regular';
+  box-sizing: border-box;
+}
+
+/*변수*/
+/*색상*/
+:root{
+  --primary-color:#5f0080;
+}
+
+/* 콘텐츠 페이지 레이아웃 */
+.product-details-page{
+  width:1050px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* 상품 lnb */
+.details-lnb ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.lnb-item{
+  flex-grow: 1;
+  border-top: 1px solid #A6A6A6;
+  border-bottom: 1px solid #A6A6A6;
+  border-right: 1px solid #A6A6A6;
+  cursor: pointer;
+  padding: 15px 103.63px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #333333;
+  background-color: #F9F9F9;;
+}
+
+.lnb-item:first-child{
+  border-left: 1px solid #A6A6A6;
+}
+
+.lnb-item-focused{
+  border: 1px solid #E1E1E1 !important;
+  color:var(--primary-color);
+  background-color: #ffffff;
+}
+
+.lnb-item-count{
+  font-size: 12.003px;
+  line-height: 160%;
+  margin-left: 8px;
+}
+
+/* 상품 상세 설명 */
+/* 상품 이미지, 설명 */
+.details-info{
+  padding-top: 40px;
+  margin-bottom: 96px;
+}
+
+.product-name{
+  font-size: 50.517px;
+  font-weight: 700;
+  line-height: 140%;
+  margin-top: 76px;
+  margin-bottom: 36px;
+}
+
+.product-name-small{
+  font-weight: 600;
+  font-size: 28.43px;
+  line-height: 150%;
+  display: block;
+}
+
+.product-description{
+  border-top: 1px solid #E1E1E1;
+  padding-top: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #333333;
+  text-align: left;
+}
+
+/* 상품 칼리 체크 포인트 karly's check point*/
+.details-check-point{
+  padding-bottom: 96px;
+}
+
+.check-title{
+  background-color: #ffffff;
+  font-size: 50.517px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #333333;
+  position: relative;
+  margin-bottom: 68px;
+}
+
+.check-title::before{
+  content: " ";
+  background: #D9D9D9;
+  width: 279.5px;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.check-title::after{
+  content: " ";
+  background: #D9D9D9;
+  width: 279.5px;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+/* 상품 와이칼리 why karly */
+.details-why-karly{
+  border-top: 1px solid #E1E1E1;
+  padding: 72px 0 52px;
+}
+
+.why-karly-title{
+  font-weight: 700;
+  font-size: 28.43px;
+  line-height: 140%;
+  color: #333333;
+}
+
+.why-karly-section{
+  margin: 35px 52.5px 84px 52.5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.why-karly-section dl{
+  padding-top: 56px;
+  width: 30%;
+}
+
+.why-karly-section dl:nth-child(1) .why-karly-sub-title::before{
+  content: '';
+  background: url('./../../assets/product-detail/whyKarly.png');
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin:0 auto;
+  margin-bottom: 16px;
+}
+
+.why-karly-section dl:nth-child(2) .why-karly-sub-title::before{
+  content: '';
+  background: url('./../../assets/product-detail/whyKarly2.png');
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin:0 auto;
+  margin-bottom: 16px;
+}
+
+.why-karly-section dl:nth-child(3) .why-karly-sub-title::before{
+  content: '';
+  background: url('./../../assets/product-detail/whyKarly3.png');
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin:0 auto;
+  margin-bottom: 16px;
+}
+
+.why-karly-section dl:nth-child(4) .why-karly-sub-title::before{
+  content: '';
+  background: url('./../../assets/product-detail/whyKarly4.png');
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin:0 auto;
+  margin-bottom: 16px;
+}
+
+.why-karly-section dl:nth-child(5) .why-karly-sub-title::before{
+  content: '';
+  background: url('./../../assets/product-detail/whyKarly5.png');
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin:0 auto;
+  margin-bottom: 16px;
+}
+
+.why-karly-sub-title{
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-size: 21.328px;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--primary-color);
+}
+
+.why-karly-txt{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: center;
+  color: #333333;
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* 상품 후기 */
+.details-review{
+  padding-bottom: 72px;
+  position: relative;
+}
+
+.review-title{
+  font-size: 28.43px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #000000;
+  text-align: left;
+}
+
+.review-benefit-list{
+  margin-bottom: 56px;
+}
+
+.details-write-btn{
+  width: 155px;
+  height: 44px;
+  background: var(--primary-color);
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.review-benefit{
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #333333;
+  margin-top: 24px;
+}
+
+.review-benefit ul{
+  margin-bottom: 56px;
+}
+
+.review-benefit-item{
+  text-align: left;
+  color: #6B6B6B;
+  font-weight: 600;
+  font-size: 12.003px;
+  line-height: 150%;
+  list-style: disc;
+  position:relative;
+  list-style-position:inside;
+  left: 6px;
+}
+
+.review-option{
+  display: flex;  
+  justify-content: space-between;
+}
+
+.review-count{
+  font-size: 12.003px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.review-array{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 4px;
+}
+
+.review-item{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #A6A6A6;
+}
+
+.review-item-selected{
+  color: #333333;
+}
+
+.review-item:first-child::after{
+  content:'';
+  width: 1px;
+  height: 10px;
+  background: #A6A6A6;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.review-section{
+  border-top: 1px solid #000000;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.review{
+  border-bottom: 1px solid #E1E1E1;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.review-notice{
+  border-bottom: 1px solid #E1E1E1;
+  padding: 20px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #333333;
+}
+
+.review-notice-btn{
+  display: inline-block;
+  background-color: #e1e1e1;
+  color: #333333;
+  padding: 0 8px;
+  font-size: 12.003px;
+  font-weight: 600;
+  line-height: 150%;
+  margin-right: 20px;  
+  border-radius: 1px;
+}
+
+.review-best-btn{
+  background-color: #bd76ff;
+  border-radius: 1px;
+  display: inline-block;
+  padding: 0 8px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 12.003px;
+  line-height: 150%;
+  margin-right: 8px;
+}
+
+.review-purple-btn{
+  border: 1px solid var(--primary-color);
+  border-radius: 1px;
+  display: inline-block;
+  padding: 0 8px;
+  font-weight: 600;
+  font-size: 12.003px;
+  line-height: 150%;
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+
+.review-author{
+  display: inline-block;
+  font-weight: 600;
+  font-size: 12.003px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.review-author-info{
+  margin-right: 82px;
+  width: 140px;
+}
+
+.review-content-info{
+  width: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+.review-product-name{
+  font-weight: 600;
+  font-size: 12.003px;
+  line-height: 150%;
+  color: #898989;
+}
+
+.review-content{
+  font-weight: 400;
+  font-size: 12.003px;
+  line-height: 160%;
+  color: #000000;
+  white-space: pre-line;
+}
+
+.review-date{
+  font-weight: 600;
+  font-size: 12.003px;
+  line-height: 150%;
+  color: #898989;
+}
+
+.slide-btn{
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  width: 56px;
+  height: 56px;
+  padding: 4px;
+  cursor: pointer;
+  background: #ffffff url('./../../assets/product-detail/btnDisabled.png') 50% 50% no-repeat;
+}
+
+.slide-btn-right{
+  transform: rotate(180deg);
+}
+
+.slide-btn:first-child{
+  margin-right: 16px;
+}
+
+.slide-btn-disable{
+  background: #ffffff url('./../../assets/product-detail/btnEnabled.png') 50% 50% no-repeat;
+}
+
+/* 상품 문의 details-inquiry */
+.details-inquiry{
+  position: relative;
+}
+
+.inquiry-title{
+  font-size: 28.43px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #000000;
+  text-align: left;
+}
+
+.inquiry-description-list{
+  margin-bottom: 56px;
+  margin-top: 24px;
+}
+
+.inquiry-description{  
+  text-align: left;
+  color: #6B6B6B;
+  font-weight: 600;
+  font-size: 12.003px;
+  line-height: 150%;
+  list-style: disc;
+  position:relative;
+  list-style-position:inside;
+  left: 6px;
+}
+
+.inquiry-list td{
+  padding: 17px 0;
+}
+
+.inquiry-item-header{
+  border-top: 2px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.inquiry-item-header th{  
+  padding: 17px 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.inquiry-item-title{
+  width: 750px;
+}
+
+.inquiry-author, .inquiry-date, .inquiry-status{
+  width: 100px;
+}
