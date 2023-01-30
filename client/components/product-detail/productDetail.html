@@ -13,12 +13,13 @@
     <main class="product-detail-wrapper">
       <!-- 상단 -->
       <section class="product-information">
+        <h2 class="a11yHidden">상품정보</h2>
         <section class="product-thumbnail">
           <img src="./../../assets/tangtang/thumbnail.jpg" alt="탱탱쫄면 썸네일" class="product-information__thumbnail-img" />
         </section>
-        <section 상품 정보>
-          <h3 class="delivery-company">샛별배송</h3>
-          <h1 class="product-name">[풀무원] 탱탱쫄면 (4개입)</h1>
+        <section>
+          <p class="delivery-company">샛별배송</p>
+          <h3 class="product-name">[풀무원] 탱탱쫄면 (4개입)</h3>
           <p class="product-slogan">튀기지 않아 부담 없는 매콤함</p>
           <p class="product-price">4,980<span>원</span></p>
           <p class="login-recommended">로그인 후, 적립 혜택이 제공됩니다.</p>
@@ -66,9 +67,13 @@
               <div class="product-purchase-box">
                 <span>[풀무원]탱탱쫄면(4개입)</span>
                 <div class="product-quantity">
-                  <button>-</button>
+                  <button>
+                    <span>-</span>
+                  </button>
                   <span>0</span>
-                  <button>+</button>
+                  <button>
+                    <span>+</span>
+                  </button>
                 </div>
                 <span class="total-price">4,980원</span>
               </div>
@@ -84,10 +89,10 @@
           <!-- 알림,좋아요, 장바구니 버튼 -->
           <div class="icons-wrap">
             <button class="icons">
-              <img src="../../assets/icons/Icon/Bell.svg" />
+              <img src="../../assets/icons/Icon/Bell.svg" alt="알림아이콘" />
             </button>
             <button class="icons">
-              <img src="../../assets/icons/Icon/Heart.svg" />
+              <img src="../../assets/icons/Icon/Heart.svg" alt="좋아요아이콘" />
             </button>
             <button class="cart">장바구니 담기</button>
           </div>
