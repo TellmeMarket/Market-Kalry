@@ -6,107 +6,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>product-list</title>
 </head>
-<body>
-  <main>
-    <div class="inner">
-      <h2 class="list-title">베스트</h2>
-      <section class="product">
-        <section class="product-nav">
-          <h3>상품 필터 메뉴</h3>
-          <ul class="list-nav">
-            <li class="filter">
-              <details class="accordial-head">
+  <body>
+    <main>
+      <div class="inner">
+        <h2 class="list-title">베스트</h2>
+
+        <!-- product list filter -->
+        <section class="product">
+          <section class="product-nav">
+            <h3>상품 필터 메뉴</h3>
+            <ul class="list-nav">
+              <li class="filter">
+                <details class="accordial-head">
+                    <summary>
+                      <h4>필터</h4>
+                      <button>초기화</button>
+                    </summary>
+                </details>
+              </li>
+              <li class="filter">
+                <details class="accordial-head">
+                    <summary>
+                      <h4>카테고리</h4>
+                    </summary>
+                </details>
+              </li>
+              <li class="accordial-set">
+                <details class="accordial-head">
                   <summary>
-                    <h4>필터</h4>
-                    <button>초기화</button>
+                    <h4>브랜드</h4>
                   </summary>
+                  <ul class="accodiaon-body">
+                    <li><input type="checkbox" name="filter" id="gamzabatt" value="gamzabatt" /><label for="gamzabatt">감자밭</label></li>
+                    <li><input type="checkbox" name="filter" id="kangnam" value="kangnam" /><label for="kangnam">강남면옥</label></li>
+                    <li><input type="checkbox" name="filter" id="kyungnam" value="kyungnam" /><label for="kyungnam">경남제약</label></li>
+                    <li><input type="checkbox" name="filter" id="kyungbokkung" value="kyungbokkung" /><label for="kyungbokkung">경복궁</label></li>
+                    <li><input type="checkbox" name="filter" id="goraesa" value="goraesa" /><label for="goraesa">고래사</label></li>
+                    <li><input type="checkbox" name="filter" id="gourmet" value="gourmet" /><label for="gourmet">고메공방</label></li>
+                    <li><input type="checkbox" name="filter" id="goonadiet" value="goonadiet" /><label for="goonadiet">고온어다이어트</label></li>
+                    <li><input type="checkbox" name="filter" id="kyotomarble" value="kyotomarble" /><label for="kyotomarble">교토마블</label></li>
+                    <li><input type="checkbox" name="filter" id="granolahouse" value="granolahouse" /><label for="granolahouse">그래놀라 하우스</label></li>
+                    <li><input type="checkbox" name="filter" id="greetslamb" value="greetslamb" /><label for="greetslamb">그리츠 시그니처 램</label></li>
+                  </ul>
+                  <button>브랜드 더보기</button>
               </details>
-            </li>
-            <li class="filter">
-              <details class="accordial-head">
+              </li>
+              <li class="accordial-set">
+                <details class="accordial-head">
                   <summary>
-                    <h4>카테고리</h4>
+                    <h4>가격</h4>
                   </summary>
-              </details>
-            </li>
-            <li class="accordial-set">
-              <details class="accordial-head">
-                <summary>
-                  <h4>브랜드</h4>
-                </summary>
-                <ul class="accodiaon-body">
-                  <li class="accordion-list">감자밭</li>
-                  <li class="accordion-list">강남면옥</li>
-                  <li class="accordion-list">경남제약</li>
-                  <li class="accordion-list">경복궁</li>
-                  <li class="accordion-list">고래사</li>
-                  <li class="accordion-list">고메공방</li>
-                  <li class="accordion-list">고온어다이어트</li>
-                  <li class="accordion-list">교토마블</li>
-                  <li class="accordion-list">그래놀라 하우스</li>
-                  <li class="accordion-list">그리츠 시그니처 램</li>
-                </ul>
-                <button>브랜드 더보기</button>
-            </details>
-            </li>
-            <li class="accordial-set">
-              <details class="accordial-head">
-                <summary>
-                  <h4>가격</h4>
-                </summary>
-              </details>
-            </li>
-            <li class="accordial-set">
-              <details class="accordial-head">
-                <summary>
-                  <h4>혜택</h4>
-                </summary>
-              </details>
-            </li>
-            <li class="accordial-set">
-              <details class="accordial-head">
-                <summary>
-                  <h4>유형</h4>
-                </summary>
-              </details>
-            </li>
-            <li class="accordial-set">
-              <details class="accordial-head">
-                <summary>
-                  <h4>특정상품 제외</h4>
-                </summary>
-              </details>
-            </li>
-          </ul>
-        </section>
-        <section class="product-list-group">
-          <h3>상품 리스트</h3>
-          <div class="menu">
-            <p>총건</p>
-            <ul>
-              <li class="menu-button"><button>추천순</button></li>
-              <li class="menu-button"><button>신상품순</button></li>
-              <li class="menu-button"><button>판매량순</button></li>
-              <li class="menu-button"><button>혜택순</button></li>
-              <li class="menu-button"><button>낮은가격순</button></li>
-              <li class="menu-button"><button>높은가격순</button></li>
+                </details>
+              </li>
+              <li class="accordial-set">
+                <details class="accordial-head">
+                  <summary>
+                    <h4>혜택</h4>
+                  </summary>
+                </details>
+              </li>
+              <li class="accordial-set">
+                <details class="accordial-head">
+                  <summary>
+                    <h4>유형</h4>
+                  </summary>
+                </details>
+              </li>
+              <li class="accordial-set">
+                <details class="accordial-head">
+                  <summary>
+                    <h4>특정상품 제외</h4>
+                  </summary>
+                </details>
+              </li>
             </ul>
-          </div>
-          <article class="product-list">
-            <div class="slider">
-              <a href="#" class="slide">
-                <div class="visual">
-                  <img src="/client/assets/bacon/thumbnail.jpg" alt="product-image" />
-                  <button><img src="/client/assets/icons/Icon/Cart.svg" alt="in-cart" /></button>
-                </div>
-                <div class="info">
-                </div>
-              </a>
+          </section>
+
+          <!-- product list -->
+          <section class="product-list-group">
+            <h3>상품 리스트</h3>
+            <div class="menu">
+              <p>총건</p>
+              <ul>
+                <li class="menu-button"><button>추천순</button></li>
+                <li class="menu-button"><button>신상품순</button></li>
+                <li class="menu-button"><button>판매량순</button></li>
+                <li class="menu-button"><button>혜택순</button></li>
+                <li class="menu-button"><button>낮은가격순</button></li>
+                <li class="menu-button"><button>높은가격순</button></li>
+              </ul>
             </div>
-          </article>
+            <article class="product-list">
+              <div class="slider">
+                <a href="#" class="slide">
+                  <div class="visual">
+                    <img src="/client/assets/bacon/thumbnail.jpg" alt="product-image" />
+                    <button><img src="/client/assets/icons/Icon/Cart.svg" alt="in-cart" /></button>
+                  </div>
+                  <div class="info">
+                  </div>
+                </a>
+              </div>
+            </article>
+          </section>
         </section>
-      </section>
-    </div>
-  </main>
-</body>
+      </div>
+    </main>
+  </body>
+
 </html>
