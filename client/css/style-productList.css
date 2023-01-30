@@ -1,0 +1,46 @@
+@import url(./reset.css);
+@import url(./theme.css);
+@import url(./a11y.css);
+
+.inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  background-color: #ccc;
+}
+
+li {
+  list-style: none;
+}
+
+.list-title {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 21px;
+}
+
+.product {
+  margin-top: 50px;
+  display: flex;
+}
+
+/* product list filter */
+.product-nav {
+  width: 220px;
+  margin-right: 47px;
+}
+
+/* product list */
+.product-list-group {
+  width: 783px;
+}
+
+.menu {
+  padding-bottom: var(--spacing-md);
+}
+
+.menu-button-list {
+  float: right;
+}
+.menu-button {
+  float: left;
+}
