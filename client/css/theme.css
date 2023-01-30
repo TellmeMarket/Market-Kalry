@@ -1,4 +1,5 @@
-:root{
+:root {
+  /* color */
   --black: #000000;
   --secondary: #bd76ff;
   --white: #ffffff;
@@ -25,4 +26,19 @@
   --blue-800: #002966;
   --blue-900: #001433;
   --info-error: #f03f40;
+
+  /* spacing/text */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-base: 16px;
+  --spacing-md: 20px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
 }
