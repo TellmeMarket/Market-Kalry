@@ -1,4 +1,7 @@
 @import url(../../css/theme.css);
+@import url(../../css/normalize.css);
+@import url(../../css/reset.css);
+@import url(../../css/a11y.css);
 
 body {
   max-width: 1050px;
@@ -16,108 +19,153 @@ body {
   height: 514px;
 }
 .delivery-company {
-  font-size: 21px;
+  font-size: var(--text-lg);
   font-weight: 700;
-  color: #6b6b6b;
+  color: var(--gray-500);
+  margin-bottom: var(--spacing-base);
 }
 .product-name {
-  font-size: 28px;
+  font-size: var(--text-xxl);
   font-weight: 600;
-  color: #333333;
+  color: var(--content);
+  margin-bottom: var(--spacing-xs);
 }
 .product-slogan {
-  font-size: 16px;
-  color: #898989;
+  font-size: var(--text-base);
+  color: var(--gray-400);
+  margin-bottom: var(--spacing-base);
 }
 .product-price {
   display: flex;
   align-items: center;
-  font-size: 28px;
+  font-size: var(--text-xxl);
   font-weight: 600;
+  margin-bottom: var(--spacing-base);
 }
 .login-recommended {
   font-size: 16px;
   font-weight: 600;
   color: var(--primary);
+  margin-bottom: var(--spacing-md);
 }
 .product-price span {
-  font-size: 16px;
+  font-size: var(--text-base);
 }
 .product-information-box {
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
-  padding: 16px 0;
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+  padding: var(--spacing-base) 0;
 }
 .product-info-title {
   width: 128px;
-  font-size: 12px;
+  font-size: var(--text-xs);
   font-weight: 600;
-  color: #6b6b6b;
+  color: var(--gray-500);
+  line-height: 150%;
+}
+.product-info-detail {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+}
+.product-info-detail-desc {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  line-height: 18px;
 }
 .line {
   display: flex;
   align-items: center;
   width: 560px;
-  border-bottom: 1px solid #e1e1e1;
-  padding: 16px 0 24px 0;
+  border-bottom: 1px solid var(--gray-100);
+  padding: var(--spacing-base) 0 var(--spacing-lg) 0;
 }
 .allergy-info {
   width: 432px;
 }
 .product-choice-wrap {
   display: flex;
-  margin-top: 16px;
+  margin-top: var(--spacing-base);
 }
 .product-purchase-box {
   position: relative;
-  border: 1px solid #c4c4c4;
+  border: 1px solid var(--gray-200);
   padding: 10px;
   width: 432px;
+}
+.product-purchase-box span:nth-child(1) {
+  color: var(--gray-500);
+  font-size: var(--text-xs);
 }
 .product-quantity {
   display: flex;
   justify-content: space-between;
-  padding: 0 5 px 0 5px;
+  padding: 0 5px;
   align-items: center;
   width: 84px;
   height: 30px;
-  border: 1px solid #C4C4C;
+  border: 1px solid var(--gray-200);
+  margin-top: var(--spacing-md);
+}
+.product-quantity button {
+  border: 0;
+  background-color: var(--white);
+  cursor: pointer;
 }
 .total-price {
   position: absolute;
   right: 0;
   bottom: 0;
-  transform: translate(-10%, -30%);
+  padding: 12px;
+  color: var(--content);
+  font-weight: 600;
+  font-size: var(--text-xs);
 }
 .total-price-result {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
+.total-price-result p:nth-child(1) {
+  margin-top: 28px;
+  margin-bottom: 8px;
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+.price {
+  font-weight: 600;
+  font-size: var(--text-xxl);
+  margin: 0 4px 0 17px;
+}
 .login-benefits {
   display: flex;
   align-items: center;
+  margin-bottom: 28px;
+}
+.login-benefits span {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-left: 6px;
 }
 .accumulate-label {
   width: 34px;
-  height: 24px;
-  background-color: #fa622f;
+  background-color: var(--accent-yellow);
   border-radius: 20px;
-  padding: 4px 8px;
+  padding: 4px 8px 4px 8px;
   align-items: center;
-  color: white;
+  color: var(--white);
 }
-.button {
+.icons-wrap {
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 .icons {
   padding: 30px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--gray-100);
   position: relative;
-  margin-right: 12px;
+  margin-right: var(--spacing-sm);
   border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--white);
 }
 .icons img {
   position: absolute;
@@ -128,8 +176,12 @@ body {
 .cart {
   text-align: center;
   padding: 20px 0;
-  width: 424px;
-  background-color: #5f0080;
-  color: white;
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--white);
   border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--text-base);
 }
