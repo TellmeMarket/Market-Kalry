@@ -14,9 +14,11 @@
         <div class="cart-list">
           <div class="cart-list-check">
             <img src="../../assets/icons/Icon/isChecked=false.svg" alt="" />
-            <p>전체선택<span>(3/3)</span></p>
+            <p>전체선택 <span>(3/3)</span></p>
             <div class="line"></div>
-            <p>선택삭제</p>
+            <button>
+              <span>선택삭제</span>
+            </button>
           </div>
           <div class="food-cate">
             <div class="food-wrap refrigerated">
@@ -41,14 +43,63 @@
               <img src="../../assets/icons/Icon/Direction=Down.svg" alt="" />
             </div>
           </div>
-          <div class="cart-list-check">
+          <div class="cart-list-check bottom">
             <img src="../../assets/icons/Icon/isChecked=false.svg" alt="" />
-            <p>전체선택<span>(3/3)</span></p>
+            <p>전체선택 <span>(3/3)</span></p>
             <div class="line"></div>
-            <p>선택삭제</p>
+            <button>
+              <span>선택삭제</span>
+            </button>
           </div>
         </div>
-        <div class="payment-information">페이먼트</div>
+        <div class="payment-information">
+          <div class="detail-payment">
+            <div class="shipping-wrap">
+              <div class="shipping">
+                <img src="../../assets/icons/Icon/Location.svg" alt="" />
+                <span>배송지</span>
+              </div>
+              <p class="shipping-address">서울 중랑구 면목로 42길11(행운빌딩)603호</p>
+              <p class="shipping-company">샛별배송</p>
+              <button class="change-address-btn">
+                <span>배송지 변경</span>
+              </button>
+            </div>
+            <div class="finally-payment-detail">
+              <div class="payment-process">
+                <span>상품금액</span>
+                <span>40,660 원</span>
+              </div>
+              <div class="payment-process">
+                <span>상품할인금액</span>
+                <span>-4,651 원</span>
+              </div>
+              <div class="payment-process shipping-fee">
+                <span>배송비</span>
+                <span>+3,000원</span>
+              </div>
+              <div class="dotted-line"></div>
+              <div class="payment-process expected-payment-amount">
+                <span>결제예정금액</span>
+                <p><span class="final-amount">40,680</span>원</p>
+              </div>
+              <div class="accumulation-benefits">
+                <div>적립</div>
+                <span>최대 36원 적립 일반 0.1%</span>
+              </div>
+            </div>
+          </div>
+          <button class="order-btn">
+            <span>주문하기</span>
+          </button>
+          <div class="notice">
+            <p>쿠폰/적립금은 주문서에서 사용 가능합니다.</p>
+            <p>[주문완료] 상태일 경우에만 주문 취소 가능합니다.</p>
+            <p>[마켓컬리 > 주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.</p>
+            <p>쿠폰,적립금 사용 금액을 제외한 실 결제 금액 기준으로 최종 산정됩니다.</p>
+            <p>상품별로 적립금 지급 기준이 다를 수 있습니다. (상품 상세 페이지에서 확인 가능합니다.)</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
