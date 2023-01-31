@@ -34,18 +34,51 @@ a {
   margin-right: 47px;
 }
 
+
+
 /* product list */
 .product-list-group {
   width: 783px;
 }
 
+/* menu */
 .menu {
   padding-bottom: var(--spacing-md);
+  display: flow-root;
+}
+
+.menu span {
+  line-height: var(--spacing-lg);
 }
 
 .menu-button-list {
   float: right;
+  display: flow-root;
 }
 .menu-button {
   float: left;
+}
+
+/* list */
+.slider {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.visual {
+  position: relative;
+}
+
+.visual>img {
+  width: 249px;
+}
+
+.visual button {
+  position: absolute;
+  right: 15px;
+  bottom: 17px;
+  padding: 0;
+  border: 0;
+  background: none;
 }
