@@ -98,6 +98,24 @@ button {
   content: '';
 }
 
+.accordian-head button {
+  width: 220px;
+  font-size: var(--text-xs);
+  line-height: 150%;
+  text-align: center;
+  color: #A6A6A6;
+  cursor: pointer;
+}
+
+.accordian-head button::after {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../assets/icons/Icon/Direction=Right.svg) no-repeat;
+  vertical-align: -4px;
+}
+
 .accodiaon-body li {
   margin: 8px 0 16px; 
   font-weight: 400;
@@ -119,6 +137,7 @@ input[type="checkbox"]::after {
   width: 23px;
   height: 23px;
   vertical-align: -6px;
+  cursor: pointer;
 }
 
 input[type="checkbox"]:checked::after {
@@ -127,7 +146,9 @@ input[type="checkbox"]:checked::after {
 
 label {
   padding-left: 9px;
+  cursor: pointer;
 }
+
 
 
 /* product list */
