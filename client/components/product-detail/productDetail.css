@@ -28,6 +28,7 @@
 
 /* 상품 lnb */
 .details-lnb ul {
+  margin-top: 49px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
