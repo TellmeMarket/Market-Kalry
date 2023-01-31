@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../signup/style.css" />
+  <!-- <script defer src="./js/main.js" type="module"></script> -->
+  <title>signup</title>
+
+</head>
+
+<main>
+  <h2 class="title">회원가입</h2>
+
+  <form action="" method="get" id="member" class="inner">
+    <h6 class="mandatory"><span>*</span> 필수입력사항</h6>
+
+    <fieldset>
+      <legend class="a11yHidden">회원가입 폼 입력 양식</legend>
+
+      <table class="sign">
+        <caption class="a11yHidden">회원가입을 위한 입력 테이블</caption>
+
+        <tbody>
+          <!-- userId -->
+          <tr>
+            <th scope="row"><label for="userid">아이디<span>*</span></label>
+            </th>
+            <td>
+              <input type="text" name="userid" id="userid" placeholder="아이디를 입력하세요" />
+              <button type="submit">중복확인</button>
+            </td>
+          </tr>
+
+          <!-- password -->
+          <tr>
+            <th scope="row"><label for="pwd">비밀번호<span>*</span></label></th>
+            <td>
+              <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요">
+            </td>
+          </tr>
+
+          <!-- passwordCheck -->
+          <tr>
+            <th scope="row"><label for="pwdCheck">비밀번호 확인<span>*</span></label></th>
+            <td>
+              <input type="password" name="pwdCheck" id="pwdCheck" placeholder="비밀번호를 한번 더 입력해주세요">
+            </td>
+          </tr>
+
+          <!-- name -->
+          <tr>
+            <th scope="row"><label for="name">이름<span>*</span></label></th>
+            <td>
+              <input type="text" name="name" id="name" placeholder="이름을 한번 더 입력해주세요">
+            </td>
+          </tr>
+
+          <!-- email -->
+          <tr>
+            <th scope="row"><label for="email">이메일<span>*</span></label></th>
+            <td>
+              <input type="text" name="email" id="email" placeholder="예) marketkarly@karly.com">
+              <button type="submit">중복확인</button>
+            </td>
+          </tr>
+
+          <!-- phoneNumber -->
+          <tr>
+            <th scope="row"><label for="phonNumber">휴대폰<span>*</span></label></th>
+            <td>
+              <input type="text" name="phonNumber" id="phonNumber" placeholder="숫자만 입력해주세요.">
+              <button type="submit">인증번호 받기</button>
+            </td>
+          </tr>
+
+          <!-- phoneNumber -->
+          <tr>
+            <th scope="row"><label for="address">주소<span>*</span></label></th>
+            <td>
+              <button type="submit" class="adressBtn"> 주소검색</button>
+              <p>배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+            </td>
+          </tr>
+
+          <!-- gender -->
+          <tr>
+            <th scope="row">성별</th>
+            <td>
+              <input type="radio" name="gender" id="male">
+              <label for="male">남자</label>
+              <input type="radio" name="gender" id="female">
+              <label for="female">여자</label>
+              <input type="radio" name="gender" id="unchecked">
+              <label for="unchecked">선택안함</label>
+            </td>
+          </tr>
+
+          <!-- birth date -->
+          <tr>
+            <th scope="row"><label for="birthDate">생년월일</label></th>
+
+            <td class="dateWrap">
+              <input type="text" id="birthYear" name="birthYear" placeholder="YYYY" value="" maxlength="4" />
+              &#47;
+              <input type="text" id="birthMonth" name="birthMonth" placeholder="MM" value="" maxlength="2" />
+              &#47;
+              <input type="text" id="birthDay" name="birthDay" placeholder="DD" value="" maxlength="2" />
+            </td>
+          </tr>
+
+          <!-- additional -->
+          <tr>
+            <th scope="row">추가입력 사항</th>
+
+            <td>
+              <input type="radio" name="eventId" id="inviteId" />
+              <label class="check" for="inviteId">친구초대 추천인 아이디</label>
+              <input type="radio" name="eventId" id="eventName" />
+              <label class="check" for="eventName">참여 이벤트명</label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- agreement -->
+      <table class="agreement">
+        <tbody class="wrap">
+          <tr>
+            <th scope="row"><label for="agreement">이용약관 동의 <span>*</span></label></th>
+
+            <!-- agreeAll -->
+          <tr class="column">
+            <td>
+              <input type="checkbox" name="agreeAll" id="agreeAll" />
+              <label for="agreeAll">전체 동의합니다.</label>
+              <p>선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
+            </td>
+
+            <!-- requiredTermsCondition -->
+            <td>
+              <input type="checkbox" name="requiredTermsCondition" id="requiredTermsCondition" />
+              <label for="requiredTermsCondition">이용약관 동의 <span>(필수)</span></label>
+              <a href="/">약관보기</a>
+            </td>
+
+            <!-- requiredTermsCondition -->
+            <td>
+              <input type="checkbox" name="requiredTermsOfPrivacy" id="requiredTermsOfPrivacy" />
+              <label for="requiredTermsOfPrivacy">개인정보 수집∙이용 동의 <span>(필수)</span></label>
+              <a href="/">약관보기</a>
+            </td>
+
+            <!-- requiredTermsCondition -->
+            <td>
+              <input type="checkbox" name="signupEventAll" id="signupEventAll" />
+              <label for="signupEventAll">무료배송, 할인쿠폰 등 혜택/정보 수신 동의 <span>(선택)</span></label>
+              <a href="/">약관보기</a>
+            </td>
+
+            <!-- requiredTermsCondition -->
+            <td>
+              <input type="checkbox" name="requiredSignupAge" id="requiredSignupAge" />
+              <label for="requiredSignupAge">본인은 만 14세 이상입니다. <span>(필수)</span></label>
+              <a href="/">약관보기</a>
+            </td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="submit" class="signBtn">가입하기</button>
+    </fieldset>
+  </form>
+</main>
+
+</html>
