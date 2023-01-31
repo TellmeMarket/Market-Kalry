@@ -3,67 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./cart.css" />
     <title>Cart</title>
   </head>
   <body>
     <div class="inner">
       <h2>장바구니</h2>
-      <div class="cart-list">
-        <div class="cart-list-check">
-          <img
-            src="../../assets/icons/Icon/isChecked=false.svg"
-            alt=""
-          />
-          <p>전체선택<span>(3/3)</span></p>
-          <div class="line"></div>
-          <p>선택삭제</p>
-        </div>
-        <div class="food-cate">
-          <div>
-            <div>
-              <img
-                src="../../assets/icons/Icon/Type=Refrigerated.svg"
-                alt=""
-              />
-              <span>냉장식품</span>
-            </div>
-            <img
-              src="../../assets/icons/Icon/Direction=Down.svg"
-              alt=""
-            />
+      <div class="cart-wrap">
+        <div class="cart-list">
+          <div class="cart-list-check">
+            <img src="../../assets/icons/Icon/isChecked=false.svg" alt="" />
+            <p>전체선택<span>(3/3)</span></p>
+            <div class="line"></div>
+            <p>선택삭제</p>
           </div>
-          <div>
-            <div>
-              <img
-                src="../../assets/icons/Icon/Type=Frozen.svg"
-                alt=""
-              />
-              <span>냉장식품</span>
+          <div class="food-cate">
+            <div class="food-wrap refrigerated">
+              <div class="food-type">
+                <img src="../../assets/icons/Icon/Type=Refrigerated.svg" alt="" />
+                <span>냉장 식품</span>
+              </div>
+              <img src="../../assets/icons/Icon/Direction=Down.svg" alt="" />
             </div>
-            <img
-              src="../../assets/icons/Icon/Direction=Down.svg"
-              alt=""
-            />
+            <div class="food-wrap frozen">
+              <div class="food-type">
+                <img src="../../assets/icons/Icon/Type=Frozen.svg" alt="" />
+                <span>냉동 식품</span>
+              </div>
+              <img src="../../assets/icons/Icon/Direction=Down.svg" alt="" />
+            </div>
+            <div class="food-wrap normal">
+              <div class="food-type">
+                <img src="../../assets/icons/Icon/Type=_Normal.svg" alt="" />
+                <span>상온 식품</span>
+              </div>
+              <img src="../../assets/icons/Icon/Direction=Down.svg" alt="" />
+            </div>
           </div>
-          <div>
-            <div>
-              <img
-                src="../../assets/icons/Icon/Type=_Normal.svg"
-                alt=""
-              />
-              <span>냉장식품</span>
-            </div>
-            <img
-              src="../../assets/icons/Icon/Direction=Down.svg"
-              alt=""
-            />
+          <div class="cart-list-check">
+            <img src="../../assets/icons/Icon/isChecked=false.svg" alt="" />
+            <p>전체선택<span>(3/3)</span></p>
+            <div class="line"></div>
+            <p>선택삭제</p>
           </div>
         </div>
+        <div class="payment-information">페이먼트</div>
       </div>
     </div>
   </body>
