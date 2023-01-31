@@ -40,13 +40,13 @@ button {
 .best-product {
   margin-top: 50px;
   display: flex;
+  flex-flow: row nowrap;
 }
 
 /* product list filter */
 .product-nav {
   width: 220px;
   margin-right: 47px;
-  white-space: nowrap;
   flex-shrink: 0;
 }
 
@@ -73,11 +73,13 @@ button {
 .filter{
   display: flex;
   justify-content: space-between;
+  flex-flow: row nowrap;
 }
 
 .accordian-head summary {
   display: flex;
   justify-content: space-between;
+  flex-flow: row nowrap;
 }
 
 .accordian-head[open] summary{
