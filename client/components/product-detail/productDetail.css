@@ -615,7 +615,6 @@
 
 /* 팝업창 후기작성/상품문의하기 공통 레이아웃 popup review inquiry*/
 .popup {
-  /* font-family: "Pretendard", "malgun gothic", dotum, sans-serif; */
   padding: 32px;
   border-radius: 16px;
   background: var(--white);
