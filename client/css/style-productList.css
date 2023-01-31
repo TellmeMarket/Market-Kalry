@@ -101,6 +101,7 @@ button {
 .accordian-head button {
   width: 220px;
   font-size: var(--text-xs);
+  font-weight: 600;
   line-height: 150%;
   text-align: center;
   color: #A6A6A6;
@@ -163,7 +164,8 @@ label {
 }
 
 .menu span {
-  line-height: var(--spacing-lg);
+  line-height: 150%;
+  font-weight: 600;
 }
 
 .menu-button-list {
