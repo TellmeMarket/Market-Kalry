@@ -2,10 +2,13 @@
 @import url(./theme.css);
 @import url(./a11y.css);
 
+* {
+  box-sizing: border-box;
+}
+
 .inner {
   max-width: 1050px;
   margin: 0 auto;
-  background-color: #ccc;
 }
 
 li {
@@ -17,13 +20,22 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: 0;
+  background: none;
+  font-family: "Pretendard";
+}
+
+/* inner */
 .list-title {
   margin-top: 50px;
   text-align: center;
   font-size: 21px;
+  line-height: 150%;
+  font-weight: 600;
 }
 
-.product {
+.best-product {
   margin-top: 50px;
   display: flex;
 }
@@ -32,8 +44,57 @@ a {
 .product-nav {
   width: 220px;
   margin-right: 47px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
+.list-nav > li {
+  padding: 14px 0;
+  font-weight: 600;
+  line-height: 150%;
+  border-bottom: 1px solid #E1E1E1;
+  cursor: pointer;
+}
+
+.list-nav li:last-child {
+  border-bottom: 0;
+}
+
+.filter button {
+  padding: 4px 0;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 160%;
+  color: #A6A6A6;
+}
+
+.filter{
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordian-head summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordian-head summary img {
+  transition: 0.5s;
+}
+
+.accordian-head[open] summary img {
+  transform: rotate(-180deg);
+}
+
+.accordian-head summary::marker {
+  content: "";
+}
+
+.accodiaon-body li {
+  margin: 8px 136px 16px 32px;
+  font-weight: 400;
+  line-height: 160%;
+}
 
 
 /* product list */
@@ -60,7 +121,7 @@ a {
 }
 
 /* list */
-.slider {
+.product-list {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 18px;
@@ -70,7 +131,7 @@ a {
   position: relative;
 }
 
-.visual>img {
+.product-image img {
   width: 249px;
 }
 
@@ -79,6 +140,4 @@ a {
   right: 15px;
   bottom: 17px;
   padding: 0;
-  border: 0;
-  background: none;
 }
