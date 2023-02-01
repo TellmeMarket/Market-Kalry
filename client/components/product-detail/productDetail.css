@@ -123,6 +123,11 @@ body {
   border: 1px solid var(--gray-200);
   margin-top: var(--spacing-md);
 }
+.quantity {
+  border: 0;
+  width: 30px;
+  text-align: center;
+}
 .product-quantity button {
   border: 0;
   background-color: var(--white);

@@ -11,9 +11,8 @@
 
   <body>
     <main class="inner product-details-page">
-      <!-- 상단 -->
+      <h2 class="a11yHidden">상세페이지</h2>
       <section class="product-information">
-        <h2 class="a11yHidden">상품정보</h2>
         <section class="product-thumbnail">
           <img src="./../../assets/tangtang/thumbnail.jpg" alt="탱탱쫄면 썸네일" class="product-information__thumbnail-img" />
         </section>
@@ -21,66 +20,66 @@
           <div class="product-title-wrap">
             <p class="delivery-company">샛별배송</p>
             <h3 class="product-title-name">[풀무원] 탱탱쫄면 (4개입)</h3>
-            <p class="product-slogan">튀기지 않아 부담 없는 매콤함</p>
-            <p class="product-price">4,980<span>원</span></p>
+            <h3 class="product-slogan">튀기지 않아 부담 없는 매콤함</h3>
+            <h3 class="product-price">4,980<span>원</span></h3>
             <p class="login-recommended">로그인 후, 적립 혜택이 제공됩니다.</p>
           </div>
-          <div class="product-information-box">
+          <dl class="product-information-box" aria-describedby="제품상세정보">
             <div class="line">
-              <span class="product-info-title">배송</span>
+              <dt class="product-info-title">배송</dt>
               <div>
                 <span class="product-info-detail">샛별배송</span>
-                <p class="product-info-detail-desc">23시 전 주문 시 내일 아침 7시 전 도착</p>
-                <p class="product-info-detail-desc">(대구 부산 울산 샛별배송 운영시간 별도 확인)</p>
+                <dd class="product-info-detail-desc">23시 전 주문 시 내일 아침 7시 전 도착</dd>
+                <dd class="product-info-detail-desc">(대구 부산 울산 샛별배송 운영시간 별도 확인)</dd>
               </div>
             </div>
             <div class="line">
-              <span class="product-info-title">판매자</span>
-              <span class="product-info-detail">칼리</span>
+              <dt class="product-info-title">판매자</dt>
+              <dd class="product-info-detail">칼리</dd>
             </div>
             <div class="line">
-              <span class="product-info-title">포장타입</span>
+              <dt class="product-info-title">포장타입</dt>
               <div>
-                <p class="product-info-detail">상온(종이포장)</p>
-                <p class="product-info-detail-desc">택배배송은 에코 포장이 스티로폼으로 대체 됩니다.</p>
+                <dd class="product-info-detail">상온(종이포장)</dd>
+                <dd class="product-info-detail-desc">택배배송은 에코 포장이 스티로폼으로 대체 됩니다.</dd>
               </div>
             </div>
             <div class="line">
-              <span class="product-info-title">판매단위</span>
-              <span class="product-info-detail">1봉</span>
+              <dt class="product-info-title">판매단위</dt>
+              <dd class="product-info-detail">1봉</dd>
             </div>
             <div class="line">
-              <span class="product-info-title">중량/용량</span>
-              <span class="product-info-detail">123g*4봉</span>
+              <dt class="product-info-title">중량/용량</dt>
+              <dd class="product-info-detail">123g*4봉</dd>
             </div>
             <div class="line">
-              <span class="product-info-title">원산지</span>
-              <span class="product-info-detail">상세페이지 별도 표기</span>
+              <dt class="product-info-title">원산지</dt>
+              <dd class="product-info-detail">상세페이지 별도 표기</dd>
             </div>
             <div class="line">
-              <p class="product-info-title">알레르기 정보</p>
+              <dt class="product-info-title">알레르기 정보</dt>
               <div class="allergy-info">
-                <p class="product-info-detail-desc">-대두, 밀, 쇠고기 함유</p>
-                <p class="product-info-detail-desc">-계란, 우유, 메밀, 땅콩, 고등어, 게, 돼지고기, 새우, 복숭아, 토마토, 아황산류, 호두, 잣, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 제조</p>
+                <dd class="product-info-detail-desc">&#45;대두, 밀, 쇠고기 함유</dd>
+                <dd class="product-info-detail-desc">&#45;계란, 우유, 메밀, 땅콩, 고등어, 게, 돼지고기, 새우, 복숭아, 토마토, 아황산류, 호두, 잣, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 제조</dd>
               </div>
             </div>
             <div class="product-choice-wrap">
-              <span class="product-info-title">상품선택</span>
+              <dt class="product-info-title">상품선택</dt>
               <div class="product-purchase-box">
                 <span>[풀무원]탱탱쫄면(4개입)</span>
                 <div class="product-quantity">
-                  <button>
-                    <span>-</span>
+                  <button role="button" aria-label="수량감소">
+                    <span>&#45;</span>
                   </button>
-                  <span>0</span>
+                  <input role="text" class="quantity" maxlength="3" aria-label="제품수량" />
                   <button>
-                    <span>+</span>
+                    <span role="button" aria-label="수량추가"> &#43;</span>
                   </button>
                 </div>
                 <span class="total-price">4,980원</span>
               </div>
             </div>
-          </div>
+          </dl>
           <div class="total-price-result">
             <p>총 상품금액:<span class="price">4,980</span>원</p>
             <div class="login-benefits">
@@ -90,18 +89,19 @@
           </div>
           <!-- 알림,좋아요, 장바구니 버튼 -->
           <div class="icons-wrap">
-            <button class="icons">
+            <button class="icons" role="button" aria-label="알림설정아이콘">
               <img src="../../assets/product-detail/Bell.svg" alt="알림아이콘" />
             </button>
-            <button class="icons">
+            <button class="icons" role="button" aria-label="좋아요아이콘">
               <img src="../../assets/product-detail/Heart.svg" alt="좋아요아이콘" />
             </button>
-            <button class="cart">장바구니 담기</button>
+            <button class="cart" role="button" aria-label="장바구니담기">장바구니 담기</button>
           </div>
         </section>
       </section>
       <!-- 하단 -->
       <section class="details">
+        <h3 class="a11yHidden">상품 상세정보</h3>
         <div class="details-lnb">
           <ul>
             <li class="lnb-item lnb-item-focused">상품설명</li>
@@ -116,15 +116,15 @@
               <img src="./../../assets/tangtang/detail_view.jpg" class="details-product-image" />
             </div>
             <div>
-              <h3 class="product-name"><small class="product-name-small">튀기지 않아 부담 없는 매콤함</small>&lsqb;풀무원&rsqb; 탱탱쫄면</h3>
-              <p class="product-description">
+              <h4 class="product-name"><small class="product-name-small">튀기지 않아 부담 없는 매콤함</small>&lsqb;풀무원&rsqb; 탱탱쫄면</h4>
+              <h5 class="product-description">
                 쫄면의 진가는 매콤새콤한 양념과 탱탱한 면발에서 찾을 수 있지요. 풀무원은 이 맛을 더 부담 없이 즐길 수 있도록 튀기지 않고 만든 탱탱쫄면을 선보입니다. 밀가루와 감자 전분을 적절히 배합해 탄력이 좋고, 입에 넣었을 때는 찰지게 씹히죠.
                 고추장을 넣어 숙성한 비빔장은 자연스럽고 깊은 맛을 냅니다. 간단하게 조리해 마지막 한 가닥까지 탱탱한 식감을 즐겨보세요. 취향에 따라 다양한 고명을 올려 드셔도 좋아요.
-              </p>
+              </h5>
             </div>
           </section>
           <section class="details-check-point">
-            <h3 class="check-title">Karly's Check Point</h3>
+            <h4 class="check-title">Karly's Check Point</h4>
             <img src="./../../assets/product-detail/checkImage.png" clasee="check-point-image" />
           </section>
           <section class="details-info2">
@@ -157,7 +157,7 @@
           </section>
         </section>
         <section class="details-review">
-          <h2 class="review-title">상품후기</h2>
+          <h3 class="review-title">상품후기</h3>
           <p class="review-benefit">글후기 50원 적립금 혜택이 있어요.</p>
           <ul class="review-benefit-list">
             <li class="review-benefit-item">퍼플&#44; 더퍼플은 2배 적립 &lpar;100원&rpar; &sol; 주간 베스트 후기로 선정 시 5,000원 추가 적립</li>
@@ -224,7 +224,7 @@
           <button class="details-write-btn" type="button">후기 작성하기</button>
         </section>
         <section class="details-inquiry">
-          <h2 class="inquiry-title">상품문의</h2>
+          <h3 class="inquiry-title">상품문의</h3>
           <ul class="inquiry-description-list">
             <li class="inquiry-description">상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다&#46;</li>
             <li class="inquiry-description">배송관련&#44; 주문&#40;취소&#47;교환&#47;환불&#41;관련 문의 및 요청사항은 마이컬리 내 1&#58;1 문의에 남겨주세요&#46;</li>
