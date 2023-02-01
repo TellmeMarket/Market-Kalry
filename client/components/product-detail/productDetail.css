@@ -871,19 +871,31 @@
 /* -------------------------------------------------------------------------- */
 /*                             focus 시 outline 스타일                            */
 /* -------------------------------------------------------------------------- */
-*:focus-visible,
-button:focus-visible,
-input:focus-visible,
-.lnb-list .lnb-item-selected:focus-visible {
+.detail *:focus-visible,
+.detail button:focus-visible,
+.detail input:focus-visible,
+.detail .lnb-list .lnb-item-selected:focus-visible,
+.popup *:focus-visible,
+.popup button:focus-visible,
+.popup input:focus-visible,
+.popup .lnb-list .lnb-item-selected:focus-visible {
   outline: none;
-  border: 3px solid rgb(114, 203, 255);
+  border: 2px solid rgb(114, 203, 255);
   box-shadow: 0 0 8px rgb(114, 203, 255);
+}
+
+.popup .popup-btn-close:focus-visible {
+  width: 0px;
+  height: 10px;
+  box-sizing: content-box;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                  버튼 눌릴 때 그림자                                */
 /* -------------------------------------------------------------------------- */
-button:hover,
-button:active {
+.detail button:hover,
+.detail button:active,
+.popup button:hover,
+.popup button:active {
   box-shadow: inset -4px -4px 6px 0 rgb(255 255 255 / 20%), inset 4px 4px 5px 0 rgb(0 0 0 / 5%);
 }
