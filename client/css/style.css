@@ -14,21 +14,26 @@
 .inner {
   width: 1050px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
-.swiper-1,
-.swiper-2 {
-  position: relative;
-  width: 100%;
+.main-banner {
+  width: clamp(1040px, 100vw, 1920px);
+  display: flex;
+  justify-content: center;
 }
 
 .swiper-1 {
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
   overflow: hidden;
 }
 
 .swiper-slide {
-  overflow: hidden;
   z-index: 10;
+  overflow: hidden;
+  height: 370px;
 }
 
 .banner-img,
@@ -38,13 +43,46 @@
   object-fit: cover;
 }
 
+/* .banner-img,
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* .visual {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+} */
+
+/* .swiper-1,
+.product-swiper,
+.swiper-wrapper,
+.recent-product-wrapper {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+} */
+
+/* .swiper-1 {
+  overflow: hidden;
+} */
+
 .swiper1-button,
-.swiper2-button {
-  position: absolute;
-  top: 50%;
+.product-button {
   z-index: 50;
   width: 60px;
   height: 60px;
+  position: absolute;
+  top: 50%;
   border: none;
   transform: translateY(-50%);
 }
@@ -52,7 +90,7 @@
 .swiper1-button-prev,
 .swiper1-button-next {
   top: 50%;
-  background: url("../assets/icons/Icon/main_arrow.png") 50% 50% no-repeat;
+  background: url("../assets/icons/Icon/banner-arrow.svg") 50% 50% no-repeat;
   transition: all 0.5s ease 0s;
 }
 
@@ -77,6 +115,7 @@
 }
 
 .today-recommend-products {
+  width: 100%;
   height: 100%;
 }
 
@@ -85,25 +124,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
+  padding: 40px 0;
 }
-
 .heading {
   text-align: center;
   padding: var(--spacing-sm);
 }
 
-.title {
+.today-recommend-title {
   font-size: var(--text-xxl);
   font-weight: 700;
 }
 
-.swiper-2 {
-  margin-top: 28px;
+.product-swiper {
   z-index: 10;
+  margin-top: 28px;
 }
 
-.swiper2-inner {
+.product-inner {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -112,9 +150,9 @@
 
 .product {
   display: flex;
-  flex-direction: column;
   width: 249px;
   height: 426px;
+  flex-direction: column;
 }
 
 .product-visual {
@@ -122,14 +160,14 @@
 }
 
 .icon-cart {
+  z-index: 50;
   width: 45px;
   height: 45px;
   position: absolute;
   bottom: 17px;
   right: 15px;
-  z-index: 50;
   border: none;
-  background: url("../assets/icons/Icon/cart.png") no-repeat;
+  background: url("../assets/icons/Icon/cart.svg") no-repeat;
 }
 
 .product-info {
@@ -168,18 +206,78 @@
   line-height: 160%;
 }
 
-.swiper2-button-prev,
-.swiper2-button-next {
+.product-button {
   top: calc(50% - 50px);
-  background: url("../assets/icons/Icon/product_arrow.png") 50% 50% no-repeat;
+  background: url("../assets/icons/Icon/product_arrow.svg") 50% 50% no-repeat;
   transition: background 0.5s ease 0s;
 }
 
-.swiper2-button-prev {
+.swiper2-button-prev,
+.swiper3-button-prev {
   left: -30px;
   transform: scaleX(-1) translateY(-50%);
 }
 
-.swiper2-button-next {
+.swiper2-button-next,
+.swiper3-button-next {
   right: -30px;
+}
+
+.recent-product {
+  z-index: 100;
+  width: 74px;
+  height: 223px;
+  border: 1px solid var(--gray-200);
+  padding: var(--spacing-xs);
+  position: sticky;
+  top: 50%;
+  right: 39px;
+  transform: translateY(-50%);
+  background-color: var(--white);
+  /* transform: translateY(-50%); */
+}
+
+.recent-product-wrapper,
+.swiper-4-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recent-product-wrapper {
+  gap: var(--spacing-xs);
+}
+
+.swiper-4-wrapper {
+  gap: var(--spacing-xxs);
+  overflow: hidden;
+}
+
+.swiper-4-wrapper {
+  width: 100%;
+  height: 129px;
+}
+
+.swiper4-btn {
+  width: 18px;
+  height: 18px;
+  border: none;
+  background: url("../assets/icons/Icon/basic-arrow.svg") 50% 50% no-repeat;
+}
+
+.swiper4-button-next {
+  transform: scaleY(-1);
+}
+
+.recent-title {
+  white-space: nowrap;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--black);
+}
+
+.product-img-wrapper {
+  width: 100%;
+  height: 51px;
 }

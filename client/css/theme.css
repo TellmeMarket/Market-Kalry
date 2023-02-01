@@ -28,6 +28,7 @@
   --info-error: #f03f40;
 
   /* spacing/text */
+  --spacing-xxs: 4px;
   --spacing-xs: 8px;
   --spacing-sm: 12px;
   --spacing-base: 16px;

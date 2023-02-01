@@ -15,8 +15,8 @@
 
   <body>
     <main>
-      <section type="main-banner">
-        <div class="swiper-1 product-swiper">
+      <section class="main-banner">
+        <div class="swiper-1">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a href="">
@@ -46,21 +46,21 @@
 
       <section class="line-banner">
         <div class="line-banner-inner inner">
-          <a href=""><img src="./assets/banner/line-banner01.png" alt="" /></a>
+          <a href=""><img class="banner-img" src="./assets/banner/line-banner01.png" alt="" /></a>
         </div>
       </section>
 
       <section class="today-recommend-products">
         <div class="today-recommend-products-inner inner">
           <div class="heading">
-            <h3 class="title">이 상품 어때요?</h3>
+            <h3 class="today-recommend-title">이 상품 어때요?</h3>
           </div>
 
           <div class="swiper-2 product-swiper">
-            <div class="swiper-wrapper swiper2-inner inner">
+            <div class="swiper-wrapper product-inner inner">
               <div class="product swiper-slide">
                 <div class="product-visual">
-                  <a href=""><img class="product-img" src="./assets/product/product01.png" alt="" /></a>
+                  <a href=""><img class="product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 제품사진" /></a>
                   <button class="icon-cart"></button>
                 </div>
                 <div class="product-info">
@@ -75,7 +75,7 @@
 
               <div class="product swiper-slide">
                 <div class="product-visual">
-                  <a href=""><img class="product-img" src="./assets/product/product02.png" alt="" /></a>
+                  <a href=""><img class="product-img" src="./assets/product/product02.png" alt="죠르디 시카 자석 선쿠션 제품사진" /></a>
                   <button class="icon-cart"></button>
                 </div>
                 <div class="product-info">
@@ -90,7 +90,7 @@
 
               <div class="product swiper-slide">
                 <div class="product-visual">
-                  <a href=""><img class="product-img" src="./assets/product/product03.png" alt="" /></a>
+                  <a href=""><img class="product-img" src="./assets/product/product03.png" alt="유기농 밀키퀸 현미 4kg 제품사진" /></a>
                   <button class="icon-cart"></button>
                 </div>
                 <div class="product-info">
@@ -105,7 +105,7 @@
 
               <div class="product swiper-slide">
                 <div class="product-visual">
-                  <a href=""><img class="product-img" src="./assets/product/product04.png" alt="" /></a>
+                  <a href=""><img class="product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세 제품 사진" /></a>
                   <button class="icon-cart"></button>
                 </div>
                 <div class="product-info">
@@ -118,104 +118,106 @@
                 </div>
               </div>
             </div>
-            <button class="swiper2-button swiper2-button-prev"></button>
-            <button class="swiper2-button swiper2-button-next"></button>
+            <button class="product-button swiper2-button-prev"></button>
+            <button class="product-button swiper2-button-next"></button>
           </div>
         </div>
-
-        <!-- <div class="recent-product">
-          <span>최근 본 상품</span>
-          <div class="swiper-3 product-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./assets/product/product01.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/product/product02.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/product/product03.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/product/product04.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <button class="swiper3-btn btn-left"></button>
-          <button class="swiper3-btn btn-right"></button>
-        </div>-->
 
         <div class="today-recommend-products-inner inner">
           <div class="heading">
-            <span class="title">놓치면 후회할 가격</span>
+            <h3 class="today-recommend-title">놓치면 후회할 가격</h3>
+          </div>
+
+          <div class="swiper-3 product-swiper">
+            <div class="swiper-wrapper product-inner inner">
+              <div class="product swiper-slide">
+                <div class="product-visual">
+                  <a href=""><img class="product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 제품사진" /></a>
+                  <button class="icon-cart"></button>
+                </div>
+                <div class="product-info">
+                  <h4 class="product-info-name">[풀무원] 탱탱쫄면</h4>
+                  <div class="product-info-price">
+                    <span class="product-sale">24%</span>
+                    <span class="current-price">&nbsp;18,900<span>&nbsp;원</span></span>
+                  </div>
+                  <span class="original-price">24,000</span>
+                </div>
+              </div>
+
+              <div class="product swiper-slide">
+                <div class="product-visual">
+                  <a href=""><img class="product-img" src="./assets/product/product02.png" alt="죠르디 시카 자석 선쿠션 제품사진" /></a>
+                  <button class="icon-cart"></button>
+                </div>
+                <div class="product-info">
+                  <h4 class="product-info-name">[온더바디] 죠르디 시카 자석 선쿠션</h4>
+                  <div class="product-info-price">
+                    <span class="product-sale">24%</span>
+                    <span class="current-price">&nbsp;18,900<span>&nbsp;원</span></span>
+                  </div>
+                  <span class="original-price">24,000</span>
+                </div>
+              </div>
+
+              <div class="product swiper-slide">
+                <div class="product-visual">
+                  <a href=""><img class="product-img" src="./assets/product/product03.png" alt="유기농 밀키퀸 현미 4kg 제품사진" /></a>
+                  <button class="icon-cart"></button>
+                </div>
+                <div class="product-info">
+                  <h4 class="product-info-name">유기농 밀키퀸 현미 4kg</h4>
+                  <div class="product-info-price">
+                    <span class="product-sale">24%</span>
+                    <span class="current-price">&nbsp;18,900<span>&nbsp;원</span></span>
+                  </div>
+                  <span class="original-price">24,000</span>
+                </div>
+              </div>
+
+              <div class="product swiper-slide">
+                <div class="product-visual">
+                  <a href=""><img class="product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세 제품 사진" /></a>
+                  <button class="icon-cart"></button>
+                </div>
+                <div class="product-info">
+                  <h4 class="product-info-name">[프로쉬] 베이비 세탁세</h4>
+                  <div class="product-info-price">
+                    <span class="product-sale">24%</span>
+                    <span class="current-price">&nbsp;18,900<span>&nbsp;원</span></span>
+                  </div>
+                  <span class="original-price">24,000</span>
+                </div>
+              </div>
+            </div>
+            <button class="product-button swiper3-button-prev"></button>
+            <button class="product-button swiper3-button-next"></button>
           </div>
         </div>
 
-        <div class="swiper-4 product-swiper">
-          <div class="swiper-wrapper swiper4-inner inner">
-            <div class="product swiper-slide">
-              <div class="product-visual">
-                <a href=""><img class="product-img" src="./assets/product/product01.png" alt="" /></a>
-                <button class="icon-cart"></button>
-              </div>
-              <div class="product-info">
-                <h4 class="product-info-name">[풀무원] 탱탱쫄면</h4>
-                <div class="product-info-price">
-                  <span class="product-sale">24%</span>
-                  <span class="current-price">&nbsp;18,900<span>&nbsp;원</span></span>
+        <section class="recent-product">
+          <div class="recent-product-wrapper">
+            <button class="swiper4-btn swiper4-button-prev"></button>
+            <span class="recent-title">최근 본 상품</span>
+            <div class="swiper-4">
+              <div class="swiper-wrapper swiper-4-wrapper">
+                <div class="product-img-wrapper swiper-slide">
+                  <img class="product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 제품사진" />
                 </div>
-                <span class="original-price">24,000</span>
+                <div class="product-img-wrapper swiper-slide">
+                  <img class="product-img" src="./assets/product/product02.png" alt="죠르디 시카 자석 선쿠션 제품사진" />
+                </div>
+                <div class="product-img-wrapper swiper-slide">
+                  <img class="product-img" src="./assets/product/product03.png" alt="유기농 밀키퀸 현미 4kg 제품사진" />
+                </div>
+                <div class="product-img-wrapper swiper-slide">
+                  <img class="product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세 제품 사진" />
+                </div>
               </div>
             </div>
-
-            <div class="product swiper-slide">
-              <div class="product-visual">
-                <a href=""><img class="product-img" src="./assets/product/product02.png" alt="" /></a>
-                <button class="icon-cart"></button>
-              </div>
-              <div class="product-info">
-                <h4 class="product-info-name">[온더바디] 죠르디 시카 자석 선쿠션</h4>
-                <div class="product-info-price">
-                  <span class="product-sale">24%</span>
-                  <span class="current-price">&nbsp;18,900<span>&nbsp;원</span></span>
-                </div>
-                <span class="original-price">24,000</span>
-              </div>
-            </div>
-
-            <div class="product swiper-slide">
-              <div class="product-visual">
-                <a href=""><img class="product-img" src="./assets/product/product03.png" alt="" /></a>
-                <button class="icon-cart"></button>
-              </div>
-              <div class="product-info">
-                <h4 class="product-info-name">유기농 밀키퀸 현미 4kg</h4>
-                <div class="product-info-price">
-                  <span class="product-sale">24%</span>
-                  <span class="current-price">&nbsp;18,900<span>&nbsp;원</span></span>
-                </div>
-                <span class="original-price">24,000</span>
-              </div>
-            </div>
-
-            <div class="product swiper-slide">
-              <div class="product-visual">
-                <a href=""><img class="product-img" src="./assets/product/product04.png" alt="" /></a>
-                <button class="icon-cart"></button>
-              </div>
-              <div class="product-info">
-                <h4 class="product-info-name">[프로쉬] 베이비 세탁세</h4>
-                <div class="product-info-price">
-                  <span class="product-sale">24%</span>
-                  <span class="current-price">&nbsp;18,900<span>&nbsp;원</span></span>
-                </div>
-                <span class="original-price">24,000</span>
-              </div>
-            </div>
+            <button class="swiper4-btn swiper4-button-next"></button>
           </div>
-          <button class="swiper4-button swiper4-button-prev"></button>
-          <button class="swiper4-button swiper4-button-next"></button>
-        </div>
+        </section>
       </section>
     </main>
   </body>
