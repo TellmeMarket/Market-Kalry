@@ -2,23 +2,37 @@
 @import url(./normalize.css);
 @import url(./a11y.css);
 @import url(./theme.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 
 *,
 :after,
 :before {
   box-sizing: border-box;
-  font-family: "Pretendard", "malgun gothic", dotum, sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
   color: var(--content);
+}
+
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
 }
 
 .inner {
   width: 1050px;
   margin: 0 auto;
-  overflow: hidden;
+}
+
+.visual {
+  width: 100%;
+  height: 100%;
 }
 
 .main-banner {
-  width: clamp(1040px, 100vw, 1920px);
+  width: clamp(1040px, 100%, 1920px);
   display: flex;
   justify-content: center;
 }
@@ -28,6 +42,13 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+
+.product-swiper,
+.recent-product {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .swiper-slide {
@@ -42,39 +63,6 @@
   height: 100%;
   object-fit: cover;
 }
-
-/* .banner-img,
-.product-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-
-/* .visual {
-  display: flex;
-  justify-content: center;
-}
-
-.swiper {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-}
-} */
-
-/* .swiper-1,
-.product-swiper,
-.swiper-wrapper,
-.recent-product-wrapper {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
-} */
-
-/* .swiper-1 {
-  overflow: hidden;
-} */
 
 .swiper1-button,
 .product-button {
@@ -114,7 +102,7 @@
   align-items: center;
 }
 
-.today-recommend-products {
+.today-recommend-products-article {
   width: 100%;
   height: 100%;
 }
@@ -161,13 +149,13 @@
 
 .icon-cart {
   z-index: 50;
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   position: absolute;
-  bottom: 17px;
-  right: 15px;
+  bottom: 12px;
+  right: 10px;
   border: none;
-  background: url("../assets/icons/Icon/cart.svg") no-repeat;
+  background: url("../assets/icons/Icon/cart.svg") 50% 50% no-repeat;
 }
 
 .product-info {
@@ -223,18 +211,28 @@
   right: -30px;
 }
 
-.recent-product {
-  z-index: 100;
+.today-recommend-products {
+  position: relative;
+}
+
+.sticky-section {
   width: 74px;
+  position: absolute;
+  right: 39px;
+  top: 231px;
+  bottom: 0px;
+  z-index: 40;
+}
+
+.recent-product {
+  width: 100%;
   height: 223px;
   border: 1px solid var(--gray-200);
   padding: var(--spacing-xs);
   position: sticky;
   top: 50%;
-  right: 39px;
   transform: translateY(-50%);
   background-color: var(--white);
-  /* transform: translateY(-50%); */
 }
 
 .recent-product-wrapper,
