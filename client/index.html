@@ -16,41 +16,160 @@
 
   <body>
     <header>
-      <!-- header-top 시작 -->
-      <div class="header-top">
-        <!-- login start -->
-        <ul class="login">
-          <li><a href="#" class="sign-up">회원가입</a></li>
-          <li><img src="/client/assets/header/bar.svg" alt="" /></li>
-          <li><a href="#">로그인</a></li>
-          <li><img src="/client/assets/header/bar.svg" alt="" /></li>
-          <li>
-            <a href="#"
-              >고객센터
-              <img src="/client/assets/header/Icon_down1.svg" alt="고객센터 메뉴 더보기" class="icon-down" />
-            </a>
-          </li>
-        </ul>
-        <!-- login end -->
+      <div class="header-inner">
+        <!-- header-top 시작 -->
+        <div class="header-top">
+          <!-- login start -->
+          <ul class="login">
+            <li><a href="#" class="sign-up">회원가입</a></li>
+            <li><img src="/client/assets/header/bar.svg" alt="" /></li>
+            <li><a href="#">로그인</a></li>
+            <li><img src="/client/assets/header/bar.svg" alt="" /></li>
+            <li>
+              <a href="#"
+                >고객센터
+                <img src="/client/assets/header/Icon_down1.svg" alt="고객센터 메뉴 더보기" class="icon-down" />
+              </a>
+            </li>
+          </ul>
+          <!-- login end -->
 
-        <!-- logo start -->
-        <div class="header-top-2">
-          <h1>
-            <img src="/client/assets/header/logo.svg" alt="마켓칼리 로고" class="logo-img" />
-            <button class="karly-btn">마켓칼리</button>
-            <img src="/client/assets/header/bar.svg" alt="" />
-            <button class="beauty-btn">뷰티칼리</button>
-          </h1>
-          <!-- logo end -->
-          <!-- search start -->
-          <div class="header-search">
+          <!-- logo start -->
+          <div class="header-top-2">
+            <h1>
+              <img src="/client/assets/header/logo.svg" alt="마켓칼리 로고" class="logo-img" />
+              <button class="karly-btn">마켓칼리</button>
+              <img src="/client/assets/header/bar.svg" alt="" />
+              <button class="beauty-btn">뷰티칼리</button>
+            </h1>
+            <!-- logo end -->
+            <!-- search start -->
+            <div class="header-search">
+              <label for="search" class="a11yHidden">제품 검색: </label>
+              <input id="search" type="text" name="search" placeholder="검색어를 입력해주세요" value />
+              <button id="submit" aria-label="submit" class="search-btn"></button>
+            </div>
+            <!-- search end -->
+            <!-- search-icon start -->
+            <ul class="search-icon">
+              <li>
+                <a href=""><img src="/client/assets/header/Location.svg" alt="배송지" /></a>
+              </li>
+              <li>
+                <a href=""><img src="/client/assets/header/Heart.svg" alt="찜하기" /></a>
+              </li>
+              <li>
+                <a href=""><img src="/client/assets/header/Cart.svg" alt="장바구니" /></a>
+              </li>
+            </ul>
+            <!-- search-icon end -->
+          </div>
+        </div>
+        <!-- header-top end -->
+
+        <!-- nav start -->
+        <nav class="header-nav">
+          <!-- category start -->
+          <div class="category">
+            <h2><a href="">카테고리</a></h2>
+            <ul class="category-list">
+              <li class="list1">
+                <a href=""> 선물하기 </a>
+              </li>
+              <li class="list list2">
+                <a href=""> 채소 </a>
+              </li>
+              <li class="list3">
+                <a href=""> 과일 &middot; 견과 &middot; 쌀 </a>
+              </li>
+              <li class="list4">
+                <a href=""> 수산 &middot; 해산 &middot; 건어물 </a>
+              </li>
+              <li class="list5">
+                <a href=""> 정육 &middot; 계란 </a>
+              </li>
+              <li class="list6">
+                <a href=""> 국 &middot; 반찬 &middot; 메인요리 </a>
+              </li>
+              <li class="list7">
+                <a href=""> 샐러드 &middot; 간편식 </a>
+              </li>
+              <li class="list8">
+                <a href=""> 면 &middot; 양념 &middot; 오일 </a>
+              </li>
+              <li class="list9">
+                <a href=""> 생수 &middot; 음료 &middot; 우유 &middot; 커피 </a>
+              </li>
+              <li class="list10">
+                <a href=""> 간식 &middot; 과자 &middot; 떡 </a>
+              </li>
+              <li class="list11">
+                <a href=""> 베이커리 &middot; 치즈 &middot; 델리 </a>
+              </li>
+              <li class="list12">
+                <a href=""> 건강식품 </a>
+              </li>
+              <li class="list13">
+                <a href=""> 와인 </a>
+              </li>
+              <li class="list14">
+                <a href=""> 전통주 </a>
+              </li>
+              <li class="list15">
+                <a href=""> 생활용품 &middot; 리빙 &middot; 캠핑 </a>
+              </li>
+              <li class="list16">
+                <a href=""> 스킨케어 &middot; 메이크업 </a>
+              </li>
+              <li class="list17">
+                <a href=""> 헤어 &middot; 바디 &middot; 구강 </a>
+              </li>
+              <li class="list18">
+                <a href=""> 주방용품 </a>
+              </li>
+              <li class="list19">
+                <a href=""> 가전제품 </a>
+              </li>
+              <li class="list20">
+                <a href=""> 반려동물 </a>
+              </li>
+              <li class="list21">
+                <a href=""> 베이비 &middot; 키즈 &middot; 완구 </a>
+              </li>
+              <li class="list22">
+                <a href=""> 여행 &middot; 티켓 </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- category end -->
+
+          <!-- menu start -->
+          <ul class="menu">
+            <li>
+              <h2><a href="#">신상품</a></h2>
+            </li>
+            <li>
+              <h2><a href="#">베스트</a></h2>
+            </li>
+            <li>
+              <h2><a href="#">알뜰쇼핑</a></h2>
+            </li>
+            <li>
+              <h2><a href="#">특가/혜택</a></h2>
+            </li>
+          </ul>
+          <!-- menu end -->
+
+          <!-- searchbar -->
+          <div class="header-search-sticky">
             <label for="search" class="a11yHidden">제품 검색: </label>
             <input id="search" type="text" name="search" placeholder="검색어를 입력해주세요" value />
             <button id="submit" aria-label="submit" class="search-btn"></button>
           </div>
-          <!-- search end -->
-          <!-- search-icon start -->
-          <ul class="search-icon">
+
+          <!-- iconList -->
+          <ul class="search-icon2">
             <li>
               <a href=""><img src="/client/assets/header/Location.svg" alt="배송지" /></a>
             </li>
@@ -61,128 +180,11 @@
               <a href=""><img src="/client/assets/header/Cart.svg" alt="장바구니" /></a>
             </li>
           </ul>
-          <!-- search-icon end -->
-        </div>
+
+          <!-- notice start -->
+          <a href="#" class="notice"> <span>샛별&middot;낮</span>&nbsp;배송안내 </a>
+        </nav>
       </div>
-      <!-- header-top end -->
-      <!-- nav start -->
-
-      <nav>
-        <!-- category start -->
-        <div class="category">
-          <h2><a href="">카테고리</a></h2>
-          <ul class="category-list">
-            <li class="list1">
-              <a href=""> 선물하기 </a>
-            </li>
-            <li class="list list2">
-              <a href=""> 채소 </a>
-            </li>
-            <li class="list3">
-              <a href=""> 과일 &middot; 견과 &middot; 쌀 </a>
-            </li>
-            <li class="list4">
-              <a href=""> 수산 &middot; 해산 &middot; 건어물 </a>
-            </li>
-            <li class="list5">
-              <a href=""> 정육 &middot; 계란 </a>
-            </li>
-            <li class="list6">
-              <a href=""> 국 &middot; 반찬 &middot; 메인요리 </a>
-            </li>
-            <li class="list7">
-              <a href=""> 샐러드 &middot; 간편식 </a>
-            </li>
-            <li class="list8">
-              <a href=""> 면 &middot; 양념 &middot; 오일 </a>
-            </li>
-            <li class="list9">
-              <a href=""> 생수 &middot; 음료 &middot; 우유 &middot; 커피 </a>
-            </li>
-            <li class="list10">
-              <a href=""> 간식 &middot; 과자 &middot; 떡 </a>
-            </li>
-            <li class="list11">
-              <a href=""> 베이커리 &middot; 치즈 &middot; 델리 </a>
-            </li>
-            <li class="list12">
-              <a href=""> 건강식품 </a>
-            </li>
-            <li class="list13">
-              <a href=""> 와인 </a>
-            </li>
-            <li class="list14">
-              <a href=""> 전통주 </a>
-            </li>
-            <li class="list15">
-              <a href=""> 생활용품 &middot; 리빙 &middot; 캠핑 </a>
-            </li>
-            <li class="list16">
-              <a href=""> 스킨케어 &middot; 메이크업 </a>
-            </li>
-            <li class="list17">
-              <a href=""> 헤어 &middot; 바디 &middot; 구강 </a>
-            </li>
-            <li class="list18">
-              <a href=""> 주방용품 </a>
-            </li>
-            <li class="list19">
-              <a href=""> 가전제품 </a>
-            </li>
-            <li class="list20">
-              <a href=""> 반려동물 </a>
-            </li>
-            <li class="list21">
-              <a href=""> 베이비 &middot; 키즈 &middot; 완구 </a>
-            </li>
-            <li class="list22">
-              <a href=""> 여행 &middot; 티켓 </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- category end -->
-
-        <!-- menu start -->
-        <ul class="menu">
-          <li>
-            <h2><a href="#">신상품</a></h2>
-          </li>
-          <li>
-            <h2><a href="#">베스트</a></h2>
-          </li>
-          <li>
-            <h2><a href="#">알뜰쇼핑</a></h2>
-          </li>
-          <li>
-            <h2><a href="#">특가/혜택</a></h2>
-          </li>
-        </ul>
-        <!-- menu end -->
-
-        <!-- searchbar -->
-        <div class="header-search-sticky">
-          <label for="search" class="a11yHidden">제품 검색: </label>
-          <input id="search" type="text" name="search" placeholder="검색어를 입력해주세요" value />
-          <button id="submit" aria-label="submit" class="search-btn"></button>
-        </div>
-
-        <!-- iconList -->
-        <ul class="search-icon2">
-          <li>
-            <a href=""><img src="/client/assets/header/Location.svg" alt="배송지" /></a>
-          </li>
-          <li>
-            <a href=""><img src="/client/assets/header/Heart.svg" alt="찜하기" /></a>
-          </li>
-          <li>
-            <a href=""><img src="/client/assets/header/Cart.svg" alt="장바구니" /></a>
-          </li>
-        </ul>
-
-        <!-- notice start -->
-        <a href="#" class="notice"> <span>샛별&middot;낮</span>&nbsp;배송안내 </a>
-      </nav>
     </header>
 
     <main>
@@ -235,7 +237,7 @@
               <div class="swiper-wrapper product-inner inner">
                 <div class="product swiper-slide">
                   <div class="product-visual">
-                    <a href=""><img class="product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 제품사진" /></a>
+                    <a href=""><img class="product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 상품사진" /></a>
                     <button class="icon-cart"></button>
                   </div>
                   <div class="product-info">
@@ -250,7 +252,7 @@
 
                 <div class="product swiper-slide">
                   <div class="product-visual">
-                    <a href=""><img class="product-img" src="./assets/product/product02.png" alt="죠르디 시카 자석 선쿠션 제품사진" /></a>
+                    <a href=""><img class="product-img" src="./assets/product/product02.png" alt="죠르디 시카 자석 선쿠션 상품사진" /></a>
                     <button class="icon-cart"></button>
                   </div>
                   <div class="product-info">
@@ -265,7 +267,7 @@
 
                 <div class="product swiper-slide">
                   <div class="product-visual">
-                    <a href=""><img class="product-img" src="./assets/product/product03.png" alt="유기농 밀키퀸 현미 4kg 제품사진" /></a>
+                    <a href=""><img class="product-img" src="./assets/product/product03.png" alt="유기농 밀키퀸 현미 4kg 상품사진" /></a>
                     <button class="icon-cart"></button>
                   </div>
                   <div class="product-info">
@@ -280,7 +282,7 @@
 
                 <div class="product swiper-slide">
                   <div class="product-visual">
-                    <a href=""><img class="product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세 제품 사진" /></a>
+                    <a href=""><img class="product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세 상품사진" /></a>
                     <button class="icon-cart"></button>
                   </div>
                   <div class="product-info">
@@ -307,7 +309,7 @@
               <div class="swiper-wrapper product-inner inner">
                 <div class="product swiper-slide">
                   <div class="product-visual">
-                    <a href=""><img class="product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 제품사진" /></a>
+                    <a href=""><img class="product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 상품사진" /></a>
                     <button class="icon-cart"></button>
                   </div>
                   <div class="product-info">
@@ -322,7 +324,7 @@
 
                 <div class="product swiper-slide">
                   <div class="product-visual">
-                    <a href=""><img class="product-img" src="./assets/product/product02.png" alt="죠르디 시카 자석 선쿠션 제품사진" /></a>
+                    <a href=""><img class="product-img" src="./assets/product/product02.png" alt="죠르디 시카 자석 선쿠션 상품사진" /></a>
                     <button class="icon-cart"></button>
                   </div>
                   <div class="product-info">
@@ -337,7 +339,7 @@
 
                 <div class="product swiper-slide">
                   <div class="product-visual">
-                    <a href=""><img class="product-img" src="./assets/product/product03.png" alt="유기농 밀키퀸 현미 4kg 제품사진" /></a>
+                    <a href=""><img class="product-img" src="./assets/product/product03.png" alt="유기농 밀키퀸 현미 4kg 상품사진" /></a>
                     <button class="icon-cart"></button>
                   </div>
                   <div class="product-info">
@@ -352,7 +354,7 @@
 
                 <div class="product swiper-slide">
                   <div class="product-visual">
-                    <a href=""><img class="product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세 제품 사진" /></a>
+                    <a href=""><img class="product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세 상품사진" /></a>
                     <button class="icon-cart"></button>
                   </div>
                   <div class="product-info">
@@ -379,16 +381,16 @@
               <div class="swiper-4">
                 <div class="swiper-wrapper swiper-4-wrapper">
                   <div class="product-img-wrapper swiper-slide">
-                    <img class="product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 제품사진" />
+                    <img class="product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 상품사진" />
                   </div>
                   <div class="product-img-wrapper swiper-slide">
-                    <img class="product-img" src="./assets/product/product02.png" alt="죠르디 시카 자석 선쿠션 제품사진" />
+                    <img class="product-img" src="./assets/product/product02.png" alt="죠르디 시카 자석 선쿠션 상품사진" />
                   </div>
                   <div class="product-img-wrapper swiper-slide">
-                    <img class="product-img" src="./assets/product/product03.png" alt="유기농 밀키퀸 현미 4kg 제품사진" />
+                    <img class="product-img" src="./assets/product/product03.png" alt="유기농 밀키퀸 현미 4kg 상품사진" />
                   </div>
                   <div class="product-img-wrapper swiper-slide">
-                    <img class="product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세 제품 사진" />
+                    <img class="product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세 상품사진" />
                   </div>
                 </div>
               </div>

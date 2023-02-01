@@ -1,4 +1,5 @@
 @import url(../../css/reset.css);
+@import url(../../css/normalize.css);
 @import url(../../css/a11y.css);
 @import url(../../css/theme.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
@@ -21,12 +22,6 @@ button {
   border: none;
   margin: 0;
   padding: 0;
-}
-
-body {
-  /* max-width: 1050px;
-  margin: 0 auto; */
-  /* font-family: "Pretendard", "Apple SD Gothic Neo", serif, dotum, sans-serif; */
 }
 
 /* footer-inner */
