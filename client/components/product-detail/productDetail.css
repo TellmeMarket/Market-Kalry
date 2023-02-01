@@ -67,11 +67,14 @@
   margin-bottom: 96px;
 }
 
+.product-img-wrap {
+  margin-bottom: 76px;
+}
+
 .product-name {
   font-size: 50.517px;
   font-weight: 700;
   line-height: 140%;
-  margin-top: 76px;
   margin-bottom: 36px;
 }
 
@@ -79,7 +82,6 @@
   font-weight: 600;
   font-size: 28.43px;
   line-height: 150%;
-  display: block;
 }
 
 .product-description {
@@ -833,4 +835,8 @@
   display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
+}
+
+*:focus-visible {
+  outline: 3px solid blue;
 }
