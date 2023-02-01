@@ -1,5 +1,5 @@
 // header sticky!
-const $nav = document.querySelector("header > nav");
+const $nav = document.querySelector(".header-nav");
 const navHandler = (_) => {
   $nav.classList.toggle("active", pageYOffset >= 92);
   if ($nav.classList.contains("active")) [...$nav.children].forEach((el) => el.classList.add("active"));

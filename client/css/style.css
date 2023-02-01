@@ -1,5 +1,4 @@
 @import url(./reset.css);
-@import url(./normalize.css);
 @import url(./a11y.css);
 @import url(./theme.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
@@ -89,6 +88,22 @@
 .swiper1-button-next {
   right: 50px;
   transform: scaleX(-1) translateY(-50%);
+}
+
+.slide-cnt {
+  position: absolute;
+  width: 47px;
+  height: 18px;
+  left: 1436px;
+  top: 324px;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.15);
+  color: var(--white);
+  border-radius: var(--text-xs);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  text-align: center;
+  line-height: 150%;
 }
 
 .line-banner {
