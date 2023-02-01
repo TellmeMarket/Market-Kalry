@@ -28,6 +28,7 @@
   --info-error: #f03f40;
 
   /* spacing/text */
+  --spacing-xxs: 4px;
   --spacing-xs: 8px;
   --spacing-sm: 12px;
   --spacing-base: 16px;
@@ -42,4 +43,8 @@
   --text-lg: 20px;
   --text-xl: 24px;
   --text-xxl: 28px;
+
+  /* font-weight */
+  --weight-base: 400;
+  --weight-md: 600;
 }
