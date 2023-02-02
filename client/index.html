@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./components/header/header.css" />
-    <link rel="stylesheet" href="./components/footer/footer.css" />
+    <link rel="stylesheet" href="./components/header-footer/headerFooter.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
@@ -16,15 +15,23 @@
 
   <body>
     <header>
+      <!-- top-banner start -->
+      <div class="top-banner">
+        <div class="top-banner-text">
+          <p>지금 가입하고 인기상품 <span>100원</span>에 받아가세요!</p>
+          <button type="button"><img src="/client/assets/header/top-banner-icon.svg" alt="닫기 버튼" /></button>
+        </div>
+      </div>
+      <!-- top-banner end -->
       <div class="header-inner">
         <!-- header-top 시작 -->
         <div class="header-top">
           <!-- login start -->
           <ul class="login">
             <li><a href="#" class="sign-up">회원가입</a></li>
-            <li><img src="/client/assets/header/bar.svg" alt="" /></li>
+            <li><img src="/client/assets/header/bar.svg" alt /></li>
             <li><a href="#">로그인</a></li>
-            <li><img src="/client/assets/header/bar.svg" alt="" /></li>
+            <li><img src="/client/assets/header/bar.svg" alt /></li>
             <li>
               <a href="#"
                 >고객센터
@@ -33,13 +40,12 @@
             </li>
           </ul>
           <!-- login end -->
-
           <!-- logo start -->
           <div class="header-top-2">
             <h1>
               <img src="/client/assets/header/logo.svg" alt="마켓칼리 로고" class="logo-img" />
               <button class="karly-btn">마켓칼리</button>
-              <img src="/client/assets/header/bar.svg" alt="" />
+              <img src="/client/assets/header/bar.svg" alt />
               <button class="beauty-btn">뷰티칼리</button>
             </h1>
             <!-- logo end -->
@@ -59,14 +65,24 @@
                 <a href=""><img src="/client/assets/header/Heart.svg" alt="찜하기" /></a>
               </li>
               <li>
-                <a href=""><img src="/client/assets/header/Cart.svg" alt="장바구니" /></a>
+                <div class="header-cart">
+                  <a href=""><img src="/client/assets/header/Cart.svg" alt="장바구니" /></a>
+                  <div class="bubble remove search-icon-bubble">
+                    <div class="content">
+                      <div class="pic"><img src="./assets/tangtang/thumbnail.jpg" alt="탱탱쫄면" /></div>
+                      <div class="text-wrap">
+                        <h5 class="title">[풀무원] 탱탱쫄면 (4개입)</h5>
+                        <p>장바구니에 상품을 담았습니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
             <!-- search-icon end -->
           </div>
         </div>
         <!-- header-top end -->
-
         <!-- nav start -->
         <nav class="header-nav">
           <!-- category start -->
@@ -76,7 +92,7 @@
               <li class="list1">
                 <a href=""> 선물하기 </a>
               </li>
-              <li class="list list2">
+              <li class="list2">
                 <a href=""> 채소 </a>
               </li>
               <li class="list3">
@@ -141,9 +157,7 @@
               </li>
             </ul>
           </div>
-
           <!-- category end -->
-
           <!-- menu start -->
           <ul class="menu">
             <li>
@@ -162,6 +176,7 @@
           <!-- menu end -->
 
           <!-- searchbar -->
+
           <div class="header-search-sticky">
             <label for="search" class="a11yHidden">제품 검색: </label>
             <input id="search" type="text" name="search" placeholder="검색어를 입력해주세요" value />
@@ -178,9 +193,19 @@
             </li>
             <li>
               <a href=""><img src="/client/assets/header/Cart.svg" alt="장바구니" /></a>
+              <div class="header-cart">
+                <div class="bubble remove search-icon2-bubble">
+                  <div class="content">
+                    <div class="pic"><img src="./assets/tangtang/thumbnail.jpg" alt="탱탱쫄면" /></div>
+                    <div class="text-wrap">
+                      <h5 class="title">[풀무원] 탱탱쫄면 (4개입)</h5>
+                      <p>장바구니에 상품을 담았습니다.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
-
           <!-- notice start -->
           <a href="#" class="notice"> <span>샛별&middot;낮</span>&nbsp;배송안내 </a>
         </nav>
@@ -242,7 +267,7 @@
                 <div class="product swiper-slide">
                   <div class="product-visual">
                     <a href=""><img class="product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 상품사진" /></a>
-                    <button class="icon-cart"></button>
+                    <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기"></button>
                   </div>
                   <div class="product-info">
                     <h4 class="product-info-name">[풀무원] 탱탱쫄면</h4>
@@ -257,7 +282,7 @@
                 <div class="product swiper-slide">
                   <div class="product-visual">
                     <a href=""><img class="product-img" src="./assets/product/product02.png" alt="죠르디 시카 자석 선쿠션 상품사진" /></a>
-                    <button class="icon-cart"></button>
+                    <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기"></button>
                   </div>
                   <div class="product-info">
                     <h4 class="product-info-name">[온더바디] 죠르디 시카 자석 선쿠션</h4>
@@ -272,7 +297,7 @@
                 <div class="product swiper-slide">
                   <div class="product-visual">
                     <a href=""><img class="product-img" src="./assets/product/product03.png" alt="유기농 밀키퀸 현미 4kg 상품사진" /></a>
-                    <button class="icon-cart"></button>
+                    <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기"></button>
                   </div>
                   <div class="product-info">
                     <h4 class="product-info-name">유기농 밀키퀸 현미 4kg</h4>
@@ -287,7 +312,7 @@
                 <div class="product swiper-slide">
                   <div class="product-visual">
                     <a href=""><img class="product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세 상품사진" /></a>
-                    <button class="icon-cart"></button>
+                    <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기"></button>
                   </div>
                   <div class="product-info">
                     <h4 class="product-info-name">[프로쉬] 베이비 세탁세</h4>
@@ -315,7 +340,7 @@
                 <div class="product swiper-slide">
                   <div class="product-visual">
                     <a href=""><img class="product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 상품사진" /></a>
-                    <button class="icon-cart"></button>
+                    <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기"></button>
                   </div>
                   <div class="product-info">
                     <h4 class="product-info-name">[풀무원] 탱탱쫄면</h4>
@@ -345,7 +370,7 @@
                 <div class="product swiper-slide">
                   <div class="product-visual">
                     <a href=""><img class="product-img" src="./assets/product/product03.png" alt="유기농 밀키퀸 현미 4kg 상품사진" /></a>
-                    <button class="icon-cart"></button>
+                    <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기"></button>
                   </div>
                   <div class="product-info">
                     <h4 class="product-info-name">유기농 밀키퀸 현미 4kg</h4>
@@ -360,7 +385,7 @@
                 <div class="product swiper-slide">
                   <div class="product-visual">
                     <a href=""><img class="product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세 상품사진" /></a>
-                    <button class="icon-cart"></button>
+                    <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기"></button>
                   </div>
                   <div class="product-info">
                     <h4 class="product-info-name">[프로쉬] 베이비 세탁세</h4>
@@ -422,9 +447,9 @@
             <div class="cart-product-cnt">
               <span class="cart-product-price">1,980원</span>
               <div class="cart-product-total">
-                <button class="minus-product"></button>
+                <button class="minus-product" role="button" aria-label="장바구니 수량 빼기"></button>
                 <div class="product-total-count">1</div>
-                <button class="plus-product"></button>
+                <button class="plus-product" role="button" aria-label="장바구니 수량 담기"></button>
               </div>
             </div>
           </div>
@@ -455,12 +480,10 @@
           <div class="customer-service">
             <h2>고객행복센터</h2>
             <strong>1644-1107<span>월~토요일 오전 7시 - 오후 6시</span></strong>
-
             <!-- customer-service > inquiry start -->
             <ul class="inquiry">
               <li>
                 <button>카카오톡 문의</button>
-
                 <p>
                   월~토요일 | 오전 7시 - 오후 6시<br />
                   일/ 공휴일 | 오전 7시 - 오후 1시
@@ -509,13 +532,12 @@
             </ul>
             <!-- about > footer-navigation end -->
             <!-- about > area start -->
-            <ul class="area">
+            <address class="area">
               법인명 (상호) : 주식회사 컬리
               <span></span>
               사업자등록번호 : 261-81-23567
               <span></span>
-              <a href="mailto:help@karlycorp.com">사업자정보 확인</a
-              ><br />
+              <a href="mailto:help@karlycorp.com">사업자정보 확인</a><br />
               통신판매업 : 제 2018-서울강남-01646 호
               <span></span>
               개인정보보호책임자 : 이원준<br />
@@ -525,13 +547,11 @@
               입점문의 : 입정문의하기
               <span></span>
               제휴문의 :
-              <a href="mailto:business@karlycorp.com">business@karlycorp.com</a
-              ><br />
+              <a href="mailto:business@karlycorp.com">business@karlycorp.com</a><br />
               채용문의 :
-              <a href="mailto:help@karlycorp.com">recruit@karlycorp.com</a
-              ><br />
+              <a href="mailto:help@karlycorp.com">recruit@karlycorp.com</a><br />
               팩스 : 070 - 7500 - 6098
-            </ul>
+            </address>
             <!-- about > area end -->
             <!-- about > sns start -->
             <ul class="sns">
@@ -568,22 +588,30 @@
         <!-- footer-top end-->
         <!-- footer-middle start -->
         <div class="footer-middle">
-          <button class="lsms">
-            <img src="/client/assets/footer/middle_icon/logo_isms.svg" alt="isms 로고" />
-            <p>[인증범위] 마켓칼리 쇼핑몰 서비스 개발 운영<br />(심사받지 않은 물리적 인프라 제외)<br />[유효기간] 2022.01.19 ~ 2025.01.18</p>
-          </button>
-          <button class="privacy">
-            <img src="/client/assets/footer/middle_icon/logo_privacy.svg" alt="privacy 로고" />
-            <p>개인정보보호 우수 웹사이트<br />개인정보처리시스템 인증 (ePRIVACY PLUS)</p>
-          </button>
-          <button class="tosspayments">
-            <img src="/client/assets/footer/middle_icon/logo_tosspayments.svg" alt="tosspayments 로고" />
-            <p>토스페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.</p>
-          </button>
-          <button class="wooriBank">
-            <img src="/client/assets/footer/middle_icon/logo_wooriBank.svg" alt="wooriBank 로고" />
+          <div class="lsms">
+            <a href="https://res.kurly.com/kurly/img/2022/isms_220310.png" target="_blank"><img src="/client/assets/footer/middle_icon/logo_isms.svg" alt="isms 인증서" /></a>
+            <div class="description">
+              <p>[인증범위] 마켓칼리 쇼핑몰 서비스 개발 운영</p>
+              <p>(심사받지 않은 물리적 인프라 제외)</p>
+              <p>[유효기간] 2022.01.19 ~ 2025.01.18</p>
+            </div>
+          </div>
+          <div class="privacy">
+            <a href="https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=EP&certNum=2022-EP-R002" target="_blank"><img src="/client/assets/footer/middle_icon/logo_privacy.svg" alt="eprivacy 인증서" /></a>
+            <div class="description">
+              <p>개인정보보호 우수 웹사이트<br />개인정보처리시스템 인증 (ePRIVACY PLUS)</p>
+            </div>
+          </div>
+          <div class="tosspayments">
+            <a href="https://pgweb.uplus.co.kr/ms/escrow/s_escrowYn.do?mertid=go_thefarmers" target="_blank"><img src="/client/assets/footer/middle_icon/logo_tosspayments.svg" alt="tosspayments 구매 안전 서비스 확인" /></a>
+            <div class="description">
+              <p>토스페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="wooriBank">
+            <a href="https://res.kurly.com/kurly/img/2022/woori_popup_v2.png" target="_blank"><img src="/client/assets/footer/middle_icon/logo_wooriBank.svg" alt="우리은행 지급 보증서" /></a>
             <p>고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
-          </button>
+          </div>
         </div>
         <!-- footer-middle end -->
       </div>

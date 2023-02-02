@@ -21,8 +21,8 @@ const swiper1 = new Swiper(".swiper-1", {
     prevEl: ".swiper1-button-prev",
   },
   a11y: {
-    prevSlideMessage: "메인 배너 다음으로 넘기기",
-    nextSlideMessage: "메인 배너 이전으로 넘기기",
+    prevSlideMessage: "메인 배너 이전으로 넘기기",
+    nextSlideMessage: "메인 배너 다음으로 넘기기",
     // slideLabelMessage: "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
   },
 });
