@@ -82,8 +82,8 @@
           <div class="review-option">
             <p class="review-count" tabindex="0">총 2개</p>
             <ul class="review-array">
-              <li class="review-array-item review-array-selected" tabindex="0" aria-selected="true">추천순</li>
-              <li class="review-array-item" tabindex="0" aria-selected="false">최근 등록순</li>
+              <li class="review-array-item review-array-selected" tabindex="0">추천순</li>
+              <li class="review-array-item" tabindex="0">최근 등록순</li>
             </ul>
           </div>
           <ul class="review-list" tabindex="0" aria-label="후기 목록">
@@ -131,6 +131,12 @@
                 <p class="review-date">2022.11.10</p>
               </div>
             </li>
+            <!-- 후기가 비어있을 때 시작 (display:none 해제 하시면 보입니다)-->
+            <li class="review-empty" aria-label="후기 없음" tabindex="0">
+              <img src="./../../assets/product-detail/Notice.png" class="review-empty-icon" aria-hidden="true" alt="" />
+              <p class="review-empty-txt">따끈한 첫 후기를 기다리고있어요.</p>
+            </li>
+            <!-- 후기가 비어있을 때 끝 -->
           </ul>
           <div class="slide-btn-wrap">
             <button class="slide-btn slide-btn-prev" type="button" aria-label="이전 후기 목록 보기 버튼"></button>

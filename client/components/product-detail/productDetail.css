@@ -340,6 +340,7 @@
   border-top: 1px solid #000000;
   margin-top: 16px;
   margin-bottom: 16px;
+  height: 578px;
 }
 
 .review-notice {
@@ -438,6 +439,21 @@
   font-size: 12px;
   line-height: 18px;
   color: #898989;
+}
+
+.review-empty {
+  padding: 20px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-100);
+  display: none;
+}
+
+.review-empty-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
 }
 
 .slide-btn {
