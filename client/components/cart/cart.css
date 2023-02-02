@@ -154,7 +154,8 @@ h2 {
   padding: 2px 8px;
   text-align: center;
   border-radius: 1px;
-  background-color: var(--accent-yellow);
+  /* background-color: var(--accent-yellow); */
+  background-color: #c85028;
   color: var(--white);
   margin-right: var(--spacing-xs);
 }
@@ -175,6 +176,6 @@ h2 {
   align-items: flex-start;
   padding: 0px;
   line-height: 1.5;
-  color: var(--gray-400);
+  color: var(--gray-600);
   font-size: var(--text-xs);
 }
