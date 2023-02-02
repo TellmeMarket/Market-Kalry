@@ -1,5 +1,7 @@
+import { getNode, getNodes } from "/client/lib/index.js";
+
 // header sticky!
-const $nav = document.querySelector(".header-nav");
+const $nav = getNode(".header-nav");
 const navHandler = (_) => {
   $nav.classList.toggle("active", pageYOffset >= 92);
   if ($nav.classList.contains("active")) [...$nav.children].forEach((el) => el.classList.add("active"));
@@ -7,6 +9,7 @@ const navHandler = (_) => {
 };
 addEventListener("scroll", navHandler);
 
+// main-banner swiper
 const swiper1 = new Swiper(".swiper-1", {
   autoplay: {
     speed: 500,
@@ -23,3 +26,13 @@ const swiper1 = new Swiper(".swiper-1", {
     // slideLabelMessage: "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
   },
 });
+
+// const cartIcon = getNode(".icon-cart");
+// const cartShadow = getNode(".add-cart-shadow");
+
+// function popUp() {
+//   console.log("test");
+//   cartIcon.classList.add("active");
+// }
+
+// cartIcon.addEventListener("click", popUp);
