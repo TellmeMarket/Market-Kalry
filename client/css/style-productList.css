@@ -246,7 +246,7 @@ label {
   font-size: 12px;
   line-height: 160%;
   color: var(--gray-400);
-  text-decoration: line-through;
+  /* text-decoration: line-through; */
 }
 
 .described {
