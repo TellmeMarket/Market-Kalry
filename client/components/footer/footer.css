@@ -197,7 +197,7 @@ button {
 
 /* footer-bottom */
 .footer-bottom {
-  max-width: 1920px;
+  max-width: 100%;
   height: 108px;
   background: var(--gray-50);
   text-align: center;
