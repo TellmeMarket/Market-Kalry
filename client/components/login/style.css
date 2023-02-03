@@ -2,6 +2,7 @@
 @import url(../../css/reset.css);
 @import url(../../css/a11y.css);
 @import url(../../css/theme.css);
+@import url(../../css/headerFooter.css);
 
 * {
   box-sizing: border-box;
@@ -11,6 +12,7 @@
   text-align: center;
   font: 800 var(--spacing-md) / var(--spacing-md) "Pretendard";
   text-align: center;
+  margin-top: 40px;
   margin-bottom: 44px;
 }
 
@@ -23,6 +25,25 @@
   display: flex;
   flex-flow: column nowrap;
 }
+
+#search{
+  border:none;
+  margin-bottom: 0;
+}
+
+div.header-search-sticky input{
+    width: 110px;
+    height: 19px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-size: var(--text-xs);
+    line-height: 16px;
+    color: var(--gray-400);
+    font-weight: 400;
+    padding: 0;
+}
+
 
 input[type="text"],
 input[type="password"] {

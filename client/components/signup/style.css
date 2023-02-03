@@ -2,6 +2,7 @@
 @import url(../../css/reset.css);
 @import url(../../css/a11y.css);
 @import url(../../css/theme.css);
+@import url(../../css/headerFooter.css);
 
 * {
   box-sizing: border-box;
@@ -9,6 +10,19 @@
 
 main {
   margin-top: 50px;
+}
+
+div.header-search-sticky input{
+    width: 110px;
+    height: 19px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-size: var(--text-xs);
+    line-height: 16px;
+    color: var(--gray-400);
+    font-weight: 400;
+    padding: 0;
 }
 
 .title {
@@ -19,6 +33,10 @@ main {
   letter-spacing: -1px;
   text-align: center;
   color: var(--content);
+}
+
+#search{
+  border:none;
 }
 
 .inner {
