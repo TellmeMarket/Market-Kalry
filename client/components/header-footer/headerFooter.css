@@ -23,6 +23,7 @@ button {
 header {
   max-width: 100%;
 }
+
 /* top-banner start */
 .top-banner {
   height: 42px;
@@ -52,6 +53,21 @@ header {
   right: 0;
   cursor: pointer;
 }
+
+/* 새로추가된거 */
+.top-banner.active {
+  margin-top: 0;
+}
+
+.top-banner {
+  height: 42px;
+  background: var(--primary);
+  text-align: center;
+  transition: margin 0.4s linear 0s;
+  /* 수정된 부분 */
+  margin-top: -42px;
+}
+
 /* top-banner end */
 .header-inner {
   width: 1050px;
