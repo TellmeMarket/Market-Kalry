@@ -16,9 +16,12 @@
   font-family: "Pretendard", "malgun gothic", dotum, sans-serif;
 }
 
-body {
+.inner {
   max-width: 1050px;
-  margin: 0 auto;
+  margin: 44px auto 0 auto;
+}
+main {
+  margin-top: 44px;
 }
 .product-information {
   display: flex;
@@ -231,7 +234,7 @@ body {
 /* -------------------------------------------------------------------------- */
 .detail-lnb {
   position: sticky;
-  top: 0;
+  top: 52px;
   z-index: 99;
 }
 
@@ -850,6 +853,7 @@ body {
 /* -------------------------------------------------------------------------- */
 /* 공통 레이아웃 popup */
 .popup {
+  display: none;
   padding: 32px;
   border-radius: 16px;
   background: var(--white);
