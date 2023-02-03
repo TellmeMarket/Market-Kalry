@@ -1,0 +1,210 @@
+@import url(../../css/reset.css);
+@import url(../../css/a11y.css);
+@import url(../../css/theme.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+}
+
+a {
+  color: var(--content);
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* footer-inner */
+.footer-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  color: var(--content);
+}
+
+/* inner > footer-top */
+.footer-top {
+  height: 417px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 28px;
+}
+
+/* footer-top > customer-service */
+.customer-service {
+  width: 477px;
+  height: 357px;
+  font-weight: 400;
+  flex: none;
+}
+
+.customer-service h2 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.customer-service strong {
+  font-size: 37px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-top: var(--spacing-base);
+  line-height: 1.4;
+}
+
+.customer-service strong span {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-left: var(--spacing-xs);
+  line-height: 1.5;
+}
+
+/* customer-service > inquiry */
+.inquiry {
+  margin-top: var(--spacing-base);
+  height: 188px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inquiry > li {
+  height: 52px;
+  display: flex;
+  align-items: center;
+}
+
+.inquiry button {
+  border: 1px solid var(--gray-200);
+  width: 140px;
+  height: 40px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.inquiry p {
+  height: 52px;
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+/* customer-service > mail */
+.mail {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  margin-top: var(--spacing-base);
+}
+
+.mail a {
+  color: var(--primary);
+}
+
+/* footer-top > about */
+.about {
+  width: 486px;
+  height: 226px;
+  font-weight: 400;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  flex: none;
+}
+
+.footer-navigation {
+  font-size: var(--text-base);
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.6;
+}
+
+/* footer-top > area */
+.area {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+}
+
+.area a {
+  color: var(--primary);
+}
+
+.area span::before {
+  content: url(/client/assets/footer/about_bar.svg);
+  vertical-align: middle;
+  padding: 0 var(--spacing-xs);
+}
+
+/* footer-top > sns */
+.sns {
+  width: 230px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sns img {
+  height: 30px;
+}
+
+/* inner > footer-middle */
+.footer-middle {
+  height: 104px;
+  border-top: 1px solid var(--gray-100);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-middle button {
+  height: 48px;
+  display: flex;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: left;
+  margin-top: var(--spacing-lg);
+  letter-spacing: -0.3px;
+  cursor: pointer;
+  flex: none;
+}
+
+.footer-middle button p {
+  padding-left: var(--spacing-xs);
+  color: var(--content);
+}
+
+.lsms {
+  width: 217px;
+}
+
+.privacy {
+  width: 222px;
+}
+
+.tosspayments {
+  width: 270px;
+}
+
+.wooriBank {
+  width: 283px;
+}
+
+/* footer-bottom */
+.footer-bottom {
+  max-width: 100%;
+  height: 108px;
+  background: var(--gray-50);
+  text-align: center;
+  font-size: 10px;
+  line-height: 16px;
+  color: var(--gray-400);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
