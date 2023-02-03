@@ -45,6 +45,7 @@ header {
 .top-banner-text span {
   font-weight: var(--weight-md);
 }
+
 .top-banner-text button {
   position: absolute;
   top: 0;
