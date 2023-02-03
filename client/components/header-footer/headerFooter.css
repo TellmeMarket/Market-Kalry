@@ -657,7 +657,8 @@ nav.active::after {
 .area span::before {
   padding: 0 var(--spacing-xs);
   vertical-align: middle;
-  content: url(/client/assets/footer/about_bar.svg);
+  content: url()
+  content: url(./../../assets/footer/about_bar.svg);
 }
 /* footer-top > sns */
 .sns {
