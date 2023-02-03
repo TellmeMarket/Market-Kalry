@@ -1,25 +1,32 @@
 import { getNode } from "/client/lib/index.js";
 
 // header sticky!
+const $banner = getNode(".top-banner");
 const $nav = getNode(".header-nav");
-const navHandler = (_) => {
-  $nav.classList.toggle("active", pageYOffset >= 92);
-  if ($nav.classList.contains("active")) [...$nav.children].forEach((el) => el.classList.add("active"));
-  else [...$nav.children].forEach((el) => el.classList.remove("active"));
-};
-addEventListener("scroll", navHandler);
+
+const headerSticky = ((_) => {
+  let base = (localStorage.getItem("hide-banner") ? $banner.offsetHeight : 0) + getNode(".header-top").offsetHeight + 1;
+
+  return () => {
+    $nav.classList.toggle("active", (pageYOffset || scrollY) >= base);
+    if ($nav.classList.contains("active")) [...$nav.children].forEach((el) => el.classList.add("active"));
+    else [...$nav.children].forEach((el) => el.classList.remove("active"));
+  };
+})();
+headerSticky();
 
 // hideBanner Part
-const $bannder = getNode(".top-banner");
-localStorage.getItem("hide-banner") ? ($bannder.style.display = "none") : $bannder.classList.add("active");
+localStorage.getItem("hide-banner") ? ($banner.style.display = "none") : $banner.classList.add("active");
 
 const bannerHide = (e) => {
   e.preventDefault();
-  !localStorage.getItem("hide-banner") && e.target.closest(".close-button") && $bannder.classList.remove("active");
+  !localStorage.getItem("hide-banner") && e.target.closest(".close-button") && $banner.classList.remove("active");
   localStorage.setItem("hide-banner", "hide");
 };
-addEventListener("scroll", navHandler);
-$bannder.addEventListener("click", bannerHide);
+
+// eventList
+addEventListener("scroll", headerSticky);
+$banner.addEventListener("click", bannerHide);
 
 // main-banner swiper
 const swiper1 = new Swiper(".swiper-1", {
