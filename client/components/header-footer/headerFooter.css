@@ -323,9 +323,11 @@ header nav::after {
 .category-list > li:hover a {
   color: var(--primary);
 }
+
 .category:hover .category-list {
   display: block;
 }
+
 .category-list {
   width: 247px;
   height: 800px;
@@ -337,6 +339,7 @@ header nav::after {
   display: none;
   background: #fff;
 }
+
 .category-list li {
   height: 40px;
   background-repeat: no-repeat;

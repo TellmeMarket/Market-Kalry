@@ -35,7 +35,6 @@
   --spacing-md: 20px;
   --spacing-lg: 24px;
   --spacing-xl: 32px;
-
   --text-xs: 12px;
   --text-sm: 14px;
   --text-base: 16px;
@@ -43,4 +42,8 @@
   --text-lg: 20px;
   --text-xl: 24px;
   --text-xxl: 28px;
+
+  /* font-weight */
+  --weight-base: 400;
+  --weight-md: 600;
 }
