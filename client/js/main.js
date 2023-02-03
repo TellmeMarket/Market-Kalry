@@ -1,13 +1,13 @@
 import { getNode } from "/client/lib/index.js";
 
 // header sticky!
-const $banner = getNode(".top-banner");
-const $nav = getNode(".header-nav");
+const $banner = document.querySelector(".top-banner");
+const $nav = document.querySelector(".header-nav");
 
 const headerSticky = ((_) => {
-  let base = (localStorage.getItem("hide-banner") ? $banner.offsetHeight : 0) + getNode(".header-top").offsetHeight + 1;
-
   return () => {
+    let base = (localStorage.getItem("hide-banner") ? 0 : $banner.offsetHeight) + document.querySelector(".header-top").offsetHeight;
+    console.log(base);
     $nav.classList.toggle("active", (pageYOffset || scrollY) >= base);
     if ($nav.classList.contains("active")) [...$nav.children].forEach((el) => el.classList.add("active"));
     else [...$nav.children].forEach((el) => el.classList.remove("active"));
