@@ -38,15 +38,11 @@ header {
   line-height: 42px;
   font-weight: var(--weight-base);
   position: relative;
-}
-
-.top-banner-text p {
   color: var(--white);
 }
 
 .top-banner-text span {
   font-weight: var(--weight-md);
-  color: var(--white);
 }
 .top-banner-text button {
   width: 42px;
@@ -94,12 +90,12 @@ header {
   align-items: center;
   position: relative;
 }
+
 h1 {
   display: flex;
   align-items: center;
-  font-size: var(--text-md);
-  font-weight: var(--weight-md);
 }
+
 h1 .logo-img {
   margin-right: var(--spacing-sm);
 }
@@ -107,6 +103,8 @@ h1 > button {
   cursor: pointer;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-size: var(--text-md);
+  font-weight: var(--weight-md);
 }
 h1 img:not(:first-child) {
   margin: 0 var(--spacing-sm);
@@ -119,7 +117,7 @@ h1 img:not(:first-child) {
   position: relative;
 }
 .beauty-btn::after {
-  content: url(/client/assets/header/new1.svg);
+  content: url(./../../assets/header/new1.svg);
   position: absolute;
   top: -10%;
   right: -10px;
@@ -159,7 +157,7 @@ h1 img:not(:first-child) {
 .header-search .search-btn {
   width: 30px;
   height: 30px;
-  background-image: url(/client/assets/header/Vector.svg);
+  background-image: url(./../../assets/header/Vector.svg);
   background-repeat: no-repeat;
   background-position: 50%;
   margin-right: var(--spacing-md);
@@ -294,7 +292,7 @@ header nav {
 }
 header nav::after {
   content: "";
-  width: 100vw;
+  width: 100%;
   height: 100%;
   position: absolute;
   left: 50%;
@@ -317,7 +315,7 @@ header nav::after {
 .category h2 a {
   display: inline-block;
   padding: 18px 10px 18px 28px;
-  background: url(/client/assets/header/Hamburger.svg) 0 18px no-repeat;
+  background: url(./../../assets/header/Hamburger.svg) 0 18px no-repeat;
 }
 .category:hover h2,
 .category-list > li:hover a {
@@ -331,7 +329,7 @@ header nav::after {
 .category-list {
   width: 247px;
   height: 800px;
-  overflow: scroll;
+  overflow-y: scroll;
   border: 1px solid #ddd;
   position: absolute;
   top: 100%;
@@ -361,70 +359,70 @@ header nav::after {
   /* fill: var(--primary) */
 }
 .category-list .list1 {
-  background-image: url(/client/assets/header/category/Type=Gift.svg);
+  background-image: url(./../../assets/header/category/Type=Gift.svg);
 }
 .category-list .list2 {
-  background-image: url(/client/assets/header/category/Type=_Vegetable.svg);
+  background-image: url(./../../assets/header/category/Type=_Vegetable.svg);
 }
 .category-list .list3 {
-  background-image: url(/client/assets/header/category/Type=Fruit.svg);
+  background-image: url(./../../assets/header/category/Type=Fruit.svg);
 }
 .category-list .list4 {
-  background-image: url(/client/assets/header/category/Type=SeaFood.svg);
+  background-image: url(./../../assets/header/category/Type=SeaFood.svg);
 }
 .category-list .list5 {
-  background-image: url(/client/assets/header/category/Type=Meet.svg);
+  background-image: url(./../../assets/header/category/Type=Meet.svg);
 }
 .category-list .list6 {
-  background-image: url(/client/assets/header/category/Type=Cook.svg);
+  background-image: url(./../../assets/header/category/Type=Cook.svg);
 }
 .category-list .list7 {
-  background-image: url(/client/assets/header/category/Type=_Salad.svg);
+  background-image: url(./../../assets/header/category/Type=_Salad.svg);
 }
 .category-list .list8 {
-  background-image: url(/client/assets/header/category/Type=Oil.svg);
+  background-image: url(./../../assets/header/category/Type=Oil.svg);
 }
 .category-list .list9 {
-  background-image: url(/client/assets/header/category/Type=Coffee.svg);
+  background-image: url(./../../assets/header/category/Type=Coffee.svg);
 }
 .category-list .list10 {
-  background-image: url(/client/assets/header/category/Type=Snack.svg);
+  background-image: url(./../../assets/header/category/Type=Snack.svg);
 }
 .category-list .list11 {
-  background-image: url(/client/assets/header/category/Type=Bread.svg);
+  background-image: url(./../../assets/header/category/Type=Bread.svg);
 }
 .category-list .list12 {
-  background-image: url(/client/assets/header/category/Type=Health.svg);
+  background-image: url(./../../assets/header/category/Type=Health.svg);
 }
 .category-list .list13 {
-  background-image: url(/client/assets/header/category/Type=Wine.svg);
+  background-image: url(./../../assets/header/category/Type=Wine.svg);
 }
 .category-list .list14 {
-  background-image: url(/client/assets/header/category/Type=_Traditional\ Liquor.svg);
+  background-image: url(./../../assets/header/category/Type=_Traditional\ Liquor.svg);
 }
 .category-list .list15 {
-  background-image: url(/client/assets/header/category/Type=_Detergent.svg);
+  background-image: url(./../../assets/header/category/Type=_Detergent.svg);
 }
 .category-list .list16 {
-  background-image: url(/client/assets/header/category/Type=Cook.svg);
+  background-image: url(./../../assets/header/category/Type=Cook.svg);
 }
 .category-list .list17 {
-  background-image: url(/client/assets/header/category/Type=shampoo.svg);
+  background-image: url(./../../assets/header/category/Type=shampoo.svg);
 }
 .category-list .list18 {
-  background-image: url(/client/assets/header/category/Type=Food.svg);
+  background-image: url(./../../assets/header/category/Type=Food.svg);
 }
 .category-list .list19 {
-  background-image: url(/client/assets/header/category/Type=HomeAppliances.svg);
+  background-image: url(./../../assets/header/category/Type=HomeAppliances.svg);
 }
 .category-list .list20 {
-  background-image: url(/client/assets/header/category/Type=Dog.svg);
+  background-image: url(./../../assets/header/category/Type=Dog.svg);
 }
 .category-list .list21 {
-  background-image: url(/client/assets/header/category/Type=Baby.svg);
+  background-image: url(./../../assets/header/category/Type=Baby.svg);
 }
 .category-list .list22 {
-  background-image: url(/client/assets/header/category/Type=Travel.svg);
+  background-image: url(./../../assets/header/category/Type=Travel.svg);
 }
 /* category end */
 /* menu start */
@@ -492,7 +490,7 @@ header nav::after {
 .header-search-sticky .search-btn {
   width: 16px;
   height: 16px;
-  background: url(/client/assets/header/Vector.svg) no-repeat center/cover;
+  background: url(./../../assets/header/Vector.svg) no-repeat center/cover;
   margin-right: var(--spacing-md);
   cursor: pointer;
 }
