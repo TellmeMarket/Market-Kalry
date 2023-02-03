@@ -168,6 +168,7 @@ label {
   float: right;
   display: flow-root;
 }
+
 .menu-button {
   float: left;
 }
@@ -178,6 +179,10 @@ label {
   color: var(--gray-300);
   padding: 0;
   margin: 0 8px;
+}
+
+.menu-button:last-child button {
+  margin-right: 0;
 }
 
 .menu-button::after {
@@ -197,7 +202,7 @@ label {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 18px;
-  margin: 24px;
+  margin-bottom: 24px;
 }
 
 .product {
@@ -226,8 +231,22 @@ label {
   color: var(--gray-400);
 }
 
+.info {
+  margin-top: 16px;
+}
+
+.info p {
+  margin-bottom: 8px;
+}
+
 .info h4 {
   line-height: 160%;
+  margin-bottom: 8px;
+}
+
+.info s {
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
 .price {
@@ -246,7 +265,6 @@ label {
   font-size: 12px;
   line-height: 160%;
   color: var(--gray-400);
-  /* text-decoration: line-through; */
 }
 
 .described {
@@ -255,7 +273,7 @@ label {
   color: var(--gray-400);
 }
 
-/* 페이지 이동 버튼 */
+/* page navigation button */
 .page-navigation {
   height: 70px;
   position: relative;
