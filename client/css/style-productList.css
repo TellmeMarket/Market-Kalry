@@ -96,6 +96,10 @@ button {
   content: '';
 }
 
+.accordian-head summary::-webkit-details-marker{
+  display: none;
+}
+
 .accordian-head button {
   width: 220px;
   font-size: var(--text-xs);
