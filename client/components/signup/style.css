@@ -9,6 +9,7 @@
 }
 
 main {
+  width: 100%;
   margin-top: 50px;
 }
 
@@ -73,6 +74,15 @@ tr > th {
 .sign > tbody > tr > td {
   display: inline-flex;
   align-items: center;
+  position: relative;
+}
+
+.sign > tbody > tr > td > p {
+  position: absolute;
+  left: 0;
+  bottom: -40%;
+  font-size: 12px;
+  color:red;
 }
 
 /*   ( * ) <-  */
@@ -141,7 +151,7 @@ button[type="submit"] {
 .sign > tbody > tr {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 16px 20px;
 }
 
 /* 주소검색 */
