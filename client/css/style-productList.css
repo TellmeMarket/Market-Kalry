@@ -156,12 +156,12 @@ label {
 }
 
 /* menu */
-.menu {
+.product-list-menu {
   padding-bottom: var(--spacing-md);
   display: flow-root;
 }
 
-.menu span {
+.product-list-menu span {
   line-height: 150%;
   font-weight: 600;
 }
