@@ -312,7 +312,8 @@ h1 img:not(:first-child) {
   background: url("../../assets/header/CartPrimary.svg");
 }
 
-.search-icon-cart span {
+.search-icon-cart-add {
+  display: none;
   position: absolute;
   right: -4px;
   top: -1px;
@@ -329,6 +330,11 @@ h1 img:not(:first-child) {
   white-space: nowrap;
   cursor: pointer;
 }
+
+.search-icon-cart-add.active {
+  display: block;
+}
+
 /* search-icon end */
 header nav {
   /* height: 52px; */
@@ -613,7 +619,8 @@ nav.active {
   background: url("../../assets/header/CartPrimary.svg");
 }
 
-.search-icon2-cart span {
+.search-icon2-cart-add {
+  display: none;
   position: absolute;
   right: -4px;
   top: -1px;
@@ -629,6 +636,10 @@ nav.active {
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
+}
+
+.search-icon2-cart-add.active {
+  display: block;
 }
 
 .header-search-sticky.active {

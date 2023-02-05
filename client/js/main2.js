@@ -14,7 +14,18 @@ function click() {
 // 취소 버튼을 누르면 다시 사라지게 하기 (.cart-cancel)
 const $cartCancel = document.querySelector(".cart-cancel");
 
-$cartCancel.addEventListener("click", function () {
+$cartCancel.addEventListener("click", close);
+
+function close() {
   document.querySelector(".add-cart-shadow").classList.remove("active");
   document.querySelector(".add-cart").classList.remove("active");
+}
+
+// 장바구니 담기 버튼 (.cart-add) 누르면 다시 사라지게 하고, 장바구니아이콘에 숫자 올라가게 하기
+// .search-icon-cart span.active
+// .search-icon2-cart span.active
+
+const $cartAddBtn = document.querySelector(".cart-add");
+$cartAddBtn.addEventListener("click", function () {
+  close();
 });
