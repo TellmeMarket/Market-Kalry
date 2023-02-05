@@ -350,9 +350,13 @@ header nav::after {
 .category h2 a {
   display: inline-block;
   padding: 18px 10px 18px 28px;
-  background: url(./../../assets/header/Hamburger.svg) 0 18px no-repeat;
+  background: url("./../../assets/header/Hamburger.svg") 0 18px no-repeat;
 }
-.category:hover h2,
+.category:hover h2 a {
+  color: var(--primary);
+  background: url("./../../assets/header/HamburgerPrimary.svg") 0 18px no-repeat;
+}
+
 .category-list > li:hover a {
   color: var(--primary);
 }
