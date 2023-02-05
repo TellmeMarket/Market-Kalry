@@ -1,5 +1,5 @@
 {
-  "name": "Vanilla Project",
+  "name": "Vanilla-Project",
   "version": "1.0.0",
   "description": "멋쟁이 사자처럼 바닐라 프로젝트",
   "main": "main.js",
@@ -17,5 +17,10 @@
     "함수형 프로그래밍"
   ],
   "author": "담당자",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.8.3"
+  }
 }
