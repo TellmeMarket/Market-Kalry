@@ -22,10 +22,12 @@ function close() {
 }
 
 // 장바구니 담기 버튼 (.cart-add) 누르면 다시 사라지게 하고, 장바구니아이콘에 숫자 올라가게 하기
-// .search-icon-cart span.active
-// .search-icon2-cart span.active
+// .search-icon-cart-add.active
+// .search-icon2-cart-add.active
 
 const $cartAddBtn = document.querySelector(".cart-add");
 $cartAddBtn.addEventListener("click", function () {
   close();
+  document.querySelector(".search-icon-cart-add").classList.add("active");
+  document.querySelector(".search-icon2-cart-add").classList.add("active");
 });
