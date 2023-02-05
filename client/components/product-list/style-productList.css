@@ -136,7 +136,7 @@ input[type="checkbox"]::after {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: var(--white) url(../assets/icons/Input/isChecked=false.svg) no-repeat center/cover;
+  background: var(--white) url(/client/assets/icons/Input/isChecked=false.svg) no-repeat center/cover;
   width: 23px;
   height: 23px;
   vertical-align: -6px;
@@ -144,7 +144,7 @@ input[type="checkbox"]::after {
 }
 
 input[type="checkbox"]:checked::after {
-  background: url(../assets/icons/Input/isChecked=true.png) no-repeat center/cover;
+  background: url(/client/assets/icons/Input/isChecked=true.png) no-repeat center/cover;
 }
 
 label {
@@ -159,7 +159,7 @@ label {
   width: 783px;
 }
 
-/* menu */
+/* product-menu */
 .product-list-menu {
   padding-bottom: var(--spacing-md);
   display: flow-root;
@@ -201,6 +201,10 @@ label {
 
 .menu-button:last-child::after{
   display: none;
+}
+
+.menu-button-list .is-active button{
+  color: var(--black);
 }
 
 /* list */
