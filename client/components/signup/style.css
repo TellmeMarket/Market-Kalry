@@ -4,11 +4,16 @@
 @import url(../../css/theme.css);
 @import url(../../css/headerFooter.css);
 
-* {
+*,
+:after,
+:before {
   box-sizing: border-box;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
 }
 
 main {
+  width: 100%;
   margin-top: 50px;
 }
 
@@ -28,7 +33,6 @@ div.header-search-sticky input{
 .title {
   text-align: center;
   font: 600 28px / 1 "Pretendard";
-  font-size: 28px;
   margin-bottom: 50px;
   letter-spacing: -1px;
   text-align: center;
@@ -73,6 +77,15 @@ tr > th {
 .sign > tbody > tr > td {
   display: inline-flex;
   align-items: center;
+  position: relative;
+}
+
+.sign > tbody > tr > td > p {
+  position: absolute;
+  left: 0;
+  bottom: -40%;
+  font-size: 12px;
+  color:red;
 }
 
 /*   ( * ) <-  */
@@ -141,7 +154,7 @@ button[type="submit"] {
 .sign > tbody > tr {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 16px 20px;
 }
 
 /* 주소검색 */
