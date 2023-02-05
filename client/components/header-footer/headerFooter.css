@@ -454,6 +454,12 @@ header nav::after {
   display: inline-block;
   padding: 10px;
 }
+
+.menu li:hover a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 /* menu end */
 /* notice start */
 .notice {
