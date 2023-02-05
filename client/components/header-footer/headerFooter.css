@@ -289,10 +289,28 @@ h1 img:not(:first-child) {
   height: 36px;
   vertical-align: middle;
 }
-.search-icon li:hover a img {
-  /* 색상 --primary 와 불일치한 상태 */
-  filter: invert(15%) sepia(30%) saturate(6904%) hue-rotate(274deg) brightness(88%) contrast(127%);
+
+.search-icon-location {
+  background: url("../../assets/header/Location.svg") 0 0;
 }
+.search-icon-location:hover {
+  background: url("../../assets/header/LocationPrimary.svg") 0 0;
+}
+
+.search-icon-heart {
+  background: url("../../assets/header/Heart.svg");
+}
+.search-icon-heart:hover {
+  background: url("../../assets/header/HeartPrimary.svg");
+}
+
+.search-icon-cart {
+  background: url("../../assets/header/Cart.svg");
+}
+.search-icon-cart:hover {
+  background: url("../../assets/header/CartPrimary.svg");
+}
+
 /* search-icon end */
 header nav {
   /* height: 52px; */
