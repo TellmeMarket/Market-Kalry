@@ -306,11 +306,29 @@ h1 img:not(:first-child) {
 
 .search-icon-cart {
   background: url("../../assets/header/Cart.svg");
+  position: relative;
 }
 .search-icon-cart:hover {
   background: url("../../assets/header/CartPrimary.svg");
 }
 
+.search-icon-cart span {
+  position: absolute;
+  right: -4px;
+  top: -1px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0px 5px;
+  border: 2px solid var(--white);
+  border-radius: 10px;
+  background-color: var(--primary);
+  font-size: 9px;
+  color: var(--white);
+  line-height: 15px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
 /* search-icon end */
 header nav {
   /* height: 52px; */
