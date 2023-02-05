@@ -291,10 +291,10 @@ h1 img:not(:first-child) {
 }
 
 .search-icon-location {
-  background: url("../../assets/header/Location.svg") 0 0;
+  background: url("../../assets/header/Location.svg");
 }
 .search-icon-location:hover {
-  background: url("../../assets/header/LocationPrimary.svg") 0 0;
+  background: url("../../assets/header/LocationPrimary.svg");
 }
 
 .search-icon-heart {
@@ -531,10 +531,11 @@ header nav::after {
 .header-search-sticky .search-btn {
   width: 16px;
   height: 16px;
-  background: url(./../../assets/header/Vector.svg) no-repeat center/cover;
+  background: url("./../../assets/header/Vector.svg") no-repeat center/cover;
   margin-right: var(--spacing-md);
   cursor: pointer;
 }
+
 /* nav.nav-sticky end */
 
 /* new */
@@ -560,6 +561,35 @@ nav.active {
   align-items: center;
   gap: 14px;
 }
+
+.search-icon2 li a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+}
+
+.search-icon2-location {
+  background: url("../../assets/header/Location.svg");
+}
+.search-icon2-location:hover {
+  background: url("../../assets/header/LocationPrimary.svg");
+}
+
+.search-icon2-heart {
+  background: url("../../assets/header/Heart.svg");
+}
+.search-icon2-heart:hover {
+  background: url("../../assets/header/HeartPrimary.svg");
+}
+
+.search-icon2-cart {
+  background: url("../../assets/header/Cart.svg");
+}
+.search-icon2-cart:hover {
+  background: url("../../assets/header/CartPrimary.svg");
+}
+
 .header-search-sticky.active {
   display: flex;
   z-index: 100;
