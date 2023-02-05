@@ -13,3 +13,8 @@ function click() {
 
 // 취소 버튼을 누르면 다시 사라지게 하기 (.cart-cancel)
 const $cartCancel = document.querySelector(".cart-cancel");
+
+$cartCancel.addEventListener("click", function () {
+  document.querySelector(".add-cart-shadow").classList.remove("active");
+  document.querySelector(".add-cart").classList.remove("active");
+});
