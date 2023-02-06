@@ -182,6 +182,7 @@ button {
   width: 55px;
   height: 55px;
   background: url("../assets/icons/Icon/cart.svg") 50% 50% no-repeat;
+  cursor: pointer;
 }
 
 .product-info {
@@ -511,6 +512,7 @@ button {
   width: 174px;
   height: 54px;
   outline-offset: var(--spacing-xxs);
+  cursor: pointer;
 }
 
 .cart-cancel {

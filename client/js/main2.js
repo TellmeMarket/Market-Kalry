@@ -19,6 +19,7 @@ $cartCancel.addEventListener("click", close);
 function close() {
   document.querySelector(".add-cart-shadow").classList.remove("active");
   document.querySelector(".add-cart").classList.remove("active");
+  document.body.style.overflow = "visible";
 }
 
 // 장바구니 담기 버튼 (.cart-add) 누르면 다시 사라지게 하고, 장바구니아이콘에 숫자 올라가게 하기
