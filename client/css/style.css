@@ -52,14 +52,7 @@ button {
 .product-swiper,
 .recent-product {
   position: relative;
-  width: 100%;
   height: 100%;
-}
-
-.swiper-slide {
-  overflow: hidden;
-  z-index: 10;
-  height: 370px;
 }
 
 .banner-img,
@@ -69,6 +62,11 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.recent-product-img {
+  width: 40px;
+  height: 51px;
 }
 
 .swiper1-button,
@@ -81,8 +79,8 @@ button {
   transform: translateY(-50%);
 }
 
-.swiper1-button-prev,
-.swiper1-button-next {
+.swiper1-button {
+  opacity: 0;
   top: 50%;
   background: url("../assets/icons/Icon/banner_arrow.svg") 50% 50% no-repeat;
   transition: all 0.5s ease 0s;
@@ -151,16 +149,22 @@ button {
   font-weight: 700;
 }
 
-.product-swiper {
-  z-index: 10;
+.today-recommend-contents {
+  position: relative;
   margin-top: 28px;
+}
+
+.product-swiper,
+.swiper-4 {
+  overflow: hidden;
+  z-index: 10;
 }
 
 .product-inner {
   display: flex;
+  width: 1050px;
   flex-direction: row;
-  justify-content: space-around;
-  gap: var(--spacing-base);
+  justify-content: flex-start;
 }
 
 .product {
@@ -224,6 +228,7 @@ button {
   font-size: var(--text-xs);
   margin-top: var(--spacing-xs);
   line-height: 160%;
+  text-decoration: line-through;
 }
 
 .product-button {
@@ -283,9 +288,6 @@ button {
 .swiper-4-wrapper {
   overflow: hidden;
   gap: var(--spacing-xxs);
-}
-
-.swiper-4-wrapper {
   width: 100%;
   height: 129px;
 }

@@ -24,7 +24,6 @@ function setCookie(name, value, day) {
 function getCookie(name) {
   const cookies = document.cookie.split(";");
   let cookieChecked = false;
-  console.log(cookies);
 
   cookies.forEach((el) => {
     if (el.includes(name)) cookieChecked = true;
@@ -53,7 +52,25 @@ $removeAd.addEventListener("click", clickCloseAD);
 $removeAdToday.addEventListener("click", clickRemoveAD);
 
 // main-banner swiper
-const swiper1 = new Swiper(".swiper-1", {
+const $mainBanner = document.querySelector(".main-banner");
+const $mainSwiperButton = document.querySelectorAll(".swiper1-button");
+
+function visibleButton() {
+  $mainSwiperButton.forEach((el) => {
+    el.style.opacity = 1;
+  });
+}
+
+function invisibleButton() {
+  $mainSwiperButton.forEach((el) => {
+    el.style.opacity = 0;
+  });
+}
+
+$mainBanner.addEventListener("mouseover", visibleButton);
+$mainBanner.addEventListener("mouseout", invisibleButton);
+
+const mainSwiper = new Swiper(".swiper-1", {
   autoplay: {
     speed: 500,
     disableOnInteraction: false,
@@ -70,11 +87,11 @@ const swiper1 = new Swiper(".swiper-1", {
   a11y: {
     prevSlideMessage: "메인 배너 이전으로 넘기기",
     nextSlideMessage: "메인 배너 다음으로 넘기기",
-    // slideLabelMessage: "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
   },
 });
 
-const $swiper = document.querySelector(".swiper2-wrapper");
+const $productSwiper1 = document.querySelector(".swiper2-wrapper");
+const $productSwiper2 = document.querySelector(".swiper3-wrapper");
 
 fetch(" http://localhost:3000/products")
   .then((res) => res.json())
@@ -82,10 +99,11 @@ fetch(" http://localhost:3000/products")
     let authors = data;
 
     authors.map((el) => {
+      let id = el.id;
       let name = el.name;
       let saleRatio = el.saleRatio !== 0 ? el.saleRatio * 100 + "%" : "";
-      let currentPrice = el.price;
-      let salePrice = el.salePrice;
+      let currentPrice = el.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 원";
+      let salePrice = el.salePrice !== 0 ? el.salePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 원" : "";
       let img = el.image.thumbnail;
       let alt = el.image.alt;
 
@@ -93,7 +111,7 @@ fetch(" http://localhost:3000/products")
         /* html */
         ` <div class="product swiper-slide">
                    <div class="product-visual">
-                     <a href="">
+                     <a href="./components/product-detail/productDetail.html"?id=${id}>
                        <img class="product-img" src="./assets/${img}" alt=${alt} />
                      </a>
                      <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기"></button>
@@ -102,14 +120,80 @@ fetch(" http://localhost:3000/products")
                      <h4 class="product-info-name">${name}</h4>
                      <div class="product-info-price">
                        <span class="product-sale">${saleRatio}</span>
-                       <span class="current-price">&nbsp;${currentPrice === salePrice ? currentPrice : salePrice}&nbsp;원</span>
+                       <span class="current-price">${saleRatio === "" ? currentPrice : "&nbsp;" + salePrice}</span>
                      </div>
-                     <span class="original-price">${currentPrice}</span>
+                     <span class="original-price">${saleRatio === "" ? salePrice : currentPrice}</span>
                    </div>
                  </div>
                  `;
-
-      $swiper.insertAdjacentHTML("beforeend", template);
+      $productSwiper1.insertAdjacentHTML("beforeend", template);
+      $productSwiper2.insertAdjacentHTML("beforeend", template);
     });
   })
   .catch((err) => console.log(err));
+
+// product swiper
+const productSwiper = new Swiper(".swiper-2", {
+  slidesPerView: 4,
+  spaceBetween: 16,
+  slidesPerGroup: 4,
+  loopFillGroupWithBlank: true,
+
+  navigation: {
+    nextEl: ".swiper2-button-next",
+    prevEl: ".swiper2-button-prev",
+  },
+  a11y: {
+    prevSlideMessage: "이 상품 어때요? 상품배너 이전으로 넘기기",
+    nextSlideMessage: "이 상품 어때요? 배너 다음으로 넘기기",
+  },
+  on: {
+    reachBeginning: function () {
+      console.log("시작");
+    },
+    reachEnd: function () {
+      console.log("끝");
+    },
+  },
+});
+
+const productSwiper2 = new Swiper(".swiper-3", {
+  slidesPerView: 4,
+  spaceBetween: 16,
+  slidesPerGroup: 4,
+  loopFillGroupWithBlank: true,
+  navigation: {
+    nextEl: ".swiper3-button-next",
+    prevEl: ".swiper3-button-prev",
+  },
+  a11y: {
+    prevSlideMessage: "놓치면 후회할 가격 상품배너 이전으로 넘기기",
+    nextSlideMessage: "놓치면 후회할 가격 상품배너 다음으로 넘기기",
+  },
+  on: {
+    reachBeginning: function () {
+      console.log("시작");
+    },
+    reachEnd: function () {
+      console.log("끝");
+    },
+  },
+});
+
+const $recentImage = document.querySelectorAll(".product-img-wrapper");
+$recentImage.forEach((el) => {
+  el.removeAttribute("style");
+  el.style.height = 51;
+});
+
+const recentSwiper = new Swiper(".swiper-4", {
+  direction: "vertical",
+  navigation: {
+    nextEl: ".swiper4-button-next",
+    prevEl: ".swiper4-button-prev",
+  },
+  a11y: {
+    prevSlideMessage: "놓치면 후회할 가격 상품배너 이전으로 넘기기",
+    nextSlideMessage: "놓치면 후회할 가격 상품배너 다음으로 넘기기",
+  },
+});
