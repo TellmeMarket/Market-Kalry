@@ -457,6 +457,7 @@ button {
   height: 30px;
   font-size: var(--text-base);
   outline-offset: var(--spacing-xxs);
+  cursor: pointer;
 }
 
 .minus-product {

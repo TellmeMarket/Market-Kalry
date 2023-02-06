@@ -48,3 +48,27 @@ $cartAddBtn.addEventListener("click", function () {
     $bubble2.classList.remove("remove");
   }, 3500);
 });
+
+// .minus-product & .plus-product 누르면 숫자 바뀌게
+const $plusBtn = document.querySelector(".plus-product");
+const $minusBtn = document.querySelector(".minus-product");
+
+const $totalCount = document.querySelector(".product-total-count");
+
+let num = 1;
+
+$plusBtn.addEventListener("click", function () {
+  num++;
+  console.log(num);
+  $totalCount.innerHTML = num;
+  console.log($totalCount);
+});
+$minusBtn.addEventListener("click", function () {
+  num--;
+  console.log(num);
+  $totalCount.innerHTML = num;
+  console.log($totalCount);
+});
+
+// 최소수량(1), 최대수량(10)
+// 금액 합계에도 반영하기
