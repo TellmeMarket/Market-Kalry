@@ -176,6 +176,10 @@ label {
   display: flow-root;
 }
 
+.menu-button-list .is-active button{
+  color: var(--black);
+}
+
 .menu-button {
   float: left;
 }
@@ -188,11 +192,12 @@ label {
   margin: 0 8px;
 }
 
-.menu-button:last-child button {
+.menu-button:last-child, .menu-button:first-child button {
   margin-right: 0;
+
 }
 
-.menu-button::after {
+.menu-button::before {
   content: '';
   display: inline-block;
   width: 1px;
@@ -200,12 +205,18 @@ label {
   background-color: var(--gray-300);
 }
 
-.menu-button:last-child::after{
+.menu-button:first-child::before{
   display: none;
 }
 
-.menu-button-list .is-active button{
-  color: var(--black);
+.menu-button:first-child::after {
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: 0 8px 0 5px;
+  vertical-align: -2px;
+  background: url(/client/assets/icons/Icon/question.svg) no-repeat center/cover;
 }
 
 /* list */
