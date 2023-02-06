@@ -1,6 +1,6 @@
-@import url(./reset.css);
-@import url(./theme.css);
-@import url(./a11y.css);
+@import url(/client/css/reset.css);
+@import url(/client/css/theme.css);
+@import url(/client/css/a11y.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 
 * {
@@ -33,6 +33,7 @@ button {
 /* inner */
 .list-title {
   margin-top: 50px;
+  max-width: 1050px;
   text-align: center;
   font-size: 21px;
   line-height: 150%;
@@ -115,7 +116,7 @@ button {
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: url(../assets/icons/Icon/Direction=Right.svg) no-repeat;
+  background: url(/client/assets/icons/Icon/Direction=Right.svg) no-repeat;
   vertical-align: -4px;
 }
 
@@ -144,7 +145,7 @@ input[type="checkbox"]::after {
 }
 
 input[type="checkbox"]:checked::after {
-  background: url(/client/assets/icons/Input/isChecked=true.png) no-repeat center/cover;
+  background: url(/client/assets/icons/Input/isChecked=true.svg) no-repeat center/cover;
 }
 
 label {
