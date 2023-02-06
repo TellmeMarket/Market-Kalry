@@ -97,7 +97,7 @@ button {
   transform: scaleX(-1) translateY(-50%);
 }
 
-.slide-cnt {
+.swiper-pagination {
   position: absolute;
   top: 324px;
   left: 1436px;
@@ -324,7 +324,7 @@ button {
 .popup-ad {
   display: flex;
   position: fixed;
-  top: 247px;
+  top: 197px;
   left: 50%;
   z-index: 120;
   width: 452px;
