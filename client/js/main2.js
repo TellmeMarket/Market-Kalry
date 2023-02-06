@@ -35,6 +35,10 @@ $cartAddBtn.addEventListener("click", function () {
 
 // .bubble.remove
 
-const $bubble = document.querySelector(".bubble");
+const $bubble = document.querySelector(".search-icon-bubble");
+const $bubble2 = document.querySelector(".search-icon2-bubble");
 
 $bubble.classList.add("remove");
+$bubble2.classList.add("remove");
+
+// .bubble.remove header-sticky에서도 활성화
