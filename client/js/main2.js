@@ -32,3 +32,9 @@ $cartAddBtn.addEventListener("click", function () {
   document.querySelector(".search-icon-cart-add").classList.add("active");
   document.querySelector(".search-icon2-cart-add").classList.add("active");
 });
+
+// .bubble.remove
+
+const $bubble = document.querySelector(".bubble");
+
+$bubble.classList.add("remove");
