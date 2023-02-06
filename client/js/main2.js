@@ -37,16 +37,14 @@ $cartAddBtn.addEventListener("click", function () {
 const $bubble = document.querySelector(".search-icon-bubble");
 const $bubble2 = document.querySelector(".search-icon2-bubble");
 
-$bubble.classList.add("remove");
-$bubble2.classList.add("remove");
-
 // 장바구니 버튼 누르면 bubble 2초 보이기
 $cartAddBtn.addEventListener("click", function () {
-  $bubble.classList.remove("remove");
-  $bubble2.classList.remove("remove");
+  $bubble.classList.add("remove");
+  $bubble2.classList.add("remove");
+  // ease-in-out 으로 나타나게 하고 싶습니다.
 
   setTimeout(() => {
-    $bubble.classList.add("remove");
-    $bubble2.classList.add("remove");
+    $bubble.classList.remove("remove");
+    $bubble2.classList.remove("remove");
   }, 3500);
 });

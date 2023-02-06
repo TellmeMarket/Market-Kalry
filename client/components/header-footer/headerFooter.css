@@ -199,7 +199,8 @@ h1 img:not(:first-child) {
 
 /* 장바구니 담기 비활성화(평소) */
 .bubble.remove {
-  display: none;
+  opacity: 1;
+  pointer-events: initial;
 }
 
 /* 장바구니 담기 완료 창 */
@@ -213,6 +214,9 @@ h1 img:not(:first-child) {
   border: 1px solid #c4c4c4;
   background: #fff;
   box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
 }
 
 .search-icon-bubble {
