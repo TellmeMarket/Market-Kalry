@@ -34,11 +34,19 @@ $cartAddBtn.addEventListener("click", function () {
 });
 
 // .bubble.remove
-
 const $bubble = document.querySelector(".search-icon-bubble");
 const $bubble2 = document.querySelector(".search-icon2-bubble");
 
 $bubble.classList.add("remove");
 $bubble2.classList.add("remove");
 
-// .bubble.remove header-sticky에서도 활성화
+// 장바구니 버튼 누르면 bubble 2초 보이기
+$cartAddBtn.addEventListener("click", function () {
+  $bubble.classList.remove("remove");
+  $bubble2.classList.remove("remove");
+
+  setTimeout(() => {
+    $bubble.classList.add("remove");
+    $bubble2.classList.add("remove");
+  }, 3500);
+});
