@@ -180,6 +180,7 @@ const productSwiper2 = new Swiper(".swiper-3", {
   },
 });
 
+// recent-product swiper
 const $recentImage = document.querySelectorAll(".product-img-wrapper");
 $recentImage.forEach((el) => {
   el.removeAttribute("style");
