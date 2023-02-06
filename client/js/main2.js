@@ -65,15 +65,13 @@ $plusBtn.addEventListener("click", function () {
 });
 $minusBtn.addEventListener("click", function () {
   num--;
-  console.log(num);
+  if (num <= 1) {
+    num = 1;
+  }
   $totalCount.innerHTML = num;
-  console.log($totalCount);
 });
 
-// if (num > 1) {
+// 금액 합계에도 반영하기
+// num이 1보다 크면 - 배경이미지 검정색으로 바꾸기 if (num > 1) {
 //   $minusBtn.style.backgroundImage = "url(../assets/disabled=false.svg)";
 // }
-
-// 최소수량(1), 최대수량(10)
-// if(num > 1) {$minusBtn.style.color = "black"} 적용하기... (하지만 이렇게 했을 때 안됐음)
-// 금액 합계에도 반영하기
