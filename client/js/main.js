@@ -1,30 +1,6 @@
-// header sticky!
-const $banner = document.querySelector(".top-banner");
-const $nav = document.querySelector(".header-nav");
+import { headerFunc } from "./header.js";
 
-const headerSticky = ((_) => {
-  return () => {
-    let base = (localStorage.getItem("hide-banner") ? 0 : $banner.offsetHeight) + document.querySelector(".header-top").offsetHeight;
-    console.log(base);
-    $nav.classList.toggle("active", (pageYOffset || scrollY) >= base);
-    if ($nav.classList.contains("active")) [...$nav.children].forEach((el) => el.classList.add("active"));
-    else [...$nav.children].forEach((el) => el.classList.remove("active"));
-  };
-})();
-headerSticky();
-
-// hideBanner Part
-localStorage.getItem("hide-banner") ? ($banner.style.display = "none") : $banner.classList.add("active");
-
-const bannerHide = (e) => {
-  e.preventDefault();
-  !localStorage.getItem("hide-banner") && e.target.closest(".close-button") && $banner.classList.remove("active");
-  localStorage.setItem("hide-banner", "hide");
-};
-
-// eventList
-addEventListener("scroll", headerSticky);
-$banner.addEventListener("click", bannerHide);
+headerFunc();
 
 // AD popup
 document.body.style.overflow = "hidden";
@@ -47,15 +23,14 @@ function setCookie(name, value, day) {
 
 function getCookie(name) {
   const cookies = document.cookie.split(";");
-  let visited = false;
+  let cookieChecked = false;
   console.log(cookies);
 
   cookies.forEach((el) => {
-    if (el.includes(name)) visited = true;
+    if (el.includes(name)) cookieChecked = true;
   });
 
-  if (visited) {
-    $popUp.classList.add("remove");
+  if (cookieChecked) {
     document.body.style.overflow = "visible";
   } else {
     $popUp.classList.remove("remove");
@@ -98,3 +73,43 @@ const swiper1 = new Swiper(".swiper-1", {
     // slideLabelMessage: "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
   },
 });
+
+const $swiper = document.querySelector(".swiper2-wrapper");
+
+fetch(" http://localhost:3000/products")
+  .then((res) => res.json())
+  .then((data) => {
+    let authors = data;
+
+    authors.map((el) => {
+      let name = el.name;
+      let saleRatio = el.saleRatio !== 0 ? el.saleRatio * 100 + "%" : "";
+      let currentPrice = el.price;
+      let salePrice = el.salePrice;
+      let img = el.image.thumbnail;
+      let alt = el.image.alt;
+
+      let template =
+        /* html */
+        ` <div class="product swiper-slide">
+                   <div class="product-visual">
+                     <a href="">
+                       <img class="product-img" src="./assets/${img}" alt=${alt} />
+                     </a>
+                     <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기"></button>
+                   </div>
+                   <div class="product-info">
+                     <h4 class="product-info-name">${name}</h4>
+                     <div class="product-info-price">
+                       <span class="product-sale">${saleRatio}</span>
+                       <span class="current-price">&nbsp;${currentPrice === salePrice ? currentPrice : salePrice}&nbsp;원</span>
+                     </div>
+                     <span class="original-price">${currentPrice}</span>
+                   </div>
+                 </div>
+                 `;
+
+      $swiper.insertAdjacentHTML("beforeend", template);
+    });
+  })
+  .catch((err) => console.log(err));
