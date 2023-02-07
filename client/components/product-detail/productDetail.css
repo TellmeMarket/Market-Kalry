@@ -896,7 +896,8 @@ main {
   padding-bottom: var(--spacing-md);
 }
 
-.popup-btn-close {
+.inquiry-btn-close,
+.review-btn-close {
   position: absolute;
   top: 46px;
   right: 41px;
@@ -1057,7 +1058,8 @@ main {
   flex-flow: row nowrap;
 }
 
-.popup-btn-cancel {
+.inquiry-btn-cancel,
+.review-btn-cancel {
   width: 186px;
   height: 54px;
   border: 1px solid var(--gray-200);
