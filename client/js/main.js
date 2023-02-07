@@ -114,7 +114,7 @@ fetch(" http://localhost:3000/products")
                      <a href="./components/product-detail/productDetail.html"?id=${id}>
                        <img class="product-img" src="./assets/${img}" alt=${alt} />
                      </a>
-                     <button class="icon-cart" data-name="${name}" data-price="${currentPrice}"role="button" aria-label="해당상품 장바구니 담기"></button>
+                     <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기" data-name="${name}" data-price="${currentPrice}" data-saleprice="${salePrice}"></button>
                    </div>
                    <div class="product-info">
                      <h4 class="product-info-name">${name}</h4>
@@ -134,15 +134,19 @@ fetch(" http://localhost:3000/products")
     const $cartButton = document.querySelectorAll(".icon-cart");
     $cartButton.forEach((el) => {
       el.addEventListener("click", (e) => {
-        console.log(e.target.dataset.name);
-        console.log(e.target.dataset.price);
+        let cartName = e.target.dataset.name;
+        let cartPrice = e.target.dataset.price;
+        let cartSalePrice = e.target.dataset.saleprice;
+
+        console.log(cartName);
+
         let cartTemplate = /* html */ `
         <div class="add-cart-shadow active">
         <div class="add-cart active">
           <div class="cart-product-info">
-            <span class="cart-product-name">[풀무원] 탱탱쫄면 (4개입)</span>
+            <span class="cart-product-name">${cartName}</span>
             <div class="cart-product-cnt">
-              <span class="cart-product-price">1,980원</span>
+              <span class="cart-product-price">${cartSalePrice === "" ? cartPrice : cartSalePrice}</span>
               <div class="cart-product-total">
                 <button class="minus-product" role="button" aria-label="장바구니 수량 빼기"></button>
                 <div class="product-total-count">1</div>
@@ -153,7 +157,7 @@ fetch(" http://localhost:3000/products")
           <div class="cart-price-info">
             <div class="product-total-price">
               <span class="product-sum">합계</span>
-              <span class="cart-final-price">4,980원</span>
+              <span class="cart-final-price">${cartSalePrice === "" ? cartPrice : cartSalePrice}</span>
             </div>
             <div class="point-info">
               <div class="accumulate">적립</div>
@@ -169,12 +173,12 @@ fetch(" http://localhost:3000/products")
         `;
         console.log(document.querySelector("main"));
         document.querySelector("main").insertAdjacentHTML("beforeend", cartTemplate);
+        document.body.style.overflow = "hidden";
 
         // 취소 버튼을 누르면 다시 사라지게 하기 (.cart-cancel)
         const $cartCancel = document.querySelector(".cart-cancel");
         function close() {
-          document.querySelector(".add-cart-shadow").classList.remove("active");
-          document.querySelector(".add-cart").classList.remove("active");
+          document.querySelector(".add-cart-shadow").remove();
           document.body.style.overflow = "visible";
         }
         $cartCancel.addEventListener("click", close);
