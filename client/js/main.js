@@ -147,14 +147,6 @@ const productSwiper = new Swiper(".swiper-2", {
     prevSlideMessage: "이 상품 어때요? 상품배너 이전으로 넘기기",
     nextSlideMessage: "이 상품 어때요? 배너 다음으로 넘기기",
   },
-  on: {
-    reachBeginning: function () {
-      console.log("시작");
-    },
-    reachEnd: function () {
-      console.log("끝");
-    },
-  },
 });
 
 const productSwiper2 = new Swiper(".swiper-3", {
@@ -169,14 +161,6 @@ const productSwiper2 = new Swiper(".swiper-3", {
   a11y: {
     prevSlideMessage: "놓치면 후회할 가격 상품배너 이전으로 넘기기",
     nextSlideMessage: "놓치면 후회할 가격 상품배너 다음으로 넘기기",
-  },
-  on: {
-    reachBeginning: function () {
-      console.log("시작");
-    },
-    reachEnd: function () {
-      console.log("끝");
-    },
   },
 });
 
@@ -194,7 +178,7 @@ const recentSwiper = new Swiper(".swiper-4", {
     prevEl: ".swiper4-button-prev",
   },
   a11y: {
-    prevSlideMessage: "놓치면 후회할 가격 상품배너 이전으로 넘기기",
-    nextSlideMessage: "놓치면 후회할 가격 상품배너 다음으로 넘기기",
+    prevSlideMessage: "최근 본 상품배너 이전으로 넘기기",
+    nextSlideMessage: "최근 본 상품배너 다음으로 넘기기",
   },
 });

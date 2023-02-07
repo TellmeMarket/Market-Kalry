@@ -248,6 +248,10 @@ button {
   right: -30px;
 }
 
+.swiper-button-disabled {
+  opacity: 0;
+}
+
 .today-recommend-products {
   position: relative;
 }
