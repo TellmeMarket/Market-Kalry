@@ -469,11 +469,12 @@ button {
 }
 
 .minus-product.remove {
+  background: url("../assets/icons/Icon/cart_minus.svg") 50% 50% no-repeat;
   cursor: initial;
 }
 
 .minus-product {
-  background: url("../assets/icons/Icon/cart_minus.svg") 50% 50% no-repeat;
+  background: url("../assets/icons/Icon/cart_minus_black.svg") 50% 50% no-repeat;
 }
 
 .plus-product {

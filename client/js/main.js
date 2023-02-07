@@ -1,3 +1,4 @@
+import { loadStorage, saveStorage } from "../lib/utils/storage.js";
 import { headerFunc } from "./header.js";
 
 headerFunc();
@@ -18,7 +19,6 @@ function setCookie(name, value, day) {
   myCookie += "Expires=" + date.toUTCString(); //쿠키에서는 date가 UTC포멧으로 나와야함.
 
   document.cookie = myCookie;
-  console.log(myCookie);
 }
 
 function getCookie(name) {
@@ -137,8 +137,7 @@ fetch(" http://localhost:3000/products")
         let cartName = e.target.dataset.name;
         let cartPrice = e.target.dataset.price;
         let cartSalePrice = e.target.dataset.saleprice;
-
-        console.log(cartName);
+        let cartCurrentPrice = cartSalePrice === "" ? cartPrice : cartSalePrice;
 
         let cartTemplate = /* html */ `
         <div class="add-cart-shadow active">
@@ -146,9 +145,9 @@ fetch(" http://localhost:3000/products")
           <div class="cart-product-info">
             <span class="cart-product-name">${cartName}</span>
             <div class="cart-product-cnt">
-              <span class="cart-product-price">${cartSalePrice === "" ? cartPrice : cartSalePrice}</span>
+              <span class="cart-product-price">${cartCurrentPrice}</span>
               <div class="cart-product-total">
-                <button class="minus-product" role="button" aria-label="장바구니 수량 빼기"></button>
+                <button class="minus-product remove" role="button" aria-label="장바구니 수량 빼기"></button>
                 <div class="product-total-count">1</div>
                 <button class="plus-product" role="button" aria-label="장바구니 수량 담기"></button>
               </div>
@@ -157,7 +156,7 @@ fetch(" http://localhost:3000/products")
           <div class="cart-price-info">
             <div class="product-total-price">
               <span class="product-sum">합계</span>
-              <span class="cart-final-price">${cartSalePrice === "" ? cartPrice : cartSalePrice}</span>
+              <span class="cart-final-price">${cartCurrentPrice}</span>
             </div>
             <div class="point-info">
               <div class="accumulate">적립</div>
@@ -171,7 +170,6 @@ fetch(" http://localhost:3000/products")
         </div>
       </div>
         `;
-        console.log(document.querySelector("main"));
         document.querySelector("main").insertAdjacentHTML("beforeend", cartTemplate);
         document.body.style.overflow = "hidden";
 
@@ -187,11 +185,34 @@ fetch(" http://localhost:3000/products")
         // .search-icon-cart-add.active
         // .search-icon2-cart-add.active
 
-        const $cartAddBtn = document.querySelector(".cart-add");
-        $cartAddBtn.addEventListener("click", function () {
-          close();
-          document.querySelector(".search-icon-cart-add").classList.add("active");
-          document.querySelector(".search-icon2-cart-add").classList.add("active");
+        // .minus-product & .plus-product 누르면 숫자 바뀌게
+        const $plusBtn = document.querySelector(".plus-product");
+        const $minusBtn = document.querySelector(".minus-product");
+        const $totalCount = document.querySelector(".product-total-count");
+        const $productSum = document.querySelector(".cart-final-price");
+
+        let regex = /[^0-9]/g; // 숫자가 아닌 문자열을 선택하는 정규식
+        let result = cartCurrentPrice.replace(regex, ""); // 원래 문자열에서 숫자가 아닌 모든 문자열을 빈 문자로 변경
+
+        let num = 1;
+        let productSum = (num * Number(result)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 원";
+        $plusBtn.addEventListener("click", function () {
+          num++;
+          $totalCount.innerHTML = num;
+          productSum = (num * Number(result)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 원";
+          $productSum.innerHTML = productSum;
+          $minusBtn.classList.add("remove");
+        });
+
+        $minusBtn.addEventListener("click", function () {
+          num--;
+          if (num <= 1) {
+            $minusBtn.classList.add("remove");
+            num = 1;
+          }
+          $totalCount.innerHTML = num;
+          productSum = (num * Number(result)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 원";
+          $productSum.innerHTML = productSum;
         });
 
         // .bubble.remove
@@ -199,37 +220,36 @@ fetch(" http://localhost:3000/products")
         const $bubble2 = document.querySelector(".search-icon2-bubble");
 
         // 장바구니 버튼 누르면 bubble 2초 보이기
+        const $cartAddBtn = document.querySelector(".cart-add");
         $cartAddBtn.addEventListener("click", function () {
           $bubble.classList.add("remove");
           $bubble2.classList.add("remove");
           // ease-in-out 으로 나타나게 하고 싶습니다.
-
           setTimeout(() => {
             $bubble.classList.remove("remove");
             $bubble2.classList.remove("remove");
           }, 3500);
-        });
 
-        // .minus-product & .plus-product 누르면 숫자 바뀌게
-        const $plusBtn = document.querySelector(".plus-product");
-        const $minusBtn = document.querySelector(".minus-product");
+          let localItem = [];
+          const newItem = { name: cartName, price: cartPrice, salePrice: cartSalePrice, productSum: productSum };
 
-        const $totalCount = document.querySelector(".product-total-count");
-
-        let num = 1;
-
-        $plusBtn.addEventListener("click", function () {
-          num++;
-          $totalCount.innerHTML = num;
-        });
-
-        $minusBtn.addEventListener("click", function () {
-          num--;
-          if (num < 1) {
-            $minusBtn.classList.add("remove");
-            num = 1;
-          }
-          $totalCount.innerHTML = num;
+          const setLocalStorage = loadStorage("cart-product")
+            .then((data) => {
+              if (data == null) {
+                saveStorage("cart-product", newItem);
+              } else if (Object.prototype.toString.call(data).slice(8, -1).toLowerCase() === "object") {
+                localItem = [data, newItem];
+                saveStorage("cart-product", localItem);
+              } else {
+                localItem = data;
+                localItem.push(newItem);
+                saveStorage("cart-product", localItem);
+              }
+            })
+            .catch((err) => console.log(err));
+          close();
+          document.querySelector(".search-icon-cart-add").classList.add("active");
+          document.querySelector(".search-icon2-cart-add").classList.add("active");
         });
       });
     });
