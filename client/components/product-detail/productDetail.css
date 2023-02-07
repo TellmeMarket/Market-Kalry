@@ -1,8 +1,216 @@
-@import url(./../../css/reset.css);
-@import url(./../../css/a11y.css);
-@import url(./../../css/theme.css);
+@import url(../../css/theme.css);
+@import url(../../css/reset.css);
+@import url(../../css/a11y.css);
 
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  font-family: "Pretendard", "malgun gothic", dotum, sans-serif;
+}
+
+.inner {
+  max-width: 1050px;
+  margin: 44px auto 0 auto;
+}
+main {
+  margin-top: 44px;
+}
+.product-information {
+  display: flex;
+  justify-content: center;
+}
+.product-thumbnail {
+  margin-right: 90px;
+}
+.product-title-wrap {
+  text-align: start;
+}
+.product-thumbnail img {
+  width: 400px;
+  height: 514px;
+}
+.delivery-company {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--gray-500);
+  margin-bottom: var(--spacing-base);
+}
+.product-title-name {
+  font-size: var(--text-xxl);
+  font-weight: 600;
+  color: var(--content);
+  margin-bottom: var(--spacing-xs);
+}
+.product-slogan {
+  font-size: var(--text-base);
+  color: var(--gray-400);
+  margin-bottom: var(--spacing-base);
+}
+.product-price {
+  display: flex;
+  align-items: center;
+  font-size: var(--text-xxl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-base);
+}
+.login-recommended {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--spacing-md);
+}
+.product-price span {
+  font-size: var(--text-base);
+}
+.product-information-box {
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+  padding: var(--spacing-base) 0;
+  text-align: start;
+}
+.product-info-title {
+  width: 128px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--gray-500);
+  line-height: 150%;
+}
+.product-info-detail {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+}
+.product-info-detail-desc {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  line-height: 18px;
+}
+.line {
+  display: flex;
+  align-items: center;
+  width: 560px;
+  border-bottom: 1px solid var(--gray-100);
+  padding: var(--spacing-base) 0 var(--spacing-lg) 0;
+}
+.allergy-info {
+  width: 432px;
+}
+.product-choice-wrap {
+  display: flex;
+  margin-top: var(--spacing-base);
+}
+.product-purchase-box {
+  position: relative;
+  border: 1px solid var(--gray-200);
+  padding: 10px;
+  width: 432px;
+}
+.product-purchase-box span:nth-child(1) {
+  color: var(--gray-500);
+  font-size: var(--text-xs);
+}
+.product-quantity {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  align-items: center;
+  width: 84px;
+  height: 30px;
+  border: 1px solid var(--gray-200);
+  margin-top: var(--spacing-md);
+}
+.quantity {
+  border: 0;
+  width: 30px;
+  text-align: center;
+}
+.product-quantity button {
+  border: 0;
+  background-color: var(--white);
+  cursor: pointer;
+}
+.total-price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 12px;
+  color: var(--content);
+  font-weight: 600;
+  font-size: var(--text-xs);
+}
+.total-price-result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.total-price-result p:nth-child(1) {
+  margin-top: 28px;
+  margin-bottom: 8px;
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+.price {
+  font-weight: 600;
+  font-size: var(--text-xxl);
+  margin: 0 4px 0 17px;
+}
+.login-benefits {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.login-benefits span {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-left: 6px;
+}
+.accumulate-label {
+  width: 45px;
+  background-color: var(--accent-yellow);
+  border-radius: 12px;
+  padding: 4px 8px 4px 8px;
+  align-items: center;
+  color: var(--white);
+  gap: 4px;
+}
+.icons-wrap {
+  display: flex;
+  align-items: center;
+}
+.icons {
+  padding: 30px;
+  border: 1px solid var(--gray-100);
+  position: relative;
+  margin-right: var(--spacing-sm);
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--white);
+}
+.icons img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cart {
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--text-base);
+}
 
 *,
 :after,
@@ -10,6 +218,7 @@
   box-sizing: border-box;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     sans-serif;
+
 }
 
 /* -------------------------------------------------------------------------- */
