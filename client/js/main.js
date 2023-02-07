@@ -173,6 +173,7 @@ $recentImage.forEach((el) => {
 
 const recentSwiper = new Swiper(".swiper-4", {
   direction: "vertical",
+  slidesPerView: 2.5,
   navigation: {
     nextEl: ".swiper4-button-next",
     prevEl: ".swiper4-button-prev",
