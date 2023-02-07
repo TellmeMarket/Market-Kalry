@@ -1,5 +1,3 @@
-import { getNode } from "/client/lib/index.js";
-
 // header sticky!
 const $banner = document.querySelector(".top-banner");
 const $nav = document.querySelector(".header-nav");

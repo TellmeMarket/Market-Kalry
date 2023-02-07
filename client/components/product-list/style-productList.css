@@ -1,6 +1,6 @@
-@import url(./reset.css);
-@import url(./theme.css);
-@import url(./a11y.css);
+@import url(/client/css/reset.css);
+@import url(/client/css/theme.css);
+@import url(/client/css/a11y.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 
 * {
@@ -33,6 +33,7 @@ button {
 /* inner */
 .list-title {
   margin-top: 50px;
+  max-width: 1050px;
   text-align: center;
   font-size: 21px;
   line-height: 150%;
@@ -115,7 +116,7 @@ button {
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: url(../assets/icons/Icon/Direction=Right.svg) no-repeat;
+  background: url(/client/assets/icons/Icon/Direction=Right.svg) no-repeat;
   vertical-align: -4px;
 }
 
@@ -136,7 +137,7 @@ input[type="checkbox"]::after {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: var(--white) url(../assets/icons/Input/isChecked=false.svg) no-repeat center/cover;
+  background: var(--white) url(/client/assets/icons/Input/isChecked=false.svg) no-repeat center/cover;
   width: 23px;
   height: 23px;
   vertical-align: -6px;
@@ -144,7 +145,7 @@ input[type="checkbox"]::after {
 }
 
 input[type="checkbox"]:checked::after {
-  background: url(../assets/icons/Input/isChecked=true.png) no-repeat center/cover;
+  background: url(/client/assets/icons/Input/isChecked=true.svg) no-repeat center/cover;
 }
 
 label {
@@ -159,7 +160,7 @@ label {
   width: 783px;
 }
 
-/* menu */
+/* product-menu */
 .product-list-menu {
   padding-bottom: var(--spacing-md);
   display: flow-root;
@@ -175,6 +176,10 @@ label {
   display: flow-root;
 }
 
+.menu-button-list .is-active button{
+  color: var(--black);
+}
+
 .menu-button {
   float: left;
 }
@@ -187,11 +192,12 @@ label {
   margin: 0 8px;
 }
 
-.menu-button:last-child button {
+.menu-button:last-child, .menu-button:first-child button {
   margin-right: 0;
+
 }
 
-.menu-button::after {
+.menu-button::before {
   content: '';
   display: inline-block;
   width: 1px;
@@ -199,8 +205,18 @@ label {
   background-color: var(--gray-300);
 }
 
-.menu-button:last-child::after{
+.menu-button:first-child::before{
   display: none;
+}
+
+.menu-button:first-child::after {
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: 0 8px 0 5px;
+  vertical-align: -2px;
+  background: url(/client/assets/icons/Icon/question.svg) no-repeat center/cover;
 }
 
 /* list */
