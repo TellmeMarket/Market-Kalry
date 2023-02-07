@@ -59,19 +59,21 @@ let num = 1;
 
 $plusBtn.addEventListener("click", function () {
   num++;
-  console.log(num);
   $totalCount.innerHTML = num;
-  console.log($totalCount);
 });
+
 $minusBtn.addEventListener("click", function () {
   num--;
-  if (num <= 1) {
+  if (num < 1) {
+    $minusBtn.classList.add("remove");
     num = 1;
   }
   $totalCount.innerHTML = num;
 });
 
-// 금액 합계에도 반영하기
+// num = 1 인 class를 만들어서 remove add로 cursor 처리....
 // num이 1보다 크면 - 배경이미지 검정색으로 바꾸기 if (num > 1) {
 //   $minusBtn.style.backgroundImage = "url(../assets/disabled=false.svg)";
 // }
+
+// 금액 합계에도 반영하기

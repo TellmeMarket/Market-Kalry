@@ -460,6 +460,10 @@ button {
   cursor: pointer;
 }
 
+.minus-product.remove {
+  cursor: initial;
+}
+
 .minus-product {
   background: url("../assets/icons/Icon/cart_minus.svg") 50% 50% no-repeat;
 }
