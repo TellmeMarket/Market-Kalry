@@ -255,7 +255,7 @@ header nav::after {
   cursor: pointer;
   margin-right: 50px;
   position: relative;
-  z-index: 999;
+  z-index: 900;
 }
 .category h2 a {
   display: inline-block;
