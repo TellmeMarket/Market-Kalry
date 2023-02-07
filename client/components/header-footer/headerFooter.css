@@ -199,7 +199,8 @@ h1 img:not(:first-child) {
 
 /* 장바구니 담기 비활성화(평소) */
 .bubble.remove {
-  display: none;
+  opacity: 1;
+  pointer-events: initial;
 }
 
 /* 장바구니 담기 완료 창 */
@@ -213,6 +214,9 @@ h1 img:not(:first-child) {
   border: 1px solid #c4c4c4;
   background: #fff;
   box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
 }
 
 .search-icon-bubble {
@@ -312,7 +316,8 @@ h1 img:not(:first-child) {
   background: url("../../assets/header/CartPrimary.svg");
 }
 
-.search-icon-cart span {
+.search-icon-cart-add {
+  display: none;
   position: absolute;
   right: -4px;
   top: -1px;
@@ -329,6 +334,11 @@ h1 img:not(:first-child) {
   white-space: nowrap;
   cursor: pointer;
 }
+
+.search-icon-cart-add.active {
+  display: block;
+}
+
 /* search-icon end */
 header nav {
   /* height: 52px; */
@@ -347,7 +357,7 @@ header nav::after {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   content: "";
   transform: translateX(-50%);
@@ -613,7 +623,8 @@ nav.active {
   background: url("../../assets/header/CartPrimary.svg");
 }
 
-.search-icon2-cart span {
+.search-icon2-cart-add {
+  display: none;
   position: absolute;
   right: -4px;
   top: -1px;
@@ -629,6 +640,10 @@ nav.active {
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
+}
+
+.search-icon2-cart-add.active {
+  display: block;
 }
 
 .header-search-sticky.active {
