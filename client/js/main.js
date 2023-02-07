@@ -114,7 +114,7 @@ fetch(" http://localhost:3000/products")
                      <a href="./components/product-detail/productDetail.html"?id=${id}>
                        <img class="product-img" src="./assets/${img}" alt=${alt} />
                      </a>
-                     <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기"></button>
+                     <button class="icon-cart" data-name="${name}" data-price="${currentPrice}"role="button" aria-label="해당상품 장바구니 담기"></button>
                    </div>
                    <div class="product-info">
                      <h4 class="product-info-name">${name}</h4>
@@ -128,6 +128,15 @@ fetch(" http://localhost:3000/products")
                  `;
       $productSwiper1.insertAdjacentHTML("beforeend", template);
       $productSwiper2.insertAdjacentHTML("beforeend", template);
+    });
+
+    const $cartButton = document.querySelectorAll(".icon-cart");
+    console.log($cartButton);
+    $cartButton.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        console.log(e.target.dataset.name);
+        console.log(e.target.dataset.price);
+      });
     });
   })
   .catch((err) => console.log(err));
@@ -165,12 +174,6 @@ const productSwiper2 = new Swiper(".swiper-3", {
 });
 
 // recent-product swiper
-const $recentImage = document.querySelectorAll(".product-img-wrapper");
-$recentImage.forEach((el) => {
-  el.removeAttribute("style");
-  el.style.height = 51;
-});
-
 const recentSwiper = new Swiper(".swiper-4", {
   direction: "vertical",
   slidesPerView: 2.5,
