@@ -341,15 +341,6 @@ label {
 }
 
 .add-cart {
-  display: none;
-}
-
-/* 장바구니 추가 활성화 */
-.add-cart-shadow.active {
-  display: block;
-}
-
-.add-cart.active {
   display: flex;
   position: fixed;
   top: 50%;
@@ -418,11 +409,11 @@ label {
 }
 
 .minus-product {
-  background: url("../assets/icons/Icon/cart_minus.svg") 50% 50% no-repeat;
+  background: url("/client/assets/icons/Icon/cart_minus.svg") 50% 50% no-repeat;
 }
 
 .plus-product {
-  background: url("../assets/icons/Icon/cart_plus.svg") 50% 50% no-repeat;
+  background: url("/client/assets/icons/Icon/cart_plus.svg") 50% 50% no-repeat;
 }
 
 .product-total-count {
