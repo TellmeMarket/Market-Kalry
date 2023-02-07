@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="/client/components/header-footer/headerfooter.css" />
-  <link rel="stylesheet" href="./style-productList.css" />
+  <link rel="stylesheet" href="./productList.css" />
 
-  <script src="/client/components/product-list/productList.js" defer></script>
+  <script src="/client/components/product-list/productList.js" type="module"></script>
 
   <title>product-list</title>
 </head>
@@ -293,7 +293,7 @@
               <div class="product">
                 <div class="visual">
                   <a href="#" class="product-image"><img src="/client/assets/ubuho/thumbnail.jpg" alt="유부호 만두" /></a>
-                  <button><img src="/client/assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
+                  <button class="add-cart-button"><img src="/client/assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
                 </div>
                 <div class="info">
                   <p class="delivery">샛별배송</p>
@@ -306,7 +306,7 @@
               <div class="product">
                 <div class="visual">
                   <a href="#" class="product-image"><img src="/client/assets/tangtang/thumbnail.jpg" alt="풀무원 탱탱쫄면" /></a>
-                  <button><img src="/client/assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
+                  <button  class="add-cart-button"><img src="/client/assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
                 </div>
                 <div class="info">
                   <p class="delivery">샛별배송</p>
@@ -318,7 +318,7 @@
               <div class="product">
                 <div class="visual">
                   <a href="#" class="product-image"><img src="/client/assets/jukkumi/thumbnail.jpg" alt="홍대 주꾸미" /></a>
-                  <button><img src="/client/assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
+                  <button class="add-cart-button"><img src="/client/assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
                 </div>
                 <div class="info">
                   <p class="delivery">샛별배송</p>
@@ -340,6 +340,37 @@
             </nav>
           </section>
         </section>
+      </div>
+
+      <!-- 장바구니 담기 -->
+      <div class="add-cart-shadow">
+        <div class="add-cart">
+          <div class="cart-product-info">
+            <span class="cart-product-name">[풀무원] 탱탱쫄면 (4개입)</span>
+            <div class="cart-product-cnt">
+              <span class="cart-product-price">1,980원</span>
+              <div class="cart-product-total">
+                <button class="minus-product" role="button" aria-label="장바구니 수량 빼기"></button>
+                <div class="product-total-count">1</div>
+                <button class="plus-product" role="button" aria-label="장바구니 수량 담기"></button>
+              </div>
+            </div>
+          </div>
+          <div class="cart-price-info">
+            <div class="product-total-price">
+              <span class="product-sum">합계</span>
+              <span class="cart-final-price">4,980원</span>
+            </div>
+            <div class="point-info">
+              <div class="accumulate">적립</div>
+              <span class="accumulation-info">구매 시 5원 적립</span>
+            </div>
+          </div>
+          <div class="cart-button">
+            <button class="cart-cancel">취소</button>
+            <button class="cart-add">장바구니 담기</button>
+          </div>
+        </div>
       </div>
     </main>
 
