@@ -659,6 +659,11 @@
   border-radius: 16px;
 }
 
+.popup-review,
+.popup-inquiry {
+  display: none;
+}
+
 .popup-title {
   color: var(--black);
   font-weight: 700;
