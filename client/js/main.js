@@ -96,9 +96,7 @@ const $productSwiper2 = document.querySelector(".swiper3-wrapper");
 fetch(" http://localhost:3000/products")
   .then((res) => res.json())
   .then((data) => {
-    let authors = data;
-
-    authors.map((el) => {
+    data.map((el) => {
       let id = el.id;
       let name = el.name;
       let saleRatio = el.saleRatio !== 0 ? el.saleRatio * 100 + "%" : "";
@@ -111,8 +109,8 @@ fetch(" http://localhost:3000/products")
         /* html */
         ` <div class="product swiper-slide">
                    <div class="product-visual">
-                     <a href="./components/product-detail/productDetail.html"?id=${id}>
-                       <img class="product-img" src="./assets/${img}" alt=${alt} />
+                     <a class="product-detail-link" href="./components/product-detail/productDetail.html?id=${id}">
+                       <img class="product-img" src="./assets/${img}" alt=${alt} data-alt=${alt} data-src="${img}" data-id="${id}"/>
                      </a>
                      <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기" data-name="${name}" data-price="${currentPrice}" data-saleprice="${salePrice}" data-image="./assets/${img}"></button>
                    </div>
@@ -252,6 +250,28 @@ fetch(" http://localhost:3000/products")
           document.querySelector(".search-icon-cart-add").classList.add("active");
           document.querySelector(".search-icon2-cart-add").classList.add("active");
         });
+      });
+    });
+
+    const $clickProduct = document.querySelectorAll(".product-detail-link");
+    $clickProduct.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        let productAlt = e.target.dataset.alt;
+        let productSrc = e.target.dataset.src;
+        let productId = e.target.id;
+        console.log(e.target);
+        console.log(productAlt);
+        console.log(productSrc);
+        console.log(productId);
+        let recentTemplate = /*html*/ `
+        <div class="product-img-wrapper swiper-slide">
+                      <a href="./components/product-detail/productDetail.html?id=${productId}">
+                      <img class="recent-product-img" src="./assets/${productSrc}" alt=${productAlt}  /></a>
+                    </div>
+        `;
+
+        const $recentSwiper = document.querySelector(".swiper4-wrapper");
+        $recentSwiper.insertAdjacentHTML("beforeend", recentTemplate);
       });
     });
   })
