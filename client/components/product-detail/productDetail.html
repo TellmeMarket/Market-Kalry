@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./productDetail.css" />
     <link rel="stylesheet" href="../header-footer/headerfooter.css" />
     <script src="../../js/main.js" defer></script>
+    <script src="./productDetailDa.js" defer></script>
     <title>PRODUCT_DETAIL</title>
   </head>
 
@@ -270,11 +271,11 @@
           </div>
           <!-- 알림,좋아요, 장바구니 버튼 -->
           <div class="icons-wrap">
-            <button class="icons" role="button" aria-label="알림설정아이콘">
-              <img src="../../assets/product-detail/Bell.svg" alt="알림아이콘" />
-            </button>
             <button class="icons" role="button" aria-label="좋아요아이콘">
               <img src="../../assets/product-detail/Heart.svg" alt="좋아요아이콘" />
+            </button>
+            <button class="icons" role="button" aria-label="알림설정아이콘">
+              <img src="../../assets/product-detail/Bell.svg" alt="알림아이콘" />
             </button>
             <button class="cart" role="button" aria-label="장바구니담기">장바구니 담기</button>
           </div>
@@ -503,7 +504,7 @@
     <div class="popup-back-review">
       <section class="popup popup-review">
         <h2 class="popup-title" tabindex="0">후기 작성</h2>
-        <button class="popup-btn-close" aria-label="닫기 버튼"></button>
+        <button class="review-btn-close" aria-label="닫기 버튼"></button>
         <div class="popup-product-info">
           <img src="./../../assets/tangtang/thumbnail.jpg" class="popup-product-img" alt="상품 사진" tabindex="0" />
           <h3 class="popup-product-name" tabindex="0">[풀무원] 탱탱쫄면 (4개입)</h3>
@@ -552,7 +553,7 @@
           </fieldset>
         </form>
         <div class="popup-btn-wrap">
-          <button class="popup-btn-cancel">취소</button>
+          <button class="review-btn-cancel">취소</button>
           <button class="popup-btn-register">등록</button>
         </div>
       </section>
@@ -562,7 +563,7 @@
     <div class="popup-back-inquiry">
       <section class="popup popup-inquiry">
         <h2 class="popup-title" tabindex="0">상품 문의하기</h2>
-        <button class="popup-btn-close" aria-label="닫기 버튼"></button>
+        <button class="inquiry-btn-close" aria-label="닫기 버튼"></button>
         <div class="popup-product-info">
           <img src="./../../assets/tangtang/thumbnail.jpg" class="popup-product-img" alt="상품 사진" tabindex="0" />
           <h3 class="popup-product-name" tabindex="0">[풀무원] 탱탱쫄면 (4개입)</h3>
@@ -612,7 +613,7 @@
           </fieldset>
         </form>
         <div class="popup-btn-wrap">
-          <button class="popup-btn-cancel">취소</button>
+          <button class="inquiry-btn-cancel">취소</button>
           <button class="popup-btn-register">등록</button>
         </div>
       </section>
