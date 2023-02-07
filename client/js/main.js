@@ -96,9 +96,7 @@ const $productSwiper2 = document.querySelector(".swiper3-wrapper");
 fetch(" http://localhost:3000/products")
   .then((res) => res.json())
   .then((data) => {
-    let authors = data;
-
-    authors.map((el) => {
+    data.map((el) => {
       let id = el.id;
       let name = el.name;
       let saleRatio = el.saleRatio !== 0 ? el.saleRatio * 100 + "%" : "";
@@ -111,7 +109,7 @@ fetch(" http://localhost:3000/products")
         /* html */
         ` <div class="product swiper-slide">
                    <div class="product-visual">
-                     <a href="./components/product-detail/productDetail.html"?id=${id}>
+                     <a href="./components/product-detail/productDetail.html?id=${id}">
                        <img class="product-img" src="./assets/${img}" alt=${alt} />
                      </a>
                      <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기" data-name="${name}" data-price="${currentPrice}" data-saleprice="${salePrice}" data-image="./assets/${img}"></button>

@@ -1,7 +1,6 @@
 const $wrap = document.querySelector(".detail-page");
 const $detail = document.querySelector(".detail-lnb");
 const bid = window.location.href.split("id=")[1];
-console.log(cart);
 const goDetailpage = (id) => {
   fetch("http://localhost:3000/products")
     .then((res) => res.json())
@@ -92,13 +91,12 @@ const goDetailpage = (id) => {
                 <span>로그인 후, 적립 혜택 제공</span>
               </div>
             </div>
-            <!-- 알림,좋아요, 장바구니 버튼 -->
             <div class="icons-wrap">
-              <button class="icons" role="button" aria-label="알림설정아이콘">
-                <img src="../../assets/product-detail/Bell.svg" alt="알림아이콘" />
-              </button>
               <button class="icons" role="button" aria-label="좋아요아이콘">
                 <img src="../../assets/product-detail/Heart.svg" alt="좋아요아이콘" />
+              </button>
+              <button class="icons" role="button" aria-label="알림설정아이콘">
+                <img src="../../assets/product-detail/Bell.svg" alt="알림아이콘" />
               </button>
               <button class="cart" role="button" aria-label="장바구니담기">장바구니 담기</button>
             </div>
@@ -152,7 +150,7 @@ const goDetailpage = (id) => {
       `;
 
       $wrap.insertAdjacentHTML("beforebegin", template);
-      $detail.insertAdjacentHTML("beforebegin", template2);
+      $detail.insertAdjacentHTML("afterend", template2);
     });
 };
 goDetailpage();
