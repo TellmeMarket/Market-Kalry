@@ -148,7 +148,7 @@ input[type="checkbox"]:checked::after {
   background: url(/client/assets/icons/Input/isChecked=true.svg) no-repeat center/cover;
 }
 
-label {
+.accodiaon-body label {
   padding-left: 9px;
   cursor: pointer;
 }
@@ -192,9 +192,12 @@ label {
   margin: 0 8px;
 }
 
-.menu-button:last-child, .menu-button:first-child button {
+.menu-button:first-child button {
   margin-right: 0;
+}
 
+.menu-button:last-child button {
+  margin-right: 0;
 }
 
 .menu-button::before {
