@@ -7,6 +7,7 @@
       "price": 6900,
       "saleRatio": 0.24,
       "salePrice": 5244,
+      "type": "냉동",
       "image": {
         "thumbnail": "ubuho/thumbnail.jpg",
         "view": "ubuho/detail_view.jpg",
@@ -23,6 +24,7 @@
       "price": 4980,
       "saleRatio": 0,
       "salePrice": 0,
+      "type": "상온",
       "image": {
         "thumbnail": "tangtang/thumbnail.jpg",
         "view": "tangtang/detail_view.jpg",
@@ -39,6 +41,7 @@
       "price": 7900,
       "saleRatio": 0.13,
       "salePrice": 6800,
+      "type": "냉동",
       "image": {
         "thumbnail": "jukkumi/thumbnail.jpg",
         "view": "jukkumi/detail_view.jpg",
@@ -55,6 +58,7 @@
       "price": 29800,
       "saleRatio": 0,
       "salePrice": 0,
+      "type": "냉동",
       "image": {
         "thumbnail": "kangnam/thumbnail.jpg",
         "view": "kangnam/detail_view.jpg",
@@ -71,6 +75,7 @@
       "price": 4500,
       "saleRatio": 0.25,
       "salePrice": 3375,
+      "type": "냉장",
       "image": {
         "thumbnail": "bacon/thumbnail.jpg",
         "view": "bacon/detail_view.jpg",
@@ -87,6 +92,7 @@
       "price": 32500,
       "saleRatio": 0,
       "salePrice": 0,
+      "type": "상온",
       "image": {
         "thumbnail": "product/product02.png",
         "view": "product/product02.png",
@@ -103,6 +109,7 @@
       "price": 25000,
       "saleRatio": 0,
       "salePrice": 0,
+      "type": "상온",
       "image": {
         "thumbnail": "product/product03.png",
         "view": "product/product03.png",
@@ -114,17 +121,18 @@
     },
     {
       "id": "product-zxcn",
-      "name": "[프로쉬] 베이비 세탁세",
-      "description": "[프로쉬] 베이비 세탁세",
+      "name": "[프로쉬] 베이비 세탁세제",
+      "description": "[프로쉬] 베이비 세탁세제",
       "price": 24000,
       "saleRatio": 0.24,
       "salePrice": 18900,
+      "type": "상온",
       "image": {
         "thumbnail": "product/product04.png",
         "view": "product/product04.png",
         "banner": "product/product04.png",
         "info": "product/product04.png",
-        "alt": "프로쉬 베이비 세탁세"
+        "alt": "프로쉬 베이비 세탁세제"
       },
       "stock": 10
     }

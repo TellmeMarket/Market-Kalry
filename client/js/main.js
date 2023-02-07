@@ -107,7 +107,7 @@ fetch(" http://localhost:3000/products")
       let img = el.image.thumbnail;
       let alt = el.image.alt;
 
-      let template =
+      let productTemplate =
         /* html */
         ` <div class="product swiper-slide">
                    <div class="product-visual">
@@ -126,16 +126,107 @@ fetch(" http://localhost:3000/products")
                    </div>
                  </div>
                  `;
-      $productSwiper1.insertAdjacentHTML("beforeend", template);
-      $productSwiper2.insertAdjacentHTML("beforeend", template);
+      $productSwiper1.insertAdjacentHTML("beforeend", productTemplate);
+      $productSwiper2.insertAdjacentHTML("beforeend", productTemplate);
     });
 
+    // iconCart를 클릭하면 장바구니 창 뜨게 하기
     const $cartButton = document.querySelectorAll(".icon-cart");
-    console.log($cartButton);
     $cartButton.forEach((el) => {
       el.addEventListener("click", (e) => {
         console.log(e.target.dataset.name);
         console.log(e.target.dataset.price);
+        let cartTemplate = /* html */ `
+        <div class="add-cart-shadow active">
+        <div class="add-cart active">
+          <div class="cart-product-info">
+            <span class="cart-product-name">[풀무원] 탱탱쫄면 (4개입)</span>
+            <div class="cart-product-cnt">
+              <span class="cart-product-price">1,980원</span>
+              <div class="cart-product-total">
+                <button class="minus-product" role="button" aria-label="장바구니 수량 빼기"></button>
+                <div class="product-total-count">1</div>
+                <button class="plus-product" role="button" aria-label="장바구니 수량 담기"></button>
+              </div>
+            </div>
+          </div>
+          <div class="cart-price-info">
+            <div class="product-total-price">
+              <span class="product-sum">합계</span>
+              <span class="cart-final-price">4,980원</span>
+            </div>
+            <div class="point-info">
+              <div class="accumulate">적립</div>
+              <span class="accumulation-info">구매 시 5원 적립</span>
+            </div>
+          </div>
+          <div class="cart-button">
+            <button class="cart-cancel">취소</button>
+            <button class="cart-add">장바구니 담기</button>
+          </div>
+        </div>
+      </div>
+        `;
+        console.log(document.querySelector("main"));
+        document.querySelector("main").insertAdjacentHTML("beforeend", cartTemplate);
+
+        // 취소 버튼을 누르면 다시 사라지게 하기 (.cart-cancel)
+        const $cartCancel = document.querySelector(".cart-cancel");
+        function close() {
+          document.querySelector(".add-cart-shadow").classList.remove("active");
+          document.querySelector(".add-cart").classList.remove("active");
+          document.body.style.overflow = "visible";
+        }
+        $cartCancel.addEventListener("click", close);
+
+        // 장바구니 담기 버튼 (.cart-add) 누르면 다시 사라지게 하고, 장바구니아이콘에 숫자 올라가게 하기
+        // .search-icon-cart-add.active
+        // .search-icon2-cart-add.active
+
+        const $cartAddBtn = document.querySelector(".cart-add");
+        $cartAddBtn.addEventListener("click", function () {
+          close();
+          document.querySelector(".search-icon-cart-add").classList.add("active");
+          document.querySelector(".search-icon2-cart-add").classList.add("active");
+        });
+
+        // .bubble.remove
+        const $bubble = document.querySelector(".search-icon-bubble");
+        const $bubble2 = document.querySelector(".search-icon2-bubble");
+
+        // 장바구니 버튼 누르면 bubble 2초 보이기
+        $cartAddBtn.addEventListener("click", function () {
+          $bubble.classList.add("remove");
+          $bubble2.classList.add("remove");
+          // ease-in-out 으로 나타나게 하고 싶습니다.
+
+          setTimeout(() => {
+            $bubble.classList.remove("remove");
+            $bubble2.classList.remove("remove");
+          }, 3500);
+        });
+
+        // .minus-product & .plus-product 누르면 숫자 바뀌게
+        const $plusBtn = document.querySelector(".plus-product");
+        const $minusBtn = document.querySelector(".minus-product");
+
+        const $totalCount = document.querySelector(".product-total-count");
+
+        let num = 1;
+
+        $plusBtn.addEventListener("click", function () {
+          num++;
+          $totalCount.innerHTML = num;
+        });
+
+        $minusBtn.addEventListener("click", function () {
+          num--;
+          if (num < 1) {
+            $minusBtn.classList.add("remove");
+            num = 1;
+          }
+          $totalCount.innerHTML = num;
+        });
       });
     });
   })

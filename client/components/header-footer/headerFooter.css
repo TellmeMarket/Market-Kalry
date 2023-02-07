@@ -357,7 +357,7 @@ header nav::after {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 100vw;
+  width: auto;
   height: 100%;
   content: "";
   transform: translateX(-50%);
@@ -573,10 +573,9 @@ header nav::after {
 /* new */
 nav.active {
   display: flex;
-  /* padding: 8px 0; */
   position: fixed;
+  z-index: 150;
   top: 0;
-  z-index: 100;
   width: 1050px;
   flex-direction: row;
   background-color: var(--white);

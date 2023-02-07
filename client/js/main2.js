@@ -1,11 +1,11 @@
-import { getNode } from "/client/lib/index.js";
-
 // iconCart를 클릭하면 .add-cart-shadow 와 .add-cart가 뜨게 하기
 const $iconCarts = document.querySelectorAll(".icon-cart");
 
+console.log($iconCarts);
 $iconCarts.forEach((el) => el.addEventListener("click", click));
 
 function click() {
+  console.log("cart버튼 클릭");
   document.querySelector(".add-cart-shadow").classList.add("active");
   document.querySelector(".add-cart").classList.add("active");
   document.body.style.overflow = "hidden";
@@ -70,10 +70,3 @@ $minusBtn.addEventListener("click", function () {
   }
   $totalCount.innerHTML = num;
 });
-
-// num = 1 인 class를 만들어서 remove add로 cursor 처리....
-// num이 1보다 크면 - 배경이미지 검정색으로 바꾸기 if (num > 1) {
-//   $minusBtn.style.backgroundImage = "url(../assets/disabled=false.svg)";
-// }
-
-// 금액 합계에도 반영하기
