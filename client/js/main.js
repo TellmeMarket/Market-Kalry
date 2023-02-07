@@ -114,7 +114,7 @@ fetch(" http://localhost:3000/products")
                      <a href="./components/product-detail/productDetail.html"?id=${id}>
                        <img class="product-img" src="./assets/${img}" alt=${alt} />
                      </a>
-                     <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기" data-name="${name}" data-price="${currentPrice}" data-saleprice="${salePrice}"></button>
+                     <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기" data-name="${name}" data-price="${currentPrice}" data-saleprice="${salePrice}" data-image="./assets/${img}"></button>
                    </div>
                    <div class="product-info">
                      <h4 class="product-info-name">${name}</h4>
@@ -138,6 +138,7 @@ fetch(" http://localhost:3000/products")
         let cartPrice = e.target.dataset.price;
         let cartSalePrice = e.target.dataset.saleprice;
         let cartCurrentPrice = cartSalePrice === "" ? cartPrice : cartSalePrice;
+        let cartImage = e.target.dataset.image;
 
         let cartTemplate = /* html */ `
         <div class="add-cart-shadow active">
@@ -231,7 +232,7 @@ fetch(" http://localhost:3000/products")
           }, 3500);
 
           let localItem = [];
-          const newItem = { name: cartName, price: cartPrice, salePrice: cartSalePrice, productSum: productSum };
+          const newItem = { name: cartName, price: cartPrice, salePrice: cartSalePrice, productSum: productSum, cartImage: cartImage };
 
           const setLocalStorage = loadStorage("cart-product")
             .then((data) => {
