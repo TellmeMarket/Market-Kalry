@@ -241,7 +241,7 @@ main {
 .detail-lnb {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 200;
 }
 
 .lnb-list {
@@ -1144,14 +1144,4 @@ main {
   width: 0px;
   height: 10px;
   box-sizing: content-box;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                  버튼 클릭할 때 효과                               */
-/* -------------------------------------------------------------------------- */
-.detail button:hover,
-.detail button:active,
-.popup button:hover,
-.popup button:active {
-  box-shadow: inset -4px -4px 6px 0 rgb(255 255 255 / 20%), inset 4px 4px 5px 0 rgb(0 0 0 / 5%);
 }
