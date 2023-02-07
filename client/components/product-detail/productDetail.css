@@ -32,7 +32,7 @@
 .detail-lnb {
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 1000;
 }
 
 .lnb-list {
@@ -649,6 +649,23 @@
 /*                    팝업창 후기작성/상품문의하기 popup review/inquiry                    */
 /* -------------------------------------------------------------------------- */
 /* 공통 레이아웃 popup */
+.popup-back-review,
+.popup-back-inquiry {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: none;
+  z-index: 500;
+}
+
 .popup {
   position: relative;
   width: 793px;
@@ -657,11 +674,8 @@
   padding: var(--spacing-xl);
   background: var(--white);
   border-radius: 16px;
-}
-
-.popup-review,
-.popup-inquiry {
-  display: none;
+  top: 50%;
+  transform: translate(0%, -50%);
 }
 
 .popup-title {
@@ -710,6 +724,7 @@
   padding: 16px 0 58px;
   margin-bottom: var(--spacing-md);
   border-bottom: 1px solid var(--gray-100);
+  background-color: var(--whie);
 }
 
 .popup-content-wrap {
