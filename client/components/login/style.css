@@ -1,0 +1,117 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+@import url(../../css/reset.css);
+@import url(../../css/a11y.css);
+@import url(../../css/theme.css);
+@import url(../../css/headerFooter.css);
+
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  font: 800 var(--spacing-md) / var(--spacing-md) "Pretendard";
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 44px;
+}
+
+.loginWrap {
+  max-width: 340px;
+  margin: 0 auto 12px auto;
+}
+
+.inputWrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#search{
+  border:none;
+  margin-bottom: 0;
+}
+
+div.header-search-sticky input{
+    width: 110px;
+    height: 19px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-size: var(--text-xs);
+    line-height: 16px;
+    color: var(--gray-400);
+    font-weight: 400;
+    padding: 0;
+}
+
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: 46px;
+  border-radius: 4px;
+  border: 1px solid rgb(221, 221, 221);
+  font: 400 var(--text-base) / 1 "Pretendard";
+  line-height: 1.5;
+  color: rgb(51, 51, 51);
+  outline: none;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-md);
+}
+
+input[type="text"] {
+  margin-bottom: 10px;
+}
+
+input[type="password"] {
+  margin-bottom: 10px;
+}
+
+.forget {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+  font: 400 12px/1 "Pretendard";
+}
+
+.forget > span > a {
+  text-decoration: none;
+  color: #222;
+}
+
+.forget span:first-child::after {
+  content: "/";
+  color: #222;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.btnsWrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* button 초기화 */
+.btnsWrap button {
+  width: 100%;
+  height: 54px;
+  display: block;
+  padding: 0px 10px;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.loginBtn {
+  color: rgb(255, 255, 255);
+  background-color: rgb(95, 0, 128);
+  border: 0px none;
+  margin-bottom: 10px;
+}
+
+.pwdBtn {
+  color: rgb(95, 0, 128);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(95, 0, 128);
+}

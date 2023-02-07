@@ -1,0 +1,344 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+@import url(../../css/reset.css);
+@import url(../../css/a11y.css);
+@import url(../../css/theme.css);
+@import url(../../css/headerFooter.css);
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+}
+
+main {
+  width: 100%;
+  margin-top: 50px;
+}
+
+div.header-search-sticky input{
+    width: 110px;
+    height: 19px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-size: var(--text-xs);
+    line-height: 16px;
+    color: var(--gray-400);
+    font-weight: 400;
+    padding: 0;
+}
+
+.title {
+  text-align: center;
+  font: 600 28px / 1 "Pretendard";
+  margin-bottom: 50px;
+  letter-spacing: -1px;
+  text-align: center;
+  color: var(--content);
+}
+
+#search{
+  border:none;
+}
+
+.inner {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.mandatory {
+  text-align: right;
+  border-bottom: 2px solid var(--black);
+  padding-bottom: 10px;
+}
+
+.mandatory > span {
+  color: var(--accent-yellow);
+}
+
+fieldset {
+  width: 100%;
+}
+
+/* titleSet */
+tbody > tr {
+  display: flex;
+  align-items: center;
+}
+
+tr > th {
+  width: 139px;
+  text-align: left;
+}
+
+.sign > tbody > tr > td {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.sign > tbody > tr > td > p {
+  position: absolute;
+  left: 0;
+  bottom: -40%;
+  font-size: 12px;
+  color:red;
+}
+
+/*   ( * ) <-  */
+tr > th > label > span {
+  color: var(--info-error);
+}
+
+/* input(text, password) 기본세팅 */
+input[type="text"],
+input[type="password"] {
+  width: 333px;
+  height: 44px;
+  border: 1px solid var(--gray-300);
+  border-radius: 0.25rem;
+  padding: 0 var(--spacing-md);
+}
+input[type="radio"] {
+  margin: 0;
+  position: relative;
+}
+
+.check {
+  padding-left: 14px;
+}
+
+input[type="radio"]::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff url("../../assets/icons/Icon/signup_icon/isSelected=false.png") no-repeat center/cover;
+  min-width: 24px;
+  min-height: 24px;
+  z-index: 2;
+}
+
+input[type="radio"]:checked::after {
+  background: #fff url("../../assets/icons/Icon/signup_icon/isSelected=true.png") no-repeat center/cover;
+}
+
+/* button 기본세팅 */
+button[type="submit"] {
+  width: 120px;
+  height: 44px;
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  margin-left: var(--spacing-xs);
+  border-radius: 4px;
+  cursor: pointer;
+  font: 500 var(--text-sm) / 1 "Pretendard";
+}
+
+.sign {
+  border-bottom: 2px solid var(--black);
+  padding-bottom: var(--spacing-sm);
+}
+
+.sign > tbody {
+  display: block;
+  padding-bottom: var(--spacing-xl);
+}
+
+.sign > tbody > tr {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+/* 주소검색 */
+.sign > tbody > tr:nth-of-type(7) > td,
+.sign > tbody > tr:nth-of-type(8) > td {
+  display: flex;
+  width: 333px;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.sign > tbody > tr:nth-of-type(7) > td > p {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: var(--spacing-base);
+  color: rgb(102, 102, 102);
+}
+
+button.adressBtn {
+  width: 333px;
+  margin-left: 0;
+}
+
+/* gender */
+.sign > tbody > tr:nth-of-type(8) > td {
+  width: 333px;
+  flex-flow: row nowrap;
+}
+
+/* gender-element */
+.sign > tbody > tr:nth-of-type(8) > td > input {
+  margin-right: 4px;
+}
+.sign > tbody > tr:nth-of-type(8) > td > label {
+  padding-left: 12px;
+  margin-right: auto;
+}
+.sign > tbody > tr:nth-of-type(8) > td > label:last-child {
+  margin-right: 0;
+}
+
+.agreement {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid var(--black);
+}
+
+.agreement .wrap {
+  display: flex;
+  padding: var(--spacing-md) 0 10px var(--spacing-md);
+}
+
+/* 생년월일 */
+.dateWrap {
+  width: 333px;
+  border-radius: 4px;
+  padding: 0px var(--spacing-base);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid rgb(204, 204, 204);
+  color: rgb(204, 204, 204);
+}
+
+.dateWrap > input {
+  width: calc(100% / 3);
+  border: none;
+  padding: 1px 10px 1px 10px;
+  text-align: center;
+  outline: none;
+}
+
+.agreement .wrap > tr:nth-of-type(1) {
+  align-items: flex-start;
+}
+
+/* 추가입력 사항 */
+.sign > tbody > tr:nth-of-type(10) > td {
+  width: 333px;
+}
+.sign > tbody > tr:nth-of-type(10) > td > input {
+  margin-right: 4px;
+}
+.sign > tbody > tr:nth-of-type(10) > td > label:not(:last-child) {
+  margin-right: auto;
+}
+
+/* 전체 동의 */
+
+input[type="checkbox"] {
+  display: inline-block;
+  position: relative;
+}
+
+input[type="checkbox"]::after {
+  width: 24px;
+  height: 24px;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff url("../../assets/icons/Icon/signup_icon/isChecked=false.png") no-repeat center/cover;
+}
+
+input[type="checkbox"]:checked::after {
+  background: #fff url("../../assets/icons/Icon/signup_icon/isChecked=true.png") no-repeat center/cover;
+}
+
+.column {
+  width: 71%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.column > td {
+  font-size: var(--text-xs);
+  padding: var(--spacing-xs) 0px;
+  color: var(--content);
+}
+
+.column > td > a {
+  margin-left: auto;
+}
+
+.column td:not(:first-child) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.column span {
+  padding: var(--spacing-xs) 0px;
+  margin-right: auto;
+}
+
+.column > td > a {
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.column > td > a::after {
+  content: "";
+  background: url("../../assets/icons/Icon/signup_icon/arrow.png") center/cover;
+  display: inline-block;
+  margin-left: 4px;
+  width: 6px;
+  height: 9px;
+}
+
+.column > td:nth-of-type(1) {
+  padding-top: 0;
+}
+tr.column > td:nth-of-type(1) > label {
+  padding-left: 14px;
+}
+
+.column > td > label {
+  padding-left: 16px;
+}
+
+.column > td:nth-of-type(1) > label {
+  width: 100%;
+  font: 600 var(--text-md) / 1 "airial";
+}
+
+.column > td:nth-of-type(1) > p {
+  padding-top: var(--spacing-xs);
+  padding-left: 38px;
+  color: var(--gray-400);
+}
+
+/* 가입하기 버튼 */
+button.signBtn {
+  width: 240px;
+  height: 56px;
+  display: block;
+  margin: 40px auto;
+  color: var(--white);
+  background-color: var(--primary);
+  font-size: var(--text-base);
+}
