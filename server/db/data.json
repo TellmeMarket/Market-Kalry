@@ -17,7 +17,7 @@
       },
       "stock": 3
     },
-    { 
+    {
       "id": "product-ekfk",
       "name": "[풀무원] 탱탱쫄면 (4개입)",
       "description": "튀기지 않아 부드럽고 매콤한",
@@ -25,6 +25,7 @@
       "price": "4,980",
       "saleRatio": 0,
       "salePrice": 0,
+      "type": "상온",
       "image": {
         "thumbnail": "tangtang/thumbnail.jpg",
         "view": "tangtang/detail_view.jpg",
@@ -59,6 +60,7 @@
       "price": "29,800",
       "saleRatio": 0,
       "salePrice": 0,
+      "type": "냉동",
       "image": {
         "thumbnail": "kangnam/thumbnail.jpg",
         "view": "kangnam/detail_view.jpg",
@@ -253,6 +255,60 @@
         "alt": "칼리 한돈 삼겹 베이컨"
       },
       "stock": 13
+    },
+    {
+      "id": "product-casd",
+      "name": "[온더바디] 죠르디 시카 자석 선쿠션",
+      "description": "죠르디 시카 자석 선쿠션",
+      "badge": "",
+      "price": "32,500",
+      "saleRatio": 0,
+      "salePrice": 0,
+      "type": "상온",
+      "image": {
+        "thumbnail": "product/product02.png",
+        "view": "product/product02.png",
+        "banner": "product/product02.png",
+        "info": "product/product02.png",
+        "alt": "온더바디 죠르디 시카 자석 선쿠션"
+      },
+      "stock": 8
+    },
+    {
+      "id": "product-qfhd",
+      "name": "유기농 밀키퀸 현미",
+      "description": "유기농 밀키퀸 현미",
+      "badge": "",
+      "price": "25,000",
+      "saleRatio": 0,
+      "salePrice": 0,
+      "type": "상온",
+      "image": {
+        "thumbnail": "product/product03.png",
+        "view": "product/product03.png",
+        "banner": "product/product03.png",
+        "info": "product/product03.png",
+        "alt": "유기농 밀키퀸 현미"
+      },
+      "stock": 13
+    },
+    {
+      "id": "product-zxcn",
+      "name": "[프로쉬] 베이비 세탁세제",
+      "description": "[프로쉬] 베이비 세탁세제",
+      "badge": "",
+      "price": "24,000",
+      "saleRatio": 0.24,
+      "salePrice": 18900,
+      "type": "상온",
+      "image": {
+        "thumbnail": "product/product04.png",
+        "view": "product/product04.png",
+        "banner": "product/product04.png",
+        "info": "product/product04.png",
+        "alt": "프로쉬 베이비 세탁세제"
+      },
+      "stock": 10
     }
   ]
 }

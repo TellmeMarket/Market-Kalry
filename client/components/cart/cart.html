@@ -4,48 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./components/header-footer/headerFooter.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/main.js" type="module"></script>
-    <script src="./js/header.js" type="module"></script>
-    <title>마켓칼리</title>
+    <link rel="stylesheet" href="./cart.css" />
+    <link rel="stylesheet" href="../header-footer/headerFooter.css" />
+    <script src="../../js/cart.js" defer></script>
+    <title>Cart</title>
   </head>
-
   <body>
     <header>
       <!-- top-banner start -->
       <div class="top-banner">
         <div class="top-banner-text">
           <p>지금 가입하고 인기상품 <span>100원</span>에 받아가세요!</p>
-          <button class="close-button" type="button"><img src="./assets/header/top-banner-icon.svg" alt="닫기 버튼" /></button>
+          <button class="close-button" type="button"><img src="../../assets/header/top-banner-icon.svg" alt="닫기 버튼" /></button>
         </div>
       </div>
       <!-- top-banner end -->
+
       <div class="header-inner">
         <!-- header-top 시작 -->
         <div class="header-top">
           <!-- login start -->
           <ul class="login">
-            <li><a href="./components/signup/signup.html" class="sign-up">회원가입</a></li>
-            <li><img src="./assets/header/bar.svg" alt /></li>
-            <li><a href="./components/login/login.html">로그인</a></li>
-            <li><img src="./assets/header/bar.svg" alt /></li>
+            <li><a href="#" class="sign-up">회원가입</a></li>
+            <li><img src="../../assets/header/bar.svg" alt /></li>
+            <li><a href="#">로그인</a></li>
+            <li><img src="../../assets/header/bar.svg" alt /></li>
             <li>
               <a href="#"
                 >고객센터
-                <img src="./assets/header/Icon_down1.svg" alt="고객센터 메뉴 더보기" class="icon-down" />
+                <img src="../../assets/header/Icon_down1.svg" alt="고객센터 메뉴 더보기" class="icon-down" />
               </a>
             </li>
           </ul>
           <!-- login end -->
+
           <!-- logo start -->
           <div class="header-top-2">
             <h1>
-              <a href="./index.html"> <img src="./assets/header/logo.svg" alt="마켓칼리 로고" class="logo-img" /></a>
+              <img src="../../assets/header/logo.svg" alt="마켓칼리 로고" class="logo-img" />
               <button class="karly-btn">마켓칼리</button>
-              <img src="./assets/header/bar.svg" alt />
+              <img src="../../assets/header/bar.svg" alt />
               <button class="beauty-btn">뷰티칼리</button>
             </h1>
             <!-- logo end -->
@@ -58,108 +56,105 @@
             <!-- search end -->
             <!-- search-icon start -->
             <ul class="search-icon">
-              <li class="search-icon-location">
-                <a href="#"></a>
+              <li>
+                <a href=""><img src="../../assets/header/Location.svg" alt="배송지" /></a>
               </li>
-              <li class="search-icon-heart">
-                <a href="#"></a>
+              <li>
+                <a href=""><img src="../../assets/header/Heart.svg" alt="찜하기" /></a>
               </li>
-              <li class="search-icon-cart">
-                <div class="header-cart">
-                  <a href="./components/cart/cart.html"></a>
-                  <div class="bubble search-icon-bubble">
-                    <div class="content"></div>
-                  </div>
-                </div>
-                <span class="search-icon-cart-add">1</span>
+              <li>
+                <a href=""><img src="../../assets/header/Cart.svg" alt="장바구니" /></a>
               </li>
             </ul>
             <!-- search-icon end -->
           </div>
         </div>
         <!-- header-top end -->
+
         <!-- nav start -->
         <nav class="header-nav">
           <!-- category start -->
           <div class="category">
-            <h2><a href="#">카테고리</a></h2>
+            <h2><a href="">카테고리</a></h2>
             <ul class="category-list">
               <li class="list1">
-                <a href="#"> 선물하기 </a>
+                <a href=""> 선물하기 </a>
               </li>
               <li class="list2">
-                <a href="#"> 채소 </a>
+                <a href=""> 채소 </a>
               </li>
               <li class="list3">
-                <a href="#"> 과일 &middot; 견과 &middot; 쌀 </a>
+                <a href=""> 과일 &middot; 견과 &middot; 쌀 </a>
               </li>
               <li class="list4">
-                <a href="#"> 수산 &middot; 해산 &middot; 건어물 </a>
+                <a href=""> 수산 &middot; 해산 &middot; 건어물 </a>
               </li>
               <li class="list5">
-                <a href="#"> 정육 &middot; 계란 </a>
+                <a href=""> 정육 &middot; 계란 </a>
               </li>
               <li class="list6">
-                <a href="#"> 국 &middot; 반찬 &middot; 메인요리 </a>
+                <a href=""> 국 &middot; 반찬 &middot; 메인요리 </a>
               </li>
               <li class="list7">
-                <a href="#"> 샐러드 &middot; 간편식 </a>
+                <a href=""> 샐러드 &middot; 간편식 </a>
               </li>
               <li class="list8">
-                <a href="#"> 면 &middot; 양념 &middot; 오일 </a>
+                <a href=""> 면 &middot; 양념 &middot; 오일 </a>
               </li>
               <li class="list9">
-                <a href="#"> 생수 &middot; 음료 &middot; 우유 &middot; 커피 </a>
+                <a href=""> 생수 &middot; 음료 &middot; 우유 &middot; 커피 </a>
               </li>
               <li class="list10">
-                <a href="#"> 간식 &middot; 과자 &middot; 떡 </a>
+                <a href=""> 간식 &middot; 과자 &middot; 떡 </a>
               </li>
               <li class="list11">
-                <a href="#"> 베이커리 &middot; 치즈 &middot; 델리 </a>
+                <a href=""> 베이커리 &middot; 치즈 &middot; 델리 </a>
               </li>
               <li class="list12">
-                <a href="#"> 건강식품 </a>
+                <a href=""> 건강식품 </a>
               </li>
               <li class="list13">
-                <a href="#"> 와인 </a>
+                <a href=""> 와인 </a>
               </li>
               <li class="list14">
-                <a href="#"> 전통주 </a>
+                <a href=""> 전통주 </a>
               </li>
               <li class="list15">
-                <a href="#"> 생활용품 &middot; 리빙 &middot; 캠핑 </a>
+                <a href=""> 생활용품 &middot; 리빙 &middot; 캠핑 </a>
               </li>
               <li class="list16">
-                <a href="#"> 스킨케어 &middot; 메이크업 </a>
+                <a href=""> 스킨케어 &middot; 메이크업 </a>
               </li>
               <li class="list17">
-                <a href="#"> 헤어 &middot; 바디 &middot; 구강 </a>
+                <a href=""> 헤어 &middot; 바디 &middot; 구강 </a>
               </li>
               <li class="list18">
-                <a href="#"> 주방용품 </a>
+                <a href=""> 주방용품 </a>
               </li>
               <li class="list19">
-                <a href="#"> 가전제품 </a>
+                <a href=""> 가전제품 </a>
               </li>
               <li class="list20">
-                <a href="#"> 반려동물 </a>
+                <a href=""> 반려동물 </a>
               </li>
               <li class="list21">
-                <a href="#"> 베이비 &middot; 키즈 &middot; 완구 </a>
+                <a href=""> 베이비 &middot; 키즈 &middot; 완구 </a>
               </li>
               <li class="list22">
-                <a href="#"> 여행 &middot; 티켓 </a>
+                <a href=""> 여행 &middot; 티켓 </a>
               </li>
             </ul>
           </div>
+
           <!-- category end -->
+
           <!-- menu start -->
           <ul class="menu">
             <li>
               <h2><a href="#">신상품</a></h2>
             </li>
             <li>
-              <h2><a href="./components/product-list/productList.html">베스트</a></h2>
+              <h2><a href="../product-list/productList.html">베스트</a></h2>
             </li>
             <li>
               <h2><a href="#">알뜰쇼핑</a></h2>
@@ -171,7 +166,6 @@
           <!-- menu end -->
 
           <!-- searchbar -->
-
           <div class="header-search-sticky">
             <label for="search-sticky" class="a11yHidden">제품 검색: </label>
             <input id="search-sticky" type="text" name="search" placeholder="검색어를 입력해주세요" value />
@@ -180,133 +174,123 @@
 
           <!-- iconList -->
           <ul class="search-icon2">
-            <li class="search-icon2-location">
-              <a href="#"></a>
+            <li>
+              <a href=""><img src="../../assets/header/Location.svg" alt="배송지" /></a>
             </li>
-            <li class="search-icon2-heart">
-              <a href="#"></a>
+            <li>
+              <a href=""><img src="../../assets/header/Heart.svg" alt="찜하기" /></a>
             </li>
-            <li class="search-icon2-cart">
-              <a href="#"></a>
-              <div class="header-cart">
-                <div class="bubble search-icon2-bubble">
-                  <div class="content">
-                    <div class="pic"><img src="./assets/tangtang/thumbnail.jpg" alt="탱탱쫄면" /></div>
-                    <div class="text-wrap">
-                      <h5 class="title">[풀무원] 탱탱쫄면 (4개입)</h5>
-                      <p>장바구니에 상품을 담았습니다.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <span class="search-icon2-cart-add">1</span>
+            <li>
+              <a href=""><img src="../../assets/header/Cart.svg" alt="장바구니" /></a>
             </li>
           </ul>
+
           <!-- notice start -->
-          <a href="#" class="notice"> <span>샛별&middot;낮</span>&nbsp;배송안내 </a>
+          <a href="#" class="header-notice"> <span>샛별&middot;낮</span>&nbsp;배송안내 </a>
         </nav>
       </div>
     </header>
-
-    <main>
-      <section class="visual">
-        <!-- 메인 배너 -->
-        <div class="main-banner">
-          <div class="swiper-1">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="">
-                  <img class="banner-img" src="./assets/banner/banner01.png" alt="10월 20일에서 10월 27일까지 하는 멜론 9900원 행사링크 배너" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="">
-                  <img class="banner-img" src="./assets/banner/banner02.png" alt="10월 1일에서 10월 31일까지 하는 이달의 카드 혜택 알림링크 배너" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="">
-                  <img class="banner-img" src="./assets/banner/banner03.png" alt="10월 24일에서 10월 28일까지 하는 KAKRLY PUPLE WEEK 쿠폰 혜택 알림링크 배너" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="">
-                  <img class="banner-img" src="./assets/banner/banner04.png" alt="이 주의 특가 한눈에 보기 링크 배너" />
-                </a>
+    <div class="inner">
+      <h2>장바구니</h2>
+      <div class="cart-wrap">
+        <div class="cart-list">
+          <div class="cart-list-check">
+            <input type="checkbox" class="a11yHidden" />
+            <img src="../../assets/icons/Icon/isChecked=false.svg" alt="체크아이콘" />
+            <!-- <label for="checkicon"> </label> -->
+            <p>전체선택 <span>(3/3)</span></p>
+            <div class="line"></div>
+            <button role="button" aria-label="선택삭제">
+              <span>선택삭제</span>
+            </button>
+          </div>
+          <div>
+            <div class="food-cate">
+              <h3 class="a11yHidden">장바구니선택</h3>
+              <div class="food-wrap refrigerated">
+                <div class="food-type">
+                  <img src="../../assets/icons/Icon/Type=Refrigerated.svg" alt="냉장식품" />
+                  <span>냉장 식품</span>
+                </div>
+                <img class="arrow" src="../../assets/icons/Icon/Direction=Down.svg" alt="아래화살표" />
               </div>
             </div>
-            <button class="swiper1-button swiper1-button-prev"></button>
-            <button class="swiper1-button swiper1-button-next"></button>
-            <div class="swiper-pagination">1 / 5</div>
+            <div class="food-wrap frozen">
+              <div class="food-type">
+                <img src="../../assets/icons/Icon/Type=Frozen.svg" alt="냉동식품" />
+                <span>냉동 식품</span>
+              </div>
+              <img src="../../assets/icons/Icon/Direction=Down.svg" alt="아래화살표" />
+            </div>
+            <div class="food-wrap normal">
+              <div class="food-type">
+                <img src="../../assets/icons/Icon/Type=_Normal.svg" alt="상온식품" />
+                <span>상온 식품</span>
+              </div>
+              <img src="../../assets/icons/Icon/Direction=Down.svg" alt="아래화살표" />
+            </div>
+          </div>
+          <div class="cart-list-check bottom">
+            <input type="checkbox" class="a11yHidden" />
+            <img src="../../assets/icons/Icon/isChecked=false.svg" alt="체크아이콘" />
+            <p>전체선택 <span>(3/3)</span></p>
+            <div class="line"></div>
+            <button role="button" aria-label="선택삭제">
+              <span>선택삭제</span>
+            </button>
           </div>
         </div>
-
-        <!-- 라인 배너 -->
-        <div class="line-banner">
-          <div class="line-banner-inner inner">
-            <a href=""><img class="banner-img" src="./assets/banner/line_banner01.png" alt="더 풍성해진 10월의 퍼플위크 보기 링크" /></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="today-recommend-products">
-        <h2 class="a11y-hidden">홍보 제품 리스트</h2>
-        <article class="today-recommend-products-article">
-          <!-- 이 상품 어때요? -->
-          <div class="today-recommend-products-inner">
-            <div class="heading">
-              <h3 class="today-recommend-title">이 상품 어때요?</h3>
-            </div>
-
-            <div class="today-recommend-contents">
-              <div class="swiper-2 product-swiper">
-                <div class="swiper-wrapper product-inner swiper2-wrapper"></div>
+        <div class="payment-information">
+          <h3 class="a11yHidden">결제정보</h3>
+          <div class="detail-payment">
+            <div class="shipping-wrap">
+              <div class="shipping">
+                <img src="../../assets/icons/Icon/Location.svg" alt="위치아이콘" />
+                <span>배송지</span>
               </div>
-              <button class="product-button swiper2-button-prev"></button>
-              <button class="product-button swiper2-button-next"></button>
+              <p class="shipping-address">서울 중랑구 면목로 42길11(행운빌딩)603호</p>
+              <p class="shipping-company">샛별배송</p>
+              <button class="change-address-btn" role="button" aria-label="배송지변경">
+                <span>배송지 변경</span>
+              </button>
             </div>
-          </div>
-
-          <!-- 놓치면 후회할 가격 -->
-          <div class="today-recommend-products-inner inner">
-            <div class="heading">
-              <h3 class="today-recommend-title">놓치면 후회할 가격</h3>
-            </div>
-
-            <div class="today-recommend-contents">
-              <div class="swiper-3 product-swiper">
-                <div class="swiper-wrapper product-inner swiper3-wrapper"></div>
+            <div class="finally-payment-detail">
+              <div class="payment-process">
+                <span>상품금액</span>
+                <span>40,660 원</span>
               </div>
-              <button class="product-button swiper3-button-prev"></button>
-              <button class="product-button swiper3-button-next"></button>
-            </div>
-          </div>
-        </article>
-
-        <!-- 최근 본 상품 -->
-        <aside class="sticky-section">
-          <div class="recent-product">
-            <div class="recent-product-wrapper">
-              <button class="swiper4-btn swiper4-button-prev"></button>
-              <span class="recent-title">최근 본 상품</span>
-              <div class="swiper-4">
-                <div class="swiper-wrapper swiper4-wrapper"></div>
+              <div class="payment-process">
+                <span>상품할인금액</span>
+                <span>-4,651 원</span>
               </div>
-              <button class="swiper4-btn swiper4-button-next"></button>
+              <div class="payment-process shipping-fee">
+                <span>배송비</span>
+                <span>+3,000원</span>
+              </div>
+              <div class="dotted-line"></div>
+              <div class="payment-process expected-payment-amount">
+                <span>결제예정금액</span>
+                <p><span class="final-amount">40,680</span>원</p>
+              </div>
+              <div class="accumulation-benefits">
+                <div>적립</div>
+                <span>최대 36원 적립 일반 0.1%</span>
+              </div>
             </div>
           </div>
-        </aside>
-      </section>
-
-      <div class="popup-ad remove">
-        <a href=""><img src="./assets/banner/popup_banner.png" alt="뷰티칼리 사이트로 이동하기" class="ad-img" /></a>
-        <div class="popup-ad-button">
-          <button class="today-ad-remove">오늘 하루 안 보기</button>
-          <button class="ad-close">닫기</button>
+          <button class="order-btn" role="button" aria-label="주문하기">
+            <span>주문하기</span>
+          </button>
+          <div class="cart-notice">
+            <span>쿠폰/적립금은 주문서에서 사용 가능합니다.</span>
+            <span>[주문완료] 상태일 경우에만 주문 취소 가능합니다.</span>
+            <span>[마켓컬리 &gt; 주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.</span>
+            <span>쿠폰,적립금 사용 금액을 제외한 실 결제 금액 기준으로 최종 산정됩니다.</span>
+            <span>상품별로 적립금 지급 기준이 다를 수 있습니다. (상품 상세 페이지에서 확인 가능합니다.)</span>
+          </div>
         </div>
       </div>
-    </main>
-
+    </div>
     <footer>
       <!-- footer-inner start -->
       <div class="footer-inner">
@@ -316,10 +300,12 @@
           <div class="customer-service">
             <h2>고객행복센터</h2>
             <strong>1644-1107<span>월~토요일 오전 7시 - 오후 6시</span></strong>
+
             <!-- customer-service > inquiry start -->
             <ul class="inquiry">
               <li>
                 <button>카카오톡 문의</button>
+
                 <p>
                   월~토요일 | 오전 7시 - 오후 6시<br />
                   일/ 공휴일 | 오전 7시 - 오후 1시
@@ -393,27 +379,27 @@
             <ul class="sns">
               <li>
                 <a href="#">
-                  <img src="./assets/footer/sns/Blog.svg" alt="컬리 네이버블로그 바로가기" />
+                  <img src="../../assets/footer/sns/Blog.svg" alt="컬리 네이버블로그 바로가기" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="./assets/footer/sns/FaceBook.svg" alt="컬리 페이스북 바로가기" />
+                  <img src="../../assets/footer/sns/FaceBook.svg" alt="컬리 페이스북 바로가기" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="./assets/footer/sns/Instagram.svg" alt="컬리 인스타그램 바로가기" />
+                  <img src="../../assets/footer/sns/Instagram.svg" alt="컬리 인스타그램 바로가기" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="./assets/footer/sns/NaverPost.svg" alt="컬리 네이버포스트 바로가기" />
+                  <img src="../../assets/footer/sns/NaverPost.svg" alt="컬리 네이버포스트 바로가기" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="./assets/footer/sns/Youtube.svg" alt="컬리 유튜브 바로가기" />
+                  <img src="../../assets/footer/sns/Youtube.svg" alt="컬리 유튜브 바로가기" />
                 </a>
               </li>
             </ul>
@@ -425,7 +411,7 @@
         <!-- footer-middle start -->
         <div class="footer-middle">
           <div class="lsms">
-            <a href="https://res.kurly.com/kurly/img/2022/isms_220310.png" target="_blank"><img src="./assets/footer/middle_icon/logo_isms.svg" alt="isms 인증서" /></a>
+            <a href="https://res.kurly.com/kurly/img/2022/isms_220310.png" target="_blank"><img src="../../assets/footer/middle_icon/logo_isms.svg" alt="isms 인증서" /></a>
             <div class="description">
               <p>[인증범위] 마켓칼리 쇼핑몰 서비스 개발 운영</p>
               <p>(심사받지 않은 물리적 인프라 제외)</p>
@@ -433,19 +419,19 @@
             </div>
           </div>
           <div class="privacy">
-            <a href="https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=EP&certNum=2022-EP-R002" target="_blank"><img src="./assets/footer/middle_icon/logo_privacy.svg" alt="eprivacy 인증서" /></a>
+            <a href="https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=EP&certNum=2022-EP-R002" target="_blank"><img src="../../assets/footer/middle_icon/logo_privacy.svg" alt="eprivacy 인증서" /></a>
             <div class="description">
               <p>개인정보보호 우수 웹사이트<br />개인정보처리시스템 인증 (ePRIVACY PLUS)</p>
             </div>
           </div>
           <div class="tosspayments">
-            <a href="https://pgweb.uplus.co.kr/ms/escrow/s_escrowYn.do?mertid=go_thefarmers" target="_blank"><img src="./assets/footer/middle_icon/logo_tosspayments.svg" alt="tosspayments 구매 안전 서비스 확인" /></a>
+            <a href="https://pgweb.uplus.co.kr/ms/escrow/s_escrowYn.do?mertid=go_thefarmers" target="_blank"><img src="../../assets/footer/middle_icon/logo_tosspayments.svg" alt="tosspayments 구매 안전 서비스 확인" /></a>
             <div class="description">
               <p>토스페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.</p>
             </div>
           </div>
           <div class="wooriBank">
-            <a href="https://res.kurly.com/kurly/img/2022/woori_popup_v2.png" target="_blank"><img src="./assets/footer/middle_icon/logo_wooriBank.svg" alt="우리은행 지급 보증서" /></a>
+            <a href="https://res.kurly.com/kurly/img/2022/woori_popup_v2.png" target="_blank"><img src="../../assets/footer/middle_icon/logo_wooriBank.svg" alt="우리은행 지급 보증서" /></a>
             <p>고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
           </div>
         </div>

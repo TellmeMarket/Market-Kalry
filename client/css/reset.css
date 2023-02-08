@@ -87,6 +87,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
+  font-family: "Pretendard", "malgun gothic", dotum, sans-serif;
   font: inherit;
   vertical-align: baseline;
 }

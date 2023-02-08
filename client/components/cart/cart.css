@@ -1,0 +1,222 @@
+@import url(../../css/theme.css);
+@import url(../../css/reset.css);
+@import url(../../css/a11y.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+.inner {
+  margin: 0 auto;
+  max-width: 1050px;
+  font-family: "Pretendard";
+  margin-top: 80px;
+}
+h2 {
+  margin: 80px 0 40px 0;
+  text-align: center;
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+.cart-wrap {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+.cart-list {
+  width: 742px;
+}
+.cart-list-check {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: var(--spacing-base);
+}
+.cart-list-check.bottom {
+  margin-top: var(--spacing-base);
+}
+.cart-list-check img {
+  margin-right: var(--spacing-xs);
+}
+.cart-list-check button {
+  background-color: var(--white);
+  border: 0;
+}
+.cart-list-check button > span {
+  font-weight: 600;
+}
+.line {
+  width: 1px;
+  height: 10px;
+  margin: 0 8px;
+  background-color: var(--content);
+}
+.food-cate {
+  border-top: 1px solid black;
+}
+.food-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 0;
+}
+.food-wrap img {
+  margin-right: var(--spacing-sm);
+}
+.food-wrap span {
+  font-weight: 600;
+  font-size: var(--text-base);
+}
+.food-type {
+  display: flex;
+  align-items: center;
+}
+.frozen,
+.refrigerated,
+.normal {
+  border-bottom: 1px solid black;
+}
+.cart-add-product {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray-100);
+  padding: 20px;
+}
+.cart-add-product-title {
+  display: flex;
+  align-items: center;
+}
+.cart-add-product-title img:nth-child(2) {
+  width: 60px;
+  height: 78px;
+}
+.cart-img {
+  margin: 0 8px;
+}
+.cart-quantity-wrap {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 233px;
+}
+.cart-quantity {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  width: 84px;
+  height: 30px;
+  border: 1px solid var(--gray-200);
+  margin-right: 50px;
+}
+.quantity {
+  border: 0;
+  width: 30px;
+  text-align: center;
+}
+.cart-product-price {
+  margin-right: 17px;
+}
+.payment-information {
+  width: 284px;
+  height: 709px;
+  position: sticky;
+  top: 20px;
+  margin-left: var(--spacing-lg);
+}
+.detail-payment {
+  border: 1px solid var(--gray-100);
+}
+.shipping-wrap {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--gray-100);
+}
+.shipping {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+.shipping span {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+.shipping-address {
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.shipping-company {
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: var(--text-xs);
+}
+.change-address-btn {
+  width: 244px;
+  height: 44px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 4px;
+  background-color: var(--white);
+}
+.change-address-btn span {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+.finally-payment-detail {
+  padding: var(--spacing-md);
+  background-color: var(--gray-50);
+}
+.dotted-line {
+  border-bottom: 1px dotted var(--gray-100);
+  margin-bottom: var(--spacing-lg);
+}
+.payment-process {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-base);
+  font-size: var(--text-base);
+  color: var(--content);
+  align-items: center;
+}
+.payment-process.shipping-fee {
+  margin-bottom: var(--spacing-lg);
+}
+.payment-process.expected-payment-amount {
+  margin-bottom: var(--spacing-xs);
+}
+.final-amount {
+  font-weight: 700;
+  font-size: var(--text-xxl);
+}
+.accumulation-benefits {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.accumulation-benefits div {
+  padding: 2px 8px;
+  text-align: center;
+  border-radius: 1px;
+  background-color: var(--accent-yellow);
+  background-color: #c85028;
+  color: var(--white);
+  margin-right: var(--spacing-xs);
+}
+.order-btn {
+  width: 284px;
+  height: 44px;
+  margin: var(--spacing-base) 0;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 0;
+  border-radius: 4px;
+}
+.cart-notice {
+  display: flex;
+  width: 284px;
+  height: 144px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  line-height: 1.5;
+  color: var(--gray-600);
+  font-size: var(--text-xs);
+}
