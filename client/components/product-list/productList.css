@@ -148,7 +148,7 @@ input[type="checkbox"]:checked::after {
   background: url(/client/assets/icons/Input/isChecked=true.svg) no-repeat center/cover;
 }
 
-label {
+.accodiaon-body label {
   padding-left: 9px;
   cursor: pointer;
 }
@@ -192,9 +192,12 @@ label {
   margin: 0 8px;
 }
 
-.menu-button:last-child, .menu-button:first-child button {
+.menu-button:first-child button {
   margin-right: 0;
+}
 
+.menu-button:last-child button {
+  margin-right: 0;
 }
 
 .menu-button::before {
@@ -296,6 +299,18 @@ label {
   color: var(--gray-400);
 }
 
+.badge {
+  display: inline-block;
+  width: 65px;
+  padding: 4px;
+  background-color: var(--gray-100);
+  border-radius: 4px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
 /* page navigation button */
 .page-navigation {
   height: 70px;
@@ -334,7 +349,7 @@ label {
   display: none;
   position: fixed;
   top: 0;
-  z-index: 130;
+  z-index: 999;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -345,7 +360,6 @@ label {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 150;
   width: 396px;
   height: 292px;
   padding: var(--spacing-lg) var(--spacing-md);
