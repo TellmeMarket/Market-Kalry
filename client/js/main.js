@@ -158,12 +158,8 @@ fetch(" http://localhost:3000/products")
             $recentSwiper.insertAdjacentHTML("beforeend", recentTemplate);
             document.querySelector(".recent-product").style.display = "block";
           } else {
-            console.log(data);
             for (let key in data) {
               const value = data[key];
-              console.log(key);
-              console.log(value);
-              console.log(value.id);
               let recentTemplate = /*html*/ `
                     <div class="product-img-wrapper swiper-slide">
                       <a href="./components/product-detail/productDetail.html?id=${value.id}">
@@ -270,6 +266,21 @@ fetch(" http://localhost:3000/products")
         // 장바구니 버튼 누르면 bubble 2초 보이기
         const $cartAddBtn = document.querySelector(".cart-add");
         $cartAddBtn.addEventListener("click", function () {
+          let bubbleTemplate =
+            /* html */
+            `
+          <div class="bubble search-icon-bubble">
+          <div class="content">
+            <div class="pic"><img src="./assets/${img}" alt="탱탱쫄면" /></div>
+            <div class="text-wrap">
+              <p class="title">[풀무원] 탱탱쫄면 (4개입)</p>
+              <p>장바구니에 상품을 담았습니다.</p>
+            </div>
+          </div>
+        </div>
+          `;
+
+          document.querySelector(".header-cart").insertAdjacentHTML("beforeend", bubbleTemplate);
           $bubble.classList.add("remove");
           $bubble2.classList.add("remove");
           // ease-in-out 으로 나타나게 하고 싶습니다.
