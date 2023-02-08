@@ -70,8 +70,8 @@ fetch("http://localhost:3000/products")
       `
       <div class="product">
         <div class="visual">
-          <a href="#" class="product-image"><img src="/client/assets/${thumbnail}" alt="${alt}" /></a>
-          <button  class="add-cart-button"><img src="/client/assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
+          <a href="#" class="product-image"><img src="../../assets/${thumbnail}" alt="${alt}" /></a>
+          <button  class="add-cart-button"><img src="../../assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
         </div>
         <div class="info">
           <p class="delivery">샛별배송</p>
@@ -86,8 +86,8 @@ fetch("http://localhost:3000/products")
       `
       <div class="product">
         <div class="visual">
-          <a href="#" class="product-image"><img src="/client/assets/${thumbnail}" alt="${alt}" /></a>
-          <button  class="add-cart-button"><img src="/client/assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
+          <a href="#" class="product-image"><img src="../../assets/${thumbnail}" alt="${alt}" /></a>
+          <button  class="add-cart-button"><img src="../../assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
         </div>
         <div class="info">
           <p class="delivery">샛별배송</p>
@@ -103,8 +103,8 @@ fetch("http://localhost:3000/products")
       `
       <div class="product">
         <div class="visual">
-          <a href="#" class="product-image"><img src="/client/assets/${thumbnail}" alt="${alt}" /></a>
-          <button class="add-cart-button"><img src="/client/assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
+          <a href="#" class="product-image"><img src="../../assets/${thumbnail}" alt="${alt}" /></a>
+          <button class="add-cart-button"><img src="../../assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
         </div>
         <div class="info">
           <p class="delivery">샛별배송</p>
@@ -120,8 +120,8 @@ fetch("http://localhost:3000/products")
       `
       <div class="product">
         <div class="visual">
-          <a href="#" class="product-image"><img src="/client/assets/${thumbnail}" alt="${alt}" /></a>
-          <button class="add-cart-button"><img src="/client/assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
+          <a href="#" class="product-image"><img src="../../assets/${thumbnail}" alt="${alt}" /></a>
+          <button class="add-cart-button"><img src="../../assets/icons/Icon/Cart.svg" alt="장바구니에 담기" /></button>
         </div>
         <div class="info">
           <p class="delivery">샛별배송</p>

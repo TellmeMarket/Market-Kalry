@@ -179,11 +179,10 @@ fetch(" http://localhost:3000/products")
         loadStorage("cart-product").then((data) => {
           let cartCnt = 0;
           if (data == null) {
-            cartCnt = 1;
           } else if (Object.prototype.toString.call(data).slice(8, -1).toLowerCase() === "object") {
-            cartCnt = 2;
+            cartCnt = 1;
           } else {
-            cartCnt = data.length + 1;
+            cartCnt = data.length;
           }
           document.querySelectorAll(".search-icon-cart-add").forEach((el) => {
             el.classList.add("active");
@@ -323,7 +322,23 @@ fetch(" http://localhost:3000/products")
 
           const cartStorage = { name: cartName, price: cartPrice, salePrice: cartSalePrice, productSum: productSum, cartImage: cartImage };
           setLocalStorage("cart-product", cartStorage);
-          loadCart();
+          loadStorage("cart-product")
+            .then((data) => {
+              let cartCnt = 0;
+              if (data == null) {
+                cartCnt = 1;
+              } else if (Object.prototype.toString.call(data).slice(8, -1).toLowerCase() === "object") {
+                cartCnt = 2;
+              } else {
+                cartCnt = data.length + 1;
+              }
+              document.querySelectorAll(".search-icon-cart-add").forEach((el) => {
+                el.classList.add("active");
+                el.innerHTML = cartCnt;
+              });
+              console.log(cartCnt);
+            })
+            .catch((err) => console.log(err));
           close();
         });
       });
