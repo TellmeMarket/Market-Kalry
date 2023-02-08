@@ -27,3 +27,4 @@ export const headerFunc = () => {
   addEventListener("scroll", headerSticky);
   $banner.addEventListener("click", bannerHide);
 };
+headerFunc();

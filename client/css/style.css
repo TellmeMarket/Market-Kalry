@@ -162,6 +162,10 @@ button {
   z-index: 10;
 }
 
+.swiper-4 {
+  height: 129px;
+}
+
 .product-inner {
   display: flex;
   width: 1050px;
@@ -255,6 +259,10 @@ button {
   opacity: 0;
 }
 
+.swiper-button-lock {
+  display: block;
+}
+
 .today-recommend-products {
   position: relative;
 }
@@ -271,6 +279,7 @@ button {
 }
 
 .recent-product {
+  display: none;
   position: sticky;
   top: 50%;
   width: 100%;
@@ -293,9 +302,7 @@ button {
 }
 
 .swiper4-wrapper {
-  gap: var(--spacing-xxs);
   width: 100%;
-  height: 129px;
 }
 
 .swiper4-btn {
