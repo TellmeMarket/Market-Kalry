@@ -281,6 +281,18 @@ h1 img:not(:first-child) {
   flex-shrink: 0;
 }
 
+.text-wrap {
+  width: 144px;
+}
+
+.title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
 .content .text-wrap .title {
   color: var(--gray-300);
   font: 600 12px/1 "Pretendard";
@@ -624,29 +636,6 @@ nav.active {
 }
 .search-icon2-cart:hover {
   background: url("../../assets/header/CartPrimary.svg");
-}
-
-.search-icon2-cart-add {
-  display: none;
-  position: absolute;
-  right: -4px;
-  top: -1px;
-  min-width: 20px;
-  height: 20px;
-  padding: 0px 5px;
-  border: 2px solid var(--white);
-  border-radius: 10px;
-  background-color: var(--primary);
-  font-size: 9px;
-  color: var(--white);
-  line-height: 15px;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.search-icon2-cart-add.active {
-  display: block;
 }
 
 .header-search-sticky.active {
