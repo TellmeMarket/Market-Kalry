@@ -1,60 +1,124 @@
 const signupFunc = (() => {
   const $form = document.querySelector(".signform");
-  const $signBtn = $form.querySelector(".signBtn");
-  const $popup = document.querySelector(".popup");
-
-  // 랜덤 아이디 생성
-  const randomString = () => {
-    const rand = Math.random().toString(36).substring(2, 11);
-    console.log(rand);
-  };
-  randomString();
-
-  // 팝업창
-  const popup = (text) => {
-    // if (!$popup.classList.contains("active")) {
-    //   $popup.querySelector("p").textContent = text;
-    //   document.body.classList.add("off");
-    //   $popup.classList.add("active");
-    //   return;
-    // } else {
-    //   document.body.classList.remove("off");
-    //   $popup.classList.remove("active");
-    // }
-  };
+  const $birthDays = [...$form.querySelector(".dateWrap").children];
+  const $popup = $form.querySelector(".popWrap");
+  const [$userid, $pwd, $pwdCheck, $name, $eamil, $phonNumber] = $form.querySelectorAll(".in");
+  let idNum = 0;
 
   // 에러 메세지 리스트
-  const errPopup = [`6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합`, `비밀번호 영문 숫자 조합 8자리 이상`];
+  const errPopup = [
+    "6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합",
+    "비밀번호 영문 숫자 조합 8자리 이상",
+    "동일한 비밀번호를 입력",
+    "이름을 입력해 주세요",
+    "이메일 형식으로 입력해 주세요",
+    "잘못된 휴대폰 번호 입니다. 확인 후 다시 시도 해 주세요.",
+  ];
 
-  // 에러체크 함수
+  // 랜덤 아이디 생성
+  const rand = Math.random().toString(36).substring(2, 11);
+
+  // 팝업창 생성
+  const createPopup = (text) => {
+    if (!$popup.classList.contains("active")) {
+      $popup.querySelector("h2").textContent = text;
+      $popup.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+  };
+
+  // 생년월일 글자방지
+  $birthDays.forEach((el) => el.addEventListener("input", (e) => (el.value = e.target.value.replace(/[^0-9.]/g, "").replace(/(\..*)\./g, "$1"))));
+
+  // 정규식표현 에러체크 함수
   const checkErr = (target, regExp, errNum) => {
     if (!regExp.test(target.value)) target.closest("td").querySelector("p").textContent = errPopup[errNum];
     if (target.value.length === 0 || regExp.test(target.value)) target.closest("td").querySelector("p").textContent = "";
   };
 
-  const isChecked = {
-    isUserid(id) { // 아이디 체크
-      const regExp = /^(?=.*[a-zA-Z])[a-zA-Z\d]{6,}$/;
-      checkErr(id, regExp, 0);
-      return regExp.test(id.value); // boolean
-    },
-    isPwd(pwd) { // 비밀번호 체크
-      const regExp = /^(?=.*[a-zA-Z])(?=.*[0-9]).{10,}$/;
-      console.log(pwd.value);
-      checkErr(pwd, regExp, 1);
-      return regExp.test(pwd.value); // boolean
-    },
-    isPwdCheck() {
-
-    },
-    isName() {},
-    isEmail() {},
-    isPhoneNumber() {},
+  const linkStart = (url) => {
+    let link = document.createElement("a");
+    link.href = url;
+    link.className = "go";
+    document.body.append(link);
+    document.querySelector(".go").click();
   };
 
-  const { isUserid, isPwd, isPwdCheck, isName, isEmail, isPhoneNumber } = isChecked;
+  // 에러메세지 생성
+  const createErr = (target, msgNum) => (target.closest("td").querySelector("p").textContent = errPopup[msgNum]);
 
-  const listCheck = []; // active된 요소를 확인하기위한 배열
+  // 에러메세지 제거
+  const removeErr = (target, msg = "") => (target.closest("td").querySelector("p").textContent = msg);
+
+  // 전체동의 체크
+  const allCheck = (target, bool) =>
+    target
+      .closest(".column")
+      .querySelectorAll("input[type=checkbox]")
+      .forEach((el) => (el.checked = bool));
+
+  // 가입하기 버튼
+  const allCheckSubmit = () => {
+
+    const result = {
+      useridReulst: isUserid($userid), // 유저아이디
+      pwdResult: isPwd($pwd), // 비밀번호 확인
+      pwdCheckResult: isPwdCheck($pwdCheck), // 비밀번호 체크 확인
+      nameReulst: isName($name), // 이름 확인
+      emailResult: isEmail($eamil), // 이메일 확인
+      phoneNumberResult: isPhoneNumber($phonNumber),
+      genderResult: !![...$form.querySelectorAll(".genderList > input[type=radio]")].filter((el) => el.checked === true).length, // 성별체크
+      yearResult: $birthDays[0].value.length === 4 && $birthDays[1].value.length === 2 && $birthDays[2].value.length === 2, // 생년월일 입력값 체크
+      additionalResult: [...$form.querySelectorAll(".additional > input[type=radio]")].filter((el) => el.checked === true).length === 1,
+      agreeResult: [...$form.querySelectorAll(".essential")].filter((el) => el.checked === true).length === $form.querySelectorAll(".essential").length,
+    };
+    const { useridReulst, pwdResult, nameReulst, pwdCheckResult, emailResult, phoneNumberResult, genderResult, yearResult, additionalResult, agreeResult } = result;
+    console.log(useridReulst, pwdResult, nameReulst, pwdCheckResult, emailResult, phoneNumberResult, genderResult, yearResult, additionalResult, agreeResult);
+
+    if (useridReulst && pwdResult && nameReulst && pwdCheckResult && emailResult && phoneNumberResult && genderResult && yearResult && additionalResult && agreeResult) {
+      localStorage.setItem(idNum++, {});
+      linkStart("https://www.google.com/webhp?hl=ko&sa=X&sqi=2&pjf=1&ved=0ahUKEwj-ifKl8ID2AhXwLLkGHW_RDmcQPAgI"); // 페이지 이동
+    }
+  };
+
+  const inputChecked = {
+    // 아이디 체크
+    isUserid(id) {
+      const regExp = /^(?=.*[a-zA-Z])[a-zA-Z\d]{6,}$/;
+      checkErr(id, regExp, 0);
+      return regExp.test(id.value);
+    },
+    // 비밀번호 체크
+    isPwd(pwd) {
+      const regExp = /^(?=.*[a-zA-Z])(?=.*[0-9]).{10,}$/;
+      checkErr(pwd, regExp, 1);
+      return regExp.test(pwd.value);
+    },
+    // 비밀번호 재확인
+    isPwdCheck(pwdCheck) {
+      pwdCheck.value !== $pwdCheck.value ? createErr(pwdCheck, 2) : removeErr(pwdCheck);
+      !pwdCheck.value.length && removeErr(pwdCheck, "비밀번호를 한번 더 확인해주세요");
+      return !!pwdCheck.value;
+    },
+    // 이름확인
+    isName(name) {
+      !name.value.length ? createErr(name, 3) : removeErr(name);
+      return !!name.value;
+    },
+    // 이메일 확인
+    isEmail(email) {
+      const regExp = /^[^@]+@[^@.]+.+[^.]+$/;
+      checkErr(email, regExp, 4);
+      return regExp.test(email.value);
+    },
+    // 휴대폰 번호 확인
+    isPhoneNumber(number) {
+      const regExp = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+      checkErr(number, regExp, 5);
+      return regExp.test(number.value);
+    },
+  };
+  const { isUserid, isPwd, isPwdCheck, isName, isEmail, isPhoneNumber } = inputChecked;
 
   return () => {
     // inputEvent
@@ -67,55 +131,47 @@ const signupFunc = (() => {
       e.target.id === "phonNumber" && isPhoneNumber(e.target);
     };
 
-    // 전체동의 체크 2
-    const allCheck = (target, bool) =>
-      target
-        .closest(".column")
-        .querySelectorAll("input[type=checkbox]")
-        .forEach((el) => (el.checked = bool));
-
     const clickHandler = (e) => {
-      // 전체동의 체크 1
+      if (e.target.className === "close") {
+        $popup.classList.remove("active");
+        document.body.style.overflow = "visible";
+      }
+
+      // buttonClick
+      if (e.target.tagName === "BUTTON") {
+        e.preventDefault();
+
+        // userid 중복확인 버튼
+        if (e.target.className === "userid-check") {
+        }
+
+        // email 중복확인 버튼
+        if (e.target.dataset.email === "email") {
+          if (isEmail(e.target.previousElementSibling)) {
+            createPopup("사용가능한 이메일입니다");
+            e.target.classList.add("off");
+          } else if (!e.target.previousElementSibling.value.length) {
+            createPopup("이메일을 입력해주세요");
+          } else {
+            createPopup("이메일 형식으로 입력해주세요");
+          }
+        }
+
+        //인증번호 전송 버튼
+        if (e.target.className === "phoneNumberBtn") {
+          if (isPhoneNumber(e.target.previousElementSibling)) createPopup("인증번호가 전송되었습니다.");
+        }
+
+        // 가입하기
+        e.target.className === "signBtn" && allCheckSubmit();
+      }
+
+      // 전체동의
       if (e.target.dataset.check === "check") {
         e.target.name === "agreeAll" && allCheck(e.target, e.target.checked);
         const result = [...$form.querySelectorAll(".required")].filter((el) => el.checked === true);
         result.length === $form.querySelectorAll(".required").length && allCheck(e.target, true);
       }
-
-      // userId 중복확인 + 팝업
-      // 1. userId 중복확인버튼을 눌렀을때 input.vaue가 해당 조건이 아니면 팝업창을 띄움
-      if (e.target.className === "userid-check") {
-        e.preventDefault();
-      }
-
-      // 2. userId 중복확인버튼을 눌렀을때 input.vaue가 해당 조건이 맞으면 팝업창을 띄우고 중복확인 버튼 off
-
-      // email 중복확인 + 팝업
-      // 1. email 중복확인버튼을 눌렀을때 빈문자열이면 입력해주세요
-      // 2. 이메일 형식이 아닐경우 이메일 형식입력하라는 팝업창 띄움
-      // 3. 이메일 형식이 맞을 경우 사용가능한 메일이라는 팝업창 뜨우고 버튼 off
-
-      // 가입하기 버튼
-      const allCheckSubmit = (e) => {
-        e.preventDefault();
-
-        // 1. userId active인가 ? 있으면 확인용 배열에 userid를 넣는다 아니면 return하면서 "아이디 중복체크해주세요"팝업창출력
-        $form.querySelector("#userid").classList.contains("active") ? listCheck.push("userid") : popup("아이디를 중복체크 해주세요");
-        // 2. email 중복확인 버튼이 off인가 ? 아니면 return하면서 "아이디 중복체크해주세요"팝업창출력
-        $form.querySelector("#email").classList.contains("active") ? listCheck.push("email") : popup("email을 중복체크 해주세요");
-        // 3. 휴대폰 인증번호 버튼이 off인가 ? 아니면 return하면서 "아이디 중복체크해주세요"팝업창출력
-        $form.querySelector("#phonNumber").classList.contains("active") ? listCheck.push("phoneNumber") : popup("휴대폰 인증번호를 확인 해주세요");
-        // 4. gender에 하나라도 체크가 되어있는가 ? 아니면 return하면서 "아이디 중복체크해주세요"팝업창출력
-        $form.querySelectorAll(".genderList").filter((el) => el.checked === true).length === 1 ? listCheck.push("genderList") : popup("성별을 체크해주세요");
-        // 5. 생년월일 input에 각각 값이 입력되어있는가 ? 아니면 return하면서 "아이디 중복체크해주세요"팝업창출력
-
-        // 6. 이밴트가 하나라도 체크가 되어있는가 ? 아니면 return하면서 "아이디 중복체크해주세요"팝업창출력
-
-        // 7. 약관동의 1,2,3에 체크가 되어있는가 ? 아니면 return하면서 "아이디 중복체크해주세요"팝업창출력
-
-        // listCheck배열에 있는 갯수가 n개일 때 가입완료 페이지로 이동한다.
-      };
-      e.target.className === "signBtn" && allCheckSubmit(e);
     };
 
     // eventList
@@ -125,8 +181,3 @@ const signupFunc = (() => {
 })();
 
 signupFunc();
-// const clickHandler = (e) => {
-//   e.preventDefault();
-//   e.target.tagName === "BUTTON" && popup("text");
-//   e.target.dataset.close === "close" && popup();
-// };

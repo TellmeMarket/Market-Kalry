@@ -1,4 +1,3 @@
-
 *,
 ::after,
 ::before {
@@ -19,17 +18,15 @@ button {
   padding: 0;
 }
 
-
-
 header {
   max-width: 100%;
   height: 100%;
 }
 
-/* top-banner start */  
+/* top-banner start */
 
 /* 새로추가된거 */
-.top-banner.active{
+.top-banner.active {
   margin-top: 0;
 }
 
@@ -41,7 +38,6 @@ header {
   /* 수정된 부분 */
   margin-top: -42px;
 }
-
 
 .top-banner-text {
   width: 1050px;
@@ -255,7 +251,7 @@ header nav::after {
   cursor: pointer;
   margin-right: 50px;
   position: relative;
-  z-index: 999;
+  z-index: 10;
 }
 .category h2 a {
   display: inline-block;
