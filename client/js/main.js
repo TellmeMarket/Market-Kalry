@@ -265,7 +265,8 @@ fetch(" http://localhost:3000/products")
         // .bubble.remove
         const $bubble = document.querySelector(".search-icon-bubble");
         const $bubble2 = document.querySelector(".search-icon2-bubble");
-        const $content = document.querySelector(".content");
+        const $content = document.querySelector(".fixed-bubble");
+        const $content2 = document.querySelector(".sticky-bubble");
 
         // 장바구니 버튼 누르면 bubble 2초 보이기
         const $cartAddBtn = document.querySelector(".cart-add");
@@ -282,23 +283,44 @@ fetch(" http://localhost:3000/products")
           </div>
           `;
 
-          $content.insertAdjacentHTML("beforeend", template);
-          $bubble.classList.add("remove");
-          $bubble2.classList.add("remove");
-          // ease-in-out 으로 나타나게 하고 싶습니다.
-          // 껌이었다 구현완료 by - 김주현
-          setTimeout(() => {
-            document.querySelector(".content-wrap").remove();
-            $bubble.classList.remove("remove");
-            $bubble2.classList.remove("remove");
-          }, 2000);
+          if (document.querySelector(".header-nav").classList.contains("active")) {
+            $content2.insertAdjacentHTML("beforeend", template);
+            $bubble2.classList.add("remove");
+
+            setTimeout(() => {
+              document.querySelector(".content-wrap").remove();
+              $bubble2.classList.remove("remove");
+            }, 2000);
+          } else {
+            $content.insertAdjacentHTML("beforeend", template);
+            $bubble.classList.add("remove");
+
+            setTimeout(() => {
+              document.querySelector(".content-wrap").remove();
+              $bubble.classList.remove("remove");
+            }, 2000);
+          }
 
           const cartStorage = { name: cartName, price: cartPrice, salePrice: cartSalePrice, productSum: productSum, cartImage: cartImage };
           setLocalStorage("cart-product", cartStorage);
-
+          loadStorage("cart-product")
+            .then((data) => {
+              let cartCnt = 0;
+              if (data == null) {
+                cartCnt = 1;
+              } else if (Object.prototype.toString.call(data).slice(8, -1).toLowerCase() === "object") {
+                cartCnt = 2;
+              } else {
+                cartCnt = data.length + 1;
+              }
+              document.querySelectorAll(".search-icon-cart-add").forEach((el) => {
+                el.classList.add("active");
+                el.innerHTML = cartCnt;
+              });
+              console.log(cartCnt);
+            })
+            .catch((err) => console.log(err));
           close();
-          document.querySelector(".search-icon-cart-add").classList.add("active");
-          document.querySelector(".search-icon2-cart-add").classList.add("active");
         });
       });
     });
