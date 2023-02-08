@@ -65,8 +65,7 @@ fetch("http://localhost:3000/products")
     let salePrice = el.salePrice !== 0 ? el.salePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 원" : "";
     let thumbnail = el.image.thumbnail;
     let alt = el.image.alt;
-
-    console.log(saleRatio);
+    
     let priceTemplete = 
       /* html */
       `
