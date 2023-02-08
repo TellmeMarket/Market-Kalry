@@ -258,11 +258,15 @@ h1 img:not(:first-child) {
   align-items: center;
   gap: 24px;
 }
-
+.content-wrap {
+  display: flex;
+  align-items: center;
+}
 .content .pic {
   overflow: hidden;
   width: 46px;
   height: 60px;
+  margin-right: 12px;
 }
 
 .content .pic > img {

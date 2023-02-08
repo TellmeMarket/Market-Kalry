@@ -11,6 +11,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
+    <script src="./js/header.js" type="module"></script>
     <title>마켓칼리</title>
   </head>
 
@@ -44,8 +45,7 @@
           <!-- logo start -->
           <div class="header-top-2">
             <h1>
-              <a href="./index.html">
-                <img src="./assets/header/logo.svg" alt="마켓칼리 로고" class="logo-img" /></a>
+              <a href="./index.html"> <img src="./assets/header/logo.svg" alt="마켓칼리 로고" class="logo-img" /></a>
               <button class="karly-btn">마켓칼리</button>
               <img src="./assets/header/bar.svg" alt />
               <button class="beauty-btn">뷰티칼리</button>
@@ -68,15 +68,9 @@
               </li>
               <li class="search-icon-cart">
                 <div class="header-cart">
-                  <a href="#"></a>
+                  <a href="./components/cart/cart.html"></a>
                   <div class="bubble search-icon-bubble">
-                    <div class="content">
-                      <div class="pic"><img src="./assets/tangtang/thumbnail.jpg" alt="탱탱쫄면" /></div>
-                      <div class="text-wrap">
-                        <p class="title">[풀무원] 탱탱쫄면 (4개입)</p>
-                        <p>장바구니에 상품을 담았습니다.</p>
-                      </div>
-                    </div>
+                    <div class="content"></div>
                   </div>
                 </div>
                 <span class="search-icon-cart-add">1</span>
@@ -87,132 +81,133 @@
         </div>
         <!-- header-top end -->
         <!-- nav start -->
-      <nav class="header-nav">
-        <!-- category start -->
-        <div class="category">
-          <h2><a href="#">카테고리</a></h2>
-          <ul class="category-list">
-            <li class="list1">
-              <a href="#"> 선물하기 </a>
+        <nav class="header-nav">
+          <!-- category start -->
+          <div class="category">
+            <h2><a href="#">카테고리</a></h2>
+            <ul class="category-list">
+              <li class="list1">
+                <a href="#"> 선물하기 </a>
+              </li>
+              <li class="list2">
+                <a href="#"> 채소 </a>
+              </li>
+              <li class="list3">
+                <a href="#"> 과일 &middot; 견과 &middot; 쌀 </a>
+              </li>
+              <li class="list4">
+                <a href="#"> 수산 &middot; 해산 &middot; 건어물 </a>
+              </li>
+              <li class="list5">
+                <a href="#"> 정육 &middot; 계란 </a>
+              </li>
+              <li class="list6">
+                <a href="#"> 국 &middot; 반찬 &middot; 메인요리 </a>
+              </li>
+              <li class="list7">
+                <a href="#"> 샐러드 &middot; 간편식 </a>
+              </li>
+              <li class="list8">
+                <a href="#"> 면 &middot; 양념 &middot; 오일 </a>
+              </li>
+              <li class="list9">
+                <a href="#"> 생수 &middot; 음료 &middot; 우유 &middot; 커피 </a>
+              </li>
+              <li class="list10">
+                <a href="#"> 간식 &middot; 과자 &middot; 떡 </a>
+              </li>
+              <li class="list11">
+                <a href="#"> 베이커리 &middot; 치즈 &middot; 델리 </a>
+              </li>
+              <li class="list12">
+                <a href="#"> 건강식품 </a>
+              </li>
+              <li class="list13">
+                <a href="#"> 와인 </a>
+              </li>
+              <li class="list14">
+                <a href="#"> 전통주 </a>
+              </li>
+              <li class="list15">
+                <a href="#"> 생활용품 &middot; 리빙 &middot; 캠핑 </a>
+              </li>
+              <li class="list16">
+                <a href="#"> 스킨케어 &middot; 메이크업 </a>
+              </li>
+              <li class="list17">
+                <a href="#"> 헤어 &middot; 바디 &middot; 구강 </a>
+              </li>
+              <li class="list18">
+                <a href="#"> 주방용품 </a>
+              </li>
+              <li class="list19">
+                <a href="#"> 가전제품 </a>
+              </li>
+              <li class="list20">
+                <a href="#"> 반려동물 </a>
+              </li>
+              <li class="list21">
+                <a href="#"> 베이비 &middot; 키즈 &middot; 완구 </a>
+              </li>
+              <li class="list22">
+                <a href="#"> 여행 &middot; 티켓 </a>
+              </li>
+            </ul>
+          </div>
+          <!-- category end -->
+          <!-- menu start -->
+          <ul class="menu">
+            <li>
+              <h2><a href="#">신상품</a></h2>
             </li>
-            <li class="list2">
-              <a href="#"> 채소 </a>
+            <li>
+              <h2><a href="./components/product-list/productList.html">베스트</a></h2>
             </li>
-            <li class="list3">
-              <a href="#"> 과일 &middot; 견과 &middot; 쌀 </a>
+            <li>
+              <h2><a href="#">알뜰쇼핑</a></h2>
             </li>
-            <li class="list4">
-              <a href="#"> 수산 &middot; 해산 &middot; 건어물 </a>
-            </li>
-            <li class="list5">
-              <a href="#"> 정육 &middot; 계란 </a>
-            </li>
-            <li class="list6">
-              <a href="#"> 국 &middot; 반찬 &middot; 메인요리 </a>
-            </li>
-            <li class="list7">
-              <a href="#"> 샐러드 &middot; 간편식 </a>
-            </li>
-            <li class="list8">
-              <a href="#"> 면 &middot; 양념 &middot; 오일 </a>
-            </li>
-            <li class="list9">
-              <a href="#"> 생수 &middot; 음료 &middot; 우유 &middot; 커피 </a>
-            </li>
-            <li class="list10">
-              <a href="#"> 간식 &middot; 과자 &middot; 떡 </a>
-            </li>
-            <li class="list11">
-              <a href="#"> 베이커리 &middot; 치즈 &middot; 델리 </a>
-            </li>
-            <li class="list12">
-              <a href="#"> 건강식품 </a>
-            </li>
-            <li class="list13">
-              <a href="#"> 와인 </a>
-            </li>
-            <li class="list14">
-              <a href="#"> 전통주 </a>
-            </li>
-            <li class="list15">
-              <a href="#"> 생활용품 &middot; 리빙 &middot; 캠핑 </a>
-            </li>
-            <li class="list16">
-              <a href="#"> 스킨케어 &middot; 메이크업 </a>
-            </li>
-            <li class="list17">
-              <a href="#"> 헤어 &middot; 바디 &middot; 구강 </a>
-            </li>
-            <li class="list18">
-              <a href="#"> 주방용품 </a>
-            </li>
-            <li class="list19">
-              <a href="#"> 가전제품 </a>
-            </li>
-            <li class="list20">
-              <a href="#"> 반려동물 </a>
-            </li>
-            <li class="list21">
-              <a href="#"> 베이비 &middot; 키즈 &middot; 완구 </a>
-            </li>
-            <li class="list22">
-              <a href="#"> 여행 &middot; 티켓 </a>
+            <li>
+              <h2><a href="#">특가/혜택</a></h2>
             </li>
           </ul>
-        </div>
-        <!-- category end -->
-        <!-- menu start -->
-        <ul class="menu">
-          <li>
-            <h2><a href="#">신상품</a></h2>
-          </li>
-          <li>
-            <h2><a href="#">베스트</a></h2>
-          </li>
-          <li>
-            <h2><a href="#">알뜰쇼핑</a></h2>
-          </li>
-          <li>
-            <h2><a href="#">특가/혜택</a></h2>
-          </li>
-        </ul>
-        <!-- menu end -->
+          <!-- menu end -->
 
-        <!-- searchbar -->
+          <!-- searchbar -->
 
-        <div class="header-search-sticky">
-          <label for="search-sticky" class="a11yHidden">제품 검색: </label>
-          <input id="search-sticky" type="text" name="search" placeholder="검색어를 입력해주세요" value />
-          <button id="submit-sticky" aria-label="submit" class="search-btn"></button>
-        </div>
+          <div class="header-search-sticky">
+            <label for="search-sticky" class="a11yHidden">제품 검색: </label>
+            <input id="search-sticky" type="text" name="search" placeholder="검색어를 입력해주세요" value />
+            <button id="submit-sticky" aria-label="submit" class="search-btn"></button>
+          </div>
 
-        <!-- iconList -->
-        <ul class="search-icon2">
-          <li class="search-icon2-location">
-            <a href="#"></a>
-          </li>
-          <li class="search-icon2-heart">
-            <a href="#"></a>
-          </li>
-          <li class="search-icon2-cart">
-            <a href="#"></a>
-            <div class="header-cart">
-              <div class="bubble search-icon2-bubble">
-                <div class="content">
-                  <div class="pic"><img src="./assets/tangtang/thumbnail.jpg" alt="탱탱쫄면" /></div>
-                  <div class="text-wrap">
-                    <h5 class="title">[풀무원] 탱탱쫄면 (4개입)</h5>
-                    <p>장바구니에 상품을 담았습니다.</p>
+          <!-- iconList -->
+          <ul class="search-icon2">
+            <li class="search-icon2-location">
+              <a href="#"></a>
+            </li>
+            <li class="search-icon2-heart">
+              <a href="#"></a>
+            </li>
+            <li class="search-icon2-cart">
+              <a href="#"></a>
+              <div class="header-cart">
+                <div class="bubble search-icon2-bubble">
+                  <div class="content">
+                    <div class="pic"><img src="./assets/tangtang/thumbnail.jpg" alt="탱탱쫄면" /></div>
+                    <div class="text-wrap">
+                      <h5 class="title">[풀무원] 탱탱쫄면 (4개입)</h5>
+                      <p>장바구니에 상품을 담았습니다.</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <span class="search-icon2-cart-add">1</span>
-          </li>
-        </ul>
-        <!-- notice start -->
-        <a href="#" class="notice"> <span>샛별&middot;낮</span>&nbsp;배송안내 </a>
-      </nav>
+              <span class="search-icon2-cart-add">1</span>
+            </li>
+          </ul>
+          <!-- notice start -->
+          <a href="#" class="notice"> <span>샛별&middot;낮</span>&nbsp;배송안내 </a>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -265,7 +260,6 @@
               <h3 class="today-recommend-title">이 상품 어때요?</h3>
             </div>
 
-
             <div class="today-recommend-contents">
               <div class="swiper-2 product-swiper">
                 <div class="swiper-wrapper product-inner swiper2-wrapper"></div>
@@ -298,8 +292,8 @@
               <button class="swiper4-btn swiper4-button-prev"></button>
               <span class="recent-title">최근 본 상품</span>
               <div class="swiper-4">
-                <div class="swiper-wrapper swiper-4-wrapper">
-                  <div class="product-img-wrapper swiper-slide">
+                <div class="swiper-wrapper swiper4-wrapper">
+                  <!-- <div class="product-img-wrapper swiper-slide">
                     <a href=""><img class="recent-product-img" src="./assets/product/product01.png" alt="풀무원 탱탱쫄면 상품사진" /></a>
                   </div>
                   <div class="product-img-wrapper swiper-slide">
@@ -310,7 +304,7 @@
                   </div>
                   <div class="product-img-wrapper swiper-slide">
                     <a href=""><img class="recent-product-img" src="./assets/product/product04.png" alt="프로쉬 베이비 세탁세제 상품사진" /></a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <button class="swiper4-btn swiper4-button-next"></button>
@@ -326,7 +320,6 @@
           <button class="ad-close">닫기</button>
         </div>
       </div>
-
     </main>
 
     <footer>

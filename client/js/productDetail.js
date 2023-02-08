@@ -1,7 +1,7 @@
 const $wrap = document.querySelector(".detail-page");
 const $detail = document.querySelector(".detail-lnb");
 const bid = window.location.href.split("id=")[1];
-const goDetailpage = (id) => {
+const goDetailpage = () => {
   fetch("http://localhost:3000/products")
     .then((res) => res.json())
     .then((data) => {

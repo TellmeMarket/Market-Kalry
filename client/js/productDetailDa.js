@@ -72,18 +72,16 @@ function closePopupInquiry() {
 /* -------------------------------------------------------------------------- */
 /*                               알림 아이콘 클릭 시 색 변경                              */
 /* -------------------------------------------------------------------------- */
-const getLikeWrap = document.querySelector(".icons");
-const getLikeIcon = document.querySelector(".icon-heart");
+// const getLikeWrap = document.querySelector(".icons");
+// const getLikeIcon = document.querySelector(".icon-heart");
 
-console.log(getLikeWrap);
-
-let cnt = 1;
-function setColor() {
-  if (cnt % 2 == 1) {
-    getLikeIcon.src = "../../assets/product-detail/heart-full.svg";
-  } else {
-    getLikeIcon.src = "../../assets/product-detail/heart.svg";
-  }
-  cnt++;
-}
-getLikeWrap.addEventListener("click", setColor);
+// let cnt = 1;
+// function setColor() {
+//   if (cnt % 2 == 1) {
+//     getLikeIcon.src = "../../assets/product-detail/heart-full.svg";
+//   } else {
+//     getLikeIcon.src = "../../assets/product-detail/heart.svg";
+//   }
+//   cnt++;
+// }
+// getLikeWrap.addEventListener("click", setColor);

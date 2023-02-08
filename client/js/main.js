@@ -1,7 +1,4 @@
 import { loadStorage, saveStorage } from "../lib/utils/storage.js";
-import { headerFunc } from "./header.js";
-
-headerFunc();
 
 // AD popup
 document.body.style.overflow = "hidden";
@@ -104,6 +101,7 @@ fetch(" http://localhost:3000/products")
       let salePrice = el.salePrice !== 0 ? el.salePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 원" : "";
       let img = el.image.thumbnail;
       let alt = el.image.alt;
+      let type = el.type;
 
       let productTemplate =
         /* html */
@@ -112,7 +110,7 @@ fetch(" http://localhost:3000/products")
                      <a href="./components/product-detail/productDetail.html?id=${id}">
                        <img class="product-img" src="./assets/${img}" alt=${alt} />
                      </a>
-                     <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기" data-name="${name}" data-price="${currentPrice}" data-saleprice="${salePrice}" data-image="./assets/${img}"></button>
+                     <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기" data-name="${name}" data-price="${currentPrice}" data-saleprice="${salePrice}" data-image="./assets/${img}" data-type="${type}"></button>
                    </div>
                    <div class="product-info">
                      <h4 class="product-info-name">${name}</h4>
@@ -137,6 +135,7 @@ fetch(" http://localhost:3000/products")
         let cartSalePrice = e.target.dataset.saleprice;
         let cartCurrentPrice = cartSalePrice === "" ? cartPrice : cartSalePrice;
         let cartImage = e.target.dataset.image;
+        let cartType = e.target.dataset.type;
 
         let cartTemplate = /* html */ `
         <div class="add-cart-shadow active">
@@ -217,20 +216,36 @@ fetch(" http://localhost:3000/products")
         // .bubble.remove
         const $bubble = document.querySelector(".search-icon-bubble");
         const $bubble2 = document.querySelector(".search-icon2-bubble");
+        const $content = document.querySelector(".content");
 
         // 장바구니 버튼 누르면 bubble 2초 보이기
         const $cartAddBtn = document.querySelector(".cart-add");
         $cartAddBtn.addEventListener("click", function () {
+          let template =
+            /* html*/
+            `
+          <div class="content-wrap">
+          <div class="pic"><img src="${cartImage}" alt="탱탱쫄면" /></div>
+          <div class="text-wrap">
+            <p class="title">${cartName}</p>
+            <p>장바구니에 상품을 담았습니다.</p>
+          </div>
+          </div>
+          `;
+
+          $content.insertAdjacentHTML("beforeend", template);
           $bubble.classList.add("remove");
           $bubble2.classList.add("remove");
           // ease-in-out 으로 나타나게 하고 싶습니다.
+          // 껌이었다 구현완료 by - 김주현
           setTimeout(() => {
+            document.querySelector(".content-wrap").remove();
             $bubble.classList.remove("remove");
             $bubble2.classList.remove("remove");
-          }, 3500);
+          }, 2000);
 
           let localItem = [];
-          const newItem = { name: cartName, price: cartPrice, salePrice: cartSalePrice, productSum: productSum, cartImage: cartImage };
+          const newItem = { name: cartName, price: cartPrice, salePrice: cartSalePrice, productSum: productSum, cartImage: cartImage, cartType: cartType };
 
           const setLocalStorage = loadStorage("cart-product")
             .then((data) => {
