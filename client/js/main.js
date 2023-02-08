@@ -107,8 +107,9 @@ fetch(" http://localhost:3000/products")
         /* html */
         ` <div class="product swiper-slide">
                    <div class="product-visual">
-                     <a href="./components/product-detail/productDetail.html?id=${id}">
-                       <img class="product-img" src="./assets/${img}" alt=${alt} />
+                     <a class="product-detail-link" href="./components/product-detail/productDetail.html?id=${id}">
+                       <img class="product-img" src="./assets/${img}" alt=${alt} data-alt="${alt}" data-src="${img}" data-id="${id}"/>
+
                      </a>
                      <button class="icon-cart" role="button" aria-label="해당상품 장바구니 담기" data-name="${name}" data-price="${currentPrice}" data-saleprice="${salePrice}" data-image="./assets/${img}" data-type="${type}"></button>
                    </div>
@@ -125,6 +126,55 @@ fetch(" http://localhost:3000/products")
       $productSwiper1.insertAdjacentHTML("beforeend", productTemplate);
       $productSwiper2.insertAdjacentHTML("beforeend", productTemplate);
     });
+
+    function setLocalStorage(name, value) {
+      let localItem = [];
+      loadStorage(name)
+        .then((data) => {
+          if (data == null) {
+            saveStorage(name, value);
+          } else if (Object.prototype.toString.call(data).slice(8, -1).toLowerCase() === "object") {
+            localItem = [data, value];
+            saveStorage(name, localItem);
+          } else {
+            localItem = data;
+            localItem.push(value);
+            saveStorage(name, localItem);
+          }
+        })
+        .catch((err) => console.log(err));
+    }
+
+    const $recentSwiper = document.querySelector(".swiper4-wrapper");
+    (function loadRecentProduct() {
+      loadStorage("recent-product")
+        .then((data) => {
+          if (data == null) {
+          } else if (Object.prototype.toString.call(data).slice(8, -1).toLowerCase() === "object") {
+            let recentTemplate = /*html*/ `
+                    <div class="product-img-wrapper swiper-slide">
+                      <a href="./components/product-detail/productDetail.html?id=${data.id}">
+                      <img class="recent-product-img" src="./assets/${data.img}" alt=${data.alt}  /></a>
+                    </div>
+              `;
+            $recentSwiper.insertAdjacentHTML("beforeend", recentTemplate);
+            document.querySelector(".recent-product").style.display = "block";
+          } else {
+            for (let key in data) {
+              const value = data[key];
+              let recentTemplate = /*html*/ `
+                    <div class="product-img-wrapper swiper-slide">
+                      <a href="./components/product-detail/productDetail.html?id=${value.id}">
+                      <img class="recent-product-img" src="./assets/${value.img}" alt=${value.alt}  /></a>
+                    </div>
+              `;
+              $recentSwiper.insertAdjacentHTML("afterbegin", recentTemplate);
+              document.querySelector(".recent-product").style.display = "block";
+            }
+          }
+        })
+        .catch((err) => console.log(err));
+    })();
 
     // iconCart를 클릭하면 장바구니 창 뜨게 하기
     const $cartButton = document.querySelectorAll(".icon-cart");
@@ -212,7 +262,6 @@ fetch(" http://localhost:3000/products")
           productSum = (num * Number(result)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 원";
           $productSum.innerHTML = productSum;
         });
-
         // .bubble.remove
         const $bubble = document.querySelector(".search-icon-bubble");
         const $bubble2 = document.querySelector(".search-icon2-bubble");
@@ -244,27 +293,25 @@ fetch(" http://localhost:3000/products")
             $bubble2.classList.remove("remove");
           }, 2000);
 
-          let localItem = [];
-          const newItem = { name: cartName, price: cartPrice, salePrice: cartSalePrice, productSum: productSum, cartImage: cartImage, cartType: cartType };
+          const cartStorage = { name: cartName, price: cartPrice, salePrice: cartSalePrice, productSum: productSum, cartImage: cartImage };
+          setLocalStorage("cart-product", cartStorage);
 
-          const setLocalStorage = loadStorage("cart-product")
-            .then((data) => {
-              if (data == null) {
-                saveStorage("cart-product", newItem);
-              } else if (Object.prototype.toString.call(data).slice(8, -1).toLowerCase() === "object") {
-                localItem = [data, newItem];
-                saveStorage("cart-product", localItem);
-              } else {
-                localItem = data;
-                localItem.push(newItem);
-                saveStorage("cart-product", localItem);
-              }
-            })
-            .catch((err) => console.log(err));
           close();
           document.querySelector(".search-icon-cart-add").classList.add("active");
           document.querySelector(".search-icon2-cart-add").classList.add("active");
         });
+      });
+    });
+
+    const $clickProduct = document.querySelectorAll(".product-detail-link");
+    $clickProduct.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        let productAlt = e.target.dataset.alt;
+        let productSrc = e.target.dataset.src;
+        let productId = e.target.dataset.id;
+
+        const recentSotrage = { id: productId, img: productSrc, alt: productAlt };
+        setLocalStorage("recent-product", recentSotrage);
       });
     });
   })
@@ -306,6 +353,7 @@ const productSwiper2 = new Swiper(".swiper-3", {
 const recentSwiper = new Swiper(".swiper-4", {
   direction: "vertical",
   slidesPerView: 2.5,
+  spaceBetween: 4,
   navigation: {
     nextEl: ".swiper4-button-next",
     prevEl: ".swiper4-button-prev",
