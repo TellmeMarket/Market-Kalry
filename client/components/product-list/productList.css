@@ -299,6 +299,18 @@ input[type="checkbox"]:checked::after {
   color: var(--gray-400);
 }
 
+.badge {
+  display: inline-block;
+  width: 65px;
+  padding: 4px;
+  background-color: var(--gray-100);
+  border-radius: 4px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
 /* page navigation button */
 .page-navigation {
   height: 70px;
