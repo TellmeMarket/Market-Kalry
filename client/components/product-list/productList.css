@@ -1,6 +1,6 @@
-@import url(/client/css/reset.css);
-@import url(/client/css/theme.css);
-@import url(/client/css/a11y.css);
+@import url(../../css/reset.css);
+@import url(../../css/theme.css);
+@import url(../../css/a11y.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 
 * {
@@ -69,7 +69,7 @@ button {
   color: var(--gray-300);
 }
 
-.filter{
+.filter {
   display: flex;
   justify-content: space-between;
   flex-flow: row nowrap;
@@ -81,7 +81,7 @@ button {
   flex-flow: row nowrap;
 }
 
-.accordian-head[open] summary{
+.accordian-head[open] summary {
   padding-bottom: 14px;
 }
 
@@ -94,10 +94,10 @@ button {
 }
 
 .accordian-head summary::marker {
-  content: '';
+  content: "";
 }
 
-.accordian-head summary::-webkit-details-marker{
+.accordian-head summary::-webkit-details-marker {
   display: none;
 }
 
@@ -112,16 +112,16 @@ button {
 }
 
 .accordian-head button::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: url(/client/assets/icons/Icon/Direction=Right.svg) no-repeat;
+  background: url(../../assets/icons/Icon/Direction=Right.svg) no-repeat;
   vertical-align: -4px;
 }
 
 .accodiaon-body li {
-  margin: 8px 0 16px; 
+  margin: 8px 0 16px;
   font-weight: 400;
   line-height: 160%;
 }
@@ -131,13 +131,13 @@ input {
 }
 
 input[type="checkbox"]::after {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: var(--white) url(/client/assets/icons/Input/isChecked=false.svg) no-repeat center/cover;
+  background: var(--white) url(../../assets/icons/Input/isChecked=false.svg) no-repeat center/cover;
   width: 23px;
   height: 23px;
   vertical-align: -6px;
@@ -145,15 +145,13 @@ input[type="checkbox"]::after {
 }
 
 input[type="checkbox"]:checked::after {
-  background: url(/client/assets/icons/Input/isChecked=true.svg) no-repeat center/cover;
+  background: url(../../assets/icons/Input/isChecked=true.svg) no-repeat center/cover;
 }
 
 .accodiaon-body label {
   padding-left: 9px;
   cursor: pointer;
 }
-
-
 
 /* product list */
 .product-list-group {
@@ -176,7 +174,7 @@ input[type="checkbox"]:checked::after {
   display: flow-root;
 }
 
-.menu-button-list .is-active button{
+.menu-button-list .is-active button {
   color: var(--black);
 }
 
@@ -186,7 +184,7 @@ input[type="checkbox"]:checked::after {
 
 .menu-button button {
   font-weight: 600;
-  line-height: 150%; 
+  line-height: 150%;
   color: var(--gray-300);
   padding: 0;
   margin: 0 8px;
@@ -201,31 +199,31 @@ input[type="checkbox"]:checked::after {
 }
 
 .menu-button::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 1px;
   height: 10px;
   background-color: var(--gray-300);
 }
 
-.menu-button:first-child::before{
+.menu-button:first-child::before {
   display: none;
 }
 
 .menu-button:first-child::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 13px;
   height: 13px;
   margin: 0 8px 0 5px;
   vertical-align: -2px;
-  background: url(/client/assets/icons/Icon/question.svg) no-repeat center/cover;
+  background: url(../../assets/icons/Icon/question.svg) no-repeat center/cover;
 }
 
 /* list */
 .product-list {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   margin-bottom: 24px;
 }
@@ -423,11 +421,11 @@ input[type="checkbox"]:checked::after {
 }
 
 .minus-product {
-  background: url("/client/assets/icons/Icon/cart_minus.svg") 50% 50% no-repeat;
+  background: url("../../assets/icons/Icon/cart_minus.svg") 50% 50% no-repeat;
 }
 
 .plus-product {
-  background: url("/client/assets/icons/Icon/cart_plus.svg") 50% 50% no-repeat;
+  background: url("../../assets/icons/Icon/cart_plus.svg") 50% 50% no-repeat;
 }
 
 .product-total-count {

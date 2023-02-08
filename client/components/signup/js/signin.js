@@ -18,7 +18,6 @@ const signupFunc = (() => {
   // 랜덤 아이디 생성
   const rand = Math.random().toString(36).substring(2, 11);
 
-  // 팝업창 생성
   const createPopup = (text) => {
     if (!$popup.classList.contains("active")) {
       $popup.querySelector("h2").textContent = text;
@@ -27,10 +26,11 @@ const signupFunc = (() => {
     }
   };
 
-  // 생년월일 글자방지
   $birthDays.forEach((el) => el.addEventListener("input", (e) => (el.value = e.target.value.replace(/[^0-9.]/g, "").replace(/(\..*)\./g, "$1"))));
 
-  // 정규식표현 에러체크 함수
+  const createErr = (target, msgNum) => (target.closest("td").querySelector("p").textContent = errPopup[msgNum]);
+  const removeErr = (target, msg = "") => (target.closest("td").querySelector("p").textContent = msg);
+
   const checkErr = (target, regExp, errNum) => {
     if (!regExp.test(target.value)) target.closest("td").querySelector("p").textContent = errPopup[errNum];
     if (target.value.length === 0 || regExp.test(target.value)) target.closest("td").querySelector("p").textContent = "";
@@ -44,22 +44,13 @@ const signupFunc = (() => {
     document.querySelector(".go").click();
   };
 
-  // 에러메세지 생성
-  const createErr = (target, msgNum) => (target.closest("td").querySelector("p").textContent = errPopup[msgNum]);
-
-  // 에러메세지 제거
-  const removeErr = (target, msg = "") => (target.closest("td").querySelector("p").textContent = msg);
-
-  // 전체동의 체크
   const allCheck = (target, bool) =>
     target
       .closest(".column")
       .querySelectorAll("input[type=checkbox]")
       .forEach((el) => (el.checked = bool));
 
-  // 가입하기 버튼
   const allCheckSubmit = () => {
-
     const result = {
       useridReulst: isUserid($userid), // 유저아이디
       pwdResult: isPwd($pwd), // 비밀번호 확인
@@ -76,8 +67,8 @@ const signupFunc = (() => {
     console.log(useridReulst, pwdResult, nameReulst, pwdCheckResult, emailResult, phoneNumberResult, genderResult, yearResult, additionalResult, agreeResult);
 
     if (useridReulst && pwdResult && nameReulst && pwdCheckResult && emailResult && phoneNumberResult && genderResult && yearResult && additionalResult && agreeResult) {
-      localStorage.setItem(idNum++, {});
-      linkStart("https://www.google.com/webhp?hl=ko&sa=X&sqi=2&pjf=1&ved=0ahUKEwj-ifKl8ID2AhXwLLkGHW_RDmcQPAgI"); // 페이지 이동
+      // localStorage.setItem(idNum++, {});
+      linkStart("../../index.html"); // 메인 페이지로 이동
     }
   };
 
@@ -121,7 +112,6 @@ const signupFunc = (() => {
   const { isUserid, isPwd, isPwdCheck, isName, isEmail, isPhoneNumber } = inputChecked;
 
   return () => {
-    // inputEvent
     const inputHandler = (e) => {
       e.target.id === "userid" && isUserid(e.target);
       e.target.id === "pwd" && isPwd(e.target);
@@ -143,6 +133,7 @@ const signupFunc = (() => {
 
         // userid 중복확인 버튼
         if (e.target.className === "userid-check") {
+          // ...
         }
 
         // email 중복확인 버튼

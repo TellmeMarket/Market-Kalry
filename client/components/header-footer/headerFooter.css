@@ -116,7 +116,9 @@ h1 {
 h1 .logo-img {
   margin-right: var(--spacing-sm);
 }
-h1 > button {
+
+.karly-btn,
+.beauty-btn {
   cursor: pointer;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -126,8 +128,10 @@ h1 > button {
 h1 img:not(:first-child) {
   margin: 0 var(--spacing-sm);
 }
+
 .karly-btn {
   color: var(--primary);
+  display: inline-block;
 }
 .beauty-btn {
   position: relative;
@@ -137,7 +141,7 @@ h1 img:not(:first-child) {
   position: absolute;
   top: -10%;
   right: -10px;
-  content: url(./../../assets/header/new1.svg);
+  content: url("../../assets/header/new1.svg");
 }
 .beauty-btn:hover {
   color: var(--primary);
@@ -174,7 +178,7 @@ h1 img:not(:first-child) {
 .header-search .search-btn {
   width: 30px;
   height: 30px;
-  background-image: url(./../../assets/header/Vector.svg);
+  background-image: url("../../assets/header/Vector.svg");
   background-repeat: no-repeat;
   background-position: 50%;
   margin-right: var(--spacing-md);
@@ -394,11 +398,11 @@ header nav::after {
 .category h2 a {
   display: inline-block;
   padding: 18px 10px 18px 28px;
-  background: url("./../../assets/header/Hamburger.svg") 0 18px no-repeat;
+  background: url("../../assets/header/Hamburger.svg") 0 18px no-repeat;
 }
 .category:hover h2 a {
   color: var(--primary);
-  background: url("./../../assets/header/HamburgerPrimary.svg") 0 18px no-repeat;
+  background: url("../../assets/header/HamburgerPrimary.svg") 0 18px no-repeat;
 }
 
 .category-list > li:hover a {
@@ -442,70 +446,70 @@ header nav::after {
   /* fill: var(--primary) */
 }
 .category-list .list1 {
-  background-image: url(./../../assets/header/category/Type=Gift.svg);
+  background-image: url(../../assets/header/category/Type=Gift.svg);
 }
 .category-list .list2 {
-  background-image: url(./../../assets/header/category/Type=_Vegetable.svg);
+  background-image: url(../../assets/header/category/Type=_Vegetable.svg);
 }
 .category-list .list3 {
-  background-image: url(./../../assets/header/category/Type=Fruit.svg);
+  background-image: url(../../assets/header/category/Type=Fruit.svg);
 }
 .category-list .list4 {
-  background-image: url(./../../assets/header/category/Type=SeaFood.svg);
+  background-image: url(../../assets/header/category/Type=SeaFood.svg);
 }
 .category-list .list5 {
-  background-image: url(./../../assets/header/category/Type=Meet.svg);
+  background-image: url(../../assets/header/category/Type=Meet.svg);
 }
 .category-list .list6 {
-  background-image: url(./../../assets/header/category/Type=Cook.svg);
+  background-image: url(../../assets/header/category/Type=Cook.svg);
 }
 .category-list .list7 {
-  background-image: url(./../../assets/header/category/Type=_Salad.svg);
+  background-image: url(../../assets/header/category/Type=_Salad.svg);
 }
 .category-list .list8 {
-  background-image: url(./../../assets/header/category/Type=Oil.svg);
+  background-image: url(../../assets/header/category/Type=Oil.svg);
 }
 .category-list .list9 {
-  background-image: url(./../../assets/header/category/Type=Coffee.svg);
+  background-image: url(../../assets/header/category/Type=Coffee.svg);
 }
 .category-list .list10 {
-  background-image: url(./../../assets/header/category/Type=Snack.svg);
+  background-image: url(../../assets/header/category/Type=Snack.svg);
 }
 .category-list .list11 {
-  background-image: url(./../../assets/header/category/Type=Bread.svg);
+  background-image: url(../../assets/header/category/Type=Bread.svg);
 }
 .category-list .list12 {
-  background-image: url(./../../assets/header/category/Type=Health.svg);
+  background-image: url(../../assets/header/category/Type=Health.svg);
 }
 .category-list .list13 {
-  background-image: url(./../../assets/header/category/Type=Wine.svg);
+  background-image: url(../../assets/header/category/Type=Wine.svg);
 }
 .category-list .list14 {
-  background-image: url(./../../assets/header/category/Type=_Traditional\ Liquor.svg);
+  background-image: url(../../assets/header/category/Type=_Traditional\ Liquor.svg);
 }
 .category-list .list15 {
-  background-image: url(./../../assets/header/category/Type=_Detergent.svg);
+  background-image: url(../../assets/header/category/Type=_Detergent.svg);
 }
 .category-list .list16 {
-  background-image: url(./../../assets/header/category/Type=Cook.svg);
+  background-image: url(../../assets/header/category/Type=Cook.svg);
 }
 .category-list .list17 {
-  background-image: url(./../../assets/header/category/Type=shampoo.svg);
+  background-image: url(../../assets/header/category/Type=shampoo.svg);
 }
 .category-list .list18 {
-  background-image: url(./../../assets/header/category/Type=Food.svg);
+  background-image: url(../../assets/header/category/Type=Food.svg);
 }
 .category-list .list19 {
-  background-image: url(./../../assets/header/category/Type=HomeAppliances.svg);
+  background-image: url(../../assets/header/category/Type=HomeAppliances.svg);
 }
 .category-list .list20 {
-  background-image: url(./../../assets/header/category/Type=Dog.svg);
+  background-image: url(../../assets/header/category/Type=Dog.svg);
 }
 .category-list .list21 {
-  background-image: url(./../../assets/header/category/Type=Baby.svg);
+  background-image: url(../../assets/header/category/Type=Baby.svg);
 }
 .category-list .list22 {
-  background-image: url(./../../assets/header/category/Type=Travel.svg);
+  background-image: url(../../assets/header/category/Type=Travel.svg);
 }
 /* category end */
 /* menu start */
@@ -579,7 +583,7 @@ header nav::after {
 .header-search-sticky .search-btn {
   width: 16px;
   height: 16px;
-  background: url("./../../assets/header/Vector.svg") no-repeat center/cover;
+  background: url("../../assets/header/Vector.svg") no-repeat center/cover;
   margin-right: var(--spacing-md);
   cursor: pointer;
 }
@@ -660,6 +664,9 @@ nav.active::after {
   pointer-events: none;
 }
 /* footer-inner */
+footer {
+  border-top: 1px solid var(--gray-100);
+}
 .footer-inner {
   margin: 0 auto;
   color: var(--content);
@@ -759,7 +766,7 @@ nav.active::after {
 .area span::before {
   padding: 0 var(--spacing-xs);
   vertical-align: middle;
-  content: url(./../../assets/footer/about_bar.svg);
+  content: url(../../assets/footer/about_bar.svg);
 }
 /* footer-top > sns */
 .sns {

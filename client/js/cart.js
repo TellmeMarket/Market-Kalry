@@ -18,7 +18,7 @@ const activeArrowIcon = () => {
 <div class="cart-add-product">
               <div class="cart-add-product-title">
                 <img src="../../assets/icons/Icon/isChecked=false.svg" alt="체크아이콘" />
-                <img src="../.${cartList.cartImage}" alt="" />
+                <img class="cart-title-img" src="../.${cartList.cartImage}" alt="" />
                 <span>${cartList.name}</span>
               </div>
               <div class="cart-quantity-wrap">

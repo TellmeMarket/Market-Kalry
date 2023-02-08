@@ -9,7 +9,7 @@
   font-family: "Pretendard";
   margin-top: 80px;
 }
-h2 {
+.cart-title {
   margin: 80px 0 40px 0;
   text-align: center;
   font-size: var(--text-lg);
@@ -86,6 +86,7 @@ h2 {
 .cart-add-product-title img:nth-child(2) {
   width: 60px;
   height: 78px;
+  margin: 0 20px;
 }
 .cart-img {
   margin: 0 8px;

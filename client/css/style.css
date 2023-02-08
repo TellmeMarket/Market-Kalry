@@ -15,6 +15,10 @@ button {
   border: none;
 }
 
+main {
+  position: relative;
+}
+
 .a11y-hidden {
   overflow: hidden;
   position: absolute;
@@ -342,8 +346,8 @@ button {
 /* 광고창 있을 때 */
 .popup-ad {
   display: flex;
-  position: fixed;
-  top: 197px;
+  position: absolute;
+  top: 50px;
   left: 50%;
   z-index: 120;
   width: 452px;

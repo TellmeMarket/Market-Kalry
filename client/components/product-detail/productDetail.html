@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Keywords" content="멋쟁이사자처럼,멋사,멋사4기,마켓칼리,텔미마켓" />
+    <meta name="Description" content="멋사 4기 바닐라 프로젝트 2조 텔미마켓" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Author" content="이주형,김형진,이경주,김다연,김주현,윤보라" />
     <link rel="stylesheet" href="./productDetail.css" />
     <link rel="stylesheet" href="../header-footer/headerfooter.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon.png" />
     <script src="../../js/productDetail.js" defer></script>
     <script src="../../js/productDetailDa.js" defer></script>
     <script src="../../js/header.js" type="module"></script>
+    <script src="../../js/loadcart.js" type="module"></script>
+
     <title>PRODUCT_DETAIL</title>
   </head>
 
@@ -27,10 +35,10 @@
         <div class="header-top">
           <!-- login start -->
           <ul class="login">
-            <li><a href="./components/signup/signup.html" class="sign-up">회원가입</a></li>
-            <li><img src="./assets/header/bar.svg" alt /></li>
-            <li><a href="./components/login/login.html">로그인</a></li>
-            <li><img src="./assets/header/bar.svg" alt /></li>
+            <li><a href="../../components/signup/signup.html" class="sign-up">회원가입</a></li>
+            <li><img src="../../assets/header/bar.svg" alt /></li>
+            <li><a href="../../components/login/login.html">로그인</a></li>
+            <li><img src="../../assets/header/bar.svg" alt /></li>
             <li>
               <a href="#"
                 >고객센터
@@ -42,8 +50,8 @@
           <!-- logo start -->
           <div class="header-top-2">
             <h1>
-              <a href="./index.html"> <img src="../../assets/header/logo.svg" alt="마켓칼리 로고" class="logo-img" /></a>
-              <button class="karly-btn">마켓칼리</button>
+              <a href="/"> <img src="../../assets/header/logo.svg" alt="마켓칼리 로고" class="logo-img" /></a>
+              <a href="/" class="karly-btn">마켓칼리</a>
               <img src="../../assets/header/bar.svg" alt />
               <button class="beauty-btn">뷰티칼리</button>
             </h1>
@@ -65,7 +73,7 @@
               </li>
               <li class="search-icon-cart">
                 <div class="header-cart">
-                  <a href="./components/cart/cart.html"></a>
+                  <a href="../cart/cart.html"></a>
                   <div class="bubble search-icon-bubble">
                     <div class="content fixed-bubble"></div>
                   </div>
@@ -158,7 +166,7 @@
               <h2><a href="#">신상품</a></h2>
             </li>
             <li>
-              <h2><a href="./components/product-list/productList.html">베스트</a></h2>
+              <h2><a href="./../product-list/productList.html">베스트</a></h2>
             </li>
             <li>
               <h2><a href="#">알뜰쇼핑</a></h2>
@@ -669,7 +677,9 @@
             </div>
           </div>
           <div class="privacy">
-            <a href="https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=EP&certNum=2022-EP-R002" target="_blank"><img src="../.../../assets/footer/middle_icon/logo_privacy.svg" alt="eprivacy 인증서" /></a>
+            <a href="https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=EP&certNum=2022-EP-R002" target="_blank">
+              <img src="../../assets/footer/middle_icon/logo_privacy.svg" alt="eprivacy 인증서" />
+            </a>
             <div class="description">
               <p>개인정보보호 우수 웹사이트<br />개인정보처리시스템 인증 (ePRIVACY PLUS)</p>
             </div>

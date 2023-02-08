@@ -1,7 +1,6 @@
 import { loadStorage, saveStorage } from "../lib/utils/storage.js";
 
 // AD popup
-document.body.style.overflow = "hidden";
 const $removeAdToday = document.querySelector(".today-ad-remove");
 const $removeAd = document.querySelector(".ad-close");
 const $popUp = document.querySelector(".popup-ad");
@@ -174,25 +173,6 @@ fetch(" http://localhost:3000/products")
           }
         })
         .catch((err) => console.log(err));
-
-      function loadCart() {
-        loadStorage("cart-product").then((data) => {
-          let cartCnt = 0;
-          if (data == null) {
-          } else if (Object.prototype.toString.call(data).slice(8, -1).toLowerCase() === "object") {
-            cartCnt = 1;
-          } else {
-            cartCnt = data.length;
-          }
-          document.querySelectorAll(".search-icon-cart-add").forEach((el) => {
-            el.classList.add("active");
-            el.innerHTML = cartCnt;
-          });
-          console.log(cartCnt);
-        });
-      }
-
-      loadCart();
     })();
 
     // iconCart를 클릭하면 장바구니 창 뜨게 하기
@@ -336,7 +316,6 @@ fetch(" http://localhost:3000/products")
                 el.classList.add("active");
                 el.innerHTML = cartCnt;
               });
-              console.log(cartCnt);
             })
             .catch((err) => console.log(err));
           close();
