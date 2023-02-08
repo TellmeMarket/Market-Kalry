@@ -33,7 +33,6 @@ closeModal.addEventListener('click', e => {
 // .minus-product & .plus-product 누르면 숫자 바뀌게
 const plusBtn = document.querySelector(".plus-product");
 const minusBtn = document.querySelector(".minus-product");
-
 const totalCount = document.querySelector(".product-total-count");
 
 let num = 1;
@@ -52,21 +51,21 @@ minusBtn.addEventListener("click", function () {
   totalCount.innerHTML = num;
 });
 
-// 자료 받아와서 뿌려주기
 fetch("http://localhost:3000/products")
 .then((res)=> res.json())
 .then((data)=> {
   data.map((el)=>{
     let name = el.name;
     let description = el.description;
-    let badge = el.badge
+    let badge = el.badge;
     let price = el.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     let saleRatio = el.saleRatio;
     let salePrice = el.salePrice !== 0 ? el.salePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 원" : "";
     let thumbnail = el.image.thumbnail;
     let alt = el.image.alt;
     
-    let priceTemplete = 
+    // 리스트 부분에 데이터 받아와서 뿌려주기
+    let priceTemplate = 
       /* html */
       `
       <div class="product">
@@ -82,7 +81,7 @@ fetch("http://localhost:3000/products")
         </div>
       </div>
       `;
-      let priceTempleteBadge = 
+      let priceTemplateBadge = 
       /* html */
       `
       <div class="product">
@@ -99,7 +98,7 @@ fetch("http://localhost:3000/products")
         </div>
       </div>
       `;
-    let saleTemplete = 
+    let saleTemplate = 
       /* html */
       `
       <div class="product">
@@ -116,7 +115,7 @@ fetch("http://localhost:3000/products")
         </div>
       </div>
       `;
-      let saleTempleteBadge = 
+      let saleTemplateBadge = 
       /* html */
       `
       <div class="product">
@@ -136,18 +135,16 @@ fetch("http://localhost:3000/products")
       `;
       if(saleRatio === 0){
         if(badge == false){
-        productList.insertAdjacentHTML('beforeend', priceTemplete);
+        productList.insertAdjacentHTML('beforeend', priceTemplate);
         } else {
-          productList.insertAdjacentHTML('beforeend', priceTempleteBadge);
+          productList.insertAdjacentHTML('beforeend', priceTemplateBadge);
         }
       } else {
         if(badge == false){
-        productList.insertAdjacentHTML('beforeend', saleTemplete);
+        productList.insertAdjacentHTML('beforeend', saleTemplate);
         } else {
-          productList.insertAdjacentHTML('beforeend', saleTempleteBadge);
+          productList.insertAdjacentHTML('beforeend', saleTemplateBadge);
         }
       }
     }) 
 });
-
-
