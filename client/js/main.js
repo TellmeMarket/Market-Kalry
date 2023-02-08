@@ -174,6 +174,26 @@ fetch(" http://localhost:3000/products")
           }
         })
         .catch((err) => console.log(err));
+
+      function loadCart() {
+        loadStorage("cart-product").then((data) => {
+          let cartCnt = 0;
+          if (data == null) {
+            cartCnt = 1;
+          } else if (Object.prototype.toString.call(data).slice(8, -1).toLowerCase() === "object") {
+            cartCnt = 2;
+          } else {
+            cartCnt = data.length + 1;
+          }
+          document.querySelectorAll(".search-icon-cart-add").forEach((el) => {
+            el.classList.add("active");
+            el.innerHTML = cartCnt;
+          });
+          console.log(cartCnt);
+        });
+      }
+
+      loadCart();
     })();
 
     // iconCart를 클릭하면 장바구니 창 뜨게 하기
@@ -303,23 +323,7 @@ fetch(" http://localhost:3000/products")
 
           const cartStorage = { name: cartName, price: cartPrice, salePrice: cartSalePrice, productSum: productSum, cartImage: cartImage };
           setLocalStorage("cart-product", cartStorage);
-          loadStorage("cart-product")
-            .then((data) => {
-              let cartCnt = 0;
-              if (data == null) {
-                cartCnt = 1;
-              } else if (Object.prototype.toString.call(data).slice(8, -1).toLowerCase() === "object") {
-                cartCnt = 2;
-              } else {
-                cartCnt = data.length + 1;
-              }
-              document.querySelectorAll(".search-icon-cart-add").forEach((el) => {
-                el.classList.add("active");
-                el.innerHTML = cartCnt;
-              });
-              console.log(cartCnt);
-            })
-            .catch((err) => console.log(err));
+          loadCart();
           close();
         });
       });
