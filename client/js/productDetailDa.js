@@ -21,12 +21,12 @@ const getPopupReview = document.querySelector(".popup-back-review");
 const getBody = document.querySelector("body");
 
 //가져온 버튼을 클릭 시 후기 작성하는 팝업창 열기
-getReviewWriteBtn.addEventListener("click", openPopupReview);
-
 function openPopupReview() {
   getPopupReview.style.display = "block";
   getBody.style.overflow = "hidden";
 }
+
+getReviewWriteBtn.addEventListener("click", openPopupReview);
 
 //후기 작성하기 닫기, X 버튼 팝업창 닫기
 const getReviewCloseBtn = document.querySelector(".review-btn-close");
@@ -72,17 +72,16 @@ function closePopupInquiry() {
 /* -------------------------------------------------------------------------- */
 /*                               알림 아이콘 클릭 시 색 변경                              */
 /* -------------------------------------------------------------------------- */
-const getLikeWrap = document.querySelector(".icons");
-const getLikeIcon = document.querySelector(".icons").children;
+// const getLikeWrap = document.querySelector(".icons");
+// const getLikeIcon = document.querySelector(".icon-heart");
 
-getLikeWrap.addEventListener("click", setColor);
-
-let cnt = 1;
-function setColor() {
-  if (cnt % 2 == 1) {
-    getLikeIcon[0].src = "../../assets/product-detail/heart-full.svg";
-  } else {
-    getLikeIcon[0].src = "../../assets/product-detail/heart.svg";
-  }
-  cnt++;
-}
+// let cnt = 1;
+// function setColor() {
+//   if (cnt % 2 == 1) {
+//     getLikeIcon.src = "../../assets/product-detail/heart-full.svg";
+//   } else {
+//     getLikeIcon.src = "../../assets/product-detail/heart.svg";
+//   }
+//   cnt++;
+// }
+// getLikeWrap.addEventListener("click", setColor);

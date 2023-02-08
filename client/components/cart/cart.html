@@ -4,17 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="./cart.css" />
     <link rel="stylesheet" href="../header-footer/headerFooter.css" />
-    <link rel="stylesheet" href="./productList.css" />
-
-    <script src="/client/components/product-list/productList.js" type="module"></script>
-    <script src="../../js/header.js" type="module"></script>
-
-    <title>product-list</title>
+    <script src="../../js/cart.js" defer></script>
+    <title>Cart</title>
   </head>
   <body>
-    <!-- header -->
     <header>
       <!-- top-banner start -->
       <div class="top-banner">
@@ -159,7 +154,7 @@
               <h2><a href="#">신상품</a></h2>
             </li>
             <li>
-              <h2><a href="#">베스트</a></h2>
+              <h2><a href="../product-list/productList.html">베스트</a></h2>
             </li>
             <li>
               <h2><a href="#">알뜰쇼핑</a></h2>
@@ -195,186 +190,107 @@
         </nav>
       </div>
     </header>
-
-    <!-- main -->
-    <main>
-      <!-- best page -->
-      <div class="inner">
-        <h2 class="list-title">베스트</h2>
-
-        <section class="best-product">
-          <!-- product list filter -->
-          <section class="product-nav">
-            <h3 class="a11yHidden">상품 필터 메뉴</h3>
-            <ul class="list-nav">
-              <li class="filter">
-                <h4>필터</h4>
-                <button>초기화</button>
-              </li>
-              <li class="accordian-set">
-                <details class="accordian-head">
-                  <summary>
-                    <h4>카테고리</h4>
-                    <img src="/client/assets/icons/Icon/Direction=Down.svg" alt="" />
-                  </summary>
-                </details>
-              </li>
-              <li class="accordian-set">
-                <details class="accordian-head">
-                  <summary>
-                    <h4>브랜드</h4>
-                    <img src="/client/assets/icons/Icon/Direction=Down.svg" alt="" />
-                  </summary>
-                  <ul class="accodiaon-body">
-                    <li><input type="checkbox" name="gamzabatt" id="gamzabatt" value="gamzabatt" /><label for="gamzabatt">감자밭</label></li>
-                    <li><input type="checkbox" name="kangnam" id="kangnam" value="kangnam" /><label for="kangnam">강남면옥</label></li>
-                    <li><input type="checkbox" name="kyungnam" id="kyungnam" value="kyungnam" /><label for="kyungnam">경남제약</label></li>
-                    <li><input type="checkbox" name="kyungbokkung" id="kyungbokkung" value="kyungbokkung" /><label for="kyungbokkung">경복궁</label></li>
-                    <li><input type="checkbox" name="goraesa" id="goraesa" value="goraesa" /><label for="goraesa">고래사</label></li>
-                    <li><input type="checkbox" name="gourmet" id="gourmet" value="gourmet" /><label for="gourmet">고메공방</label></li>
-                    <li><input type="checkbox" name="goonadiet" id="goonadiet" value="goonadiet" /><label for="goonadiet">고온어다이어트</label></li>
-                    <li><input type="checkbox" name="kyotomarble" id="kyotomarble" value="kyotomarble" /><label for="kyotomarble">교토마블</label></li>
-                    <li><input type="checkbox" name="granolahouse" id="granolahouse" value="granolahouse" /><label for="granolahouse">그래놀라 하우스</label></li>
-                    <li><input type="checkbox" name="greetslamb" id="greetslamb" value="greetslamb" /><label for="greetslamb">그리츠 시그니처 램</label></li>
-                  </ul>
-                  <button>브랜드 더보기</button>
-                </details>
-              </li>
-              <li class="accordian-set">
-                <details class="accordian-head">
-                  <summary>
-                    <h4>가격</h4>
-                    <img src="/client/assets/icons/Icon/Direction=Down.svg" alt="" />
-                  </summary>
-                </details>
-              </li>
-              <li class="accordian-set">
-                <details class="accordian-head">
-                  <summary>
-                    <h4>혜택</h4>
-                    <img src="/client/assets/icons/Icon/Direction=Down.svg" alt="" />
-                  </summary>
-                </details>
-              </li>
-              <li class="accordian-set">
-                <details class="accordian-head">
-                  <summary>
-                    <h4>유형</h4>
-                    <img src="/client/assets/icons/Icon/Direction=Down.svg" alt="" />
-                  </summary>
-                </details>
-              </li>
-              <li class="accordian-set">
-                <details class="accordian-head">
-                  <summary>
-                    <h4>특정상품 제외</h4>
-                    <img src="/client/assets/icons/Icon/Direction=Down.svg" alt="" />
-                  </summary>
-                </details>
-              </li>
-            </ul>
-          </section>
-
-          <!-- product list -->
-          <section class="product-list-group">
-            <h3 class="a11yHidden">상품 리스트</h3>
-            <div class="product-list-menu">
-              <span>총건</span>
-              <ul class="menu-button-list">
-                <li class="menu-button is-active"><button>추천순</button></li>
-                <li class="menu-button"><button>신상품순</button></li>
-                <li class="menu-button"><button>판매량순</button></li>
-                <li class="menu-button"><button>혜택순</button></li>
-                <li class="menu-button"><button>낮은가격순</button></li>
-                <li class="menu-button"><button>높은가격순</button></li>
-              </ul>
+    <div class="inner">
+      <h2>장바구니</h2>
+      <div class="cart-wrap">
+        <div class="cart-list">
+          <div class="cart-list-check">
+            <input type="checkbox" class="a11yHidden" />
+            <img src="../../assets/icons/Icon/isChecked=false.svg" alt="체크아이콘" />
+            <!-- <label for="checkicon"> </label> -->
+            <p>전체선택 <span>(3/3)</span></p>
+            <div class="line"></div>
+            <button role="button" aria-label="선택삭제">
+              <span>선택삭제</span>
+            </button>
+          </div>
+          <div>
+            <div class="food-cate">
+              <h3 class="a11yHidden">장바구니선택</h3>
+              <div class="food-wrap refrigerated">
+                <div class="food-type">
+                  <img src="../../assets/icons/Icon/Type=Refrigerated.svg" alt="냉장식품" />
+                  <span>냉장 식품</span>
+                </div>
+                <img class="arrow" src="../../assets/icons/Icon/Direction=Down.svg" alt="아래화살표" />
+              </div>
             </div>
-            <article class="product-list">
-              <div class="product">
-                <div class="visual">
-                  <a href="#" class="product-image"><img src="/client/assets/ubuho/thumbnail.jpg" alt="유부호 만두" /></a>
-                  <button class="add-cart-button"><img src="../../assets/icons/Icon/cart.svg" alt="장바구니에 담기" /></button>
-                </div>
-                <div class="info">
-                  <p class="delivery">샛별배송</p>
-                  <h4>[대구 반할만떡] 유부호만두</h4>
-                  <p class="price"><span class="sale">24%</span>5,344원</p>
-                  <del class="pre-price">6,900원</del>
-                  <p class="described">유부로 속을 든든히 채운 군만두</p>
-                </div>
+            <div class="food-wrap frozen">
+              <div class="food-type">
+                <img src="../../assets/icons/Icon/Type=Frozen.svg" alt="냉동식품" />
+                <span>냉동 식품</span>
               </div>
-              <div class="product">
-                <div class="visual">
-                  <a href="#" class="product-image"><img src="/client/assets/tangtang/thumbnail.jpg" alt="풀무원 탱탱쫄면" /></a>
-                  <button class="add-cart-button"><img src="../../assets/icons/Icon/cart.svg" alt="장바구니에 담기" /></button>
-                </div>
-                <div class="info">
-                  <p class="delivery">샛별배송</p>
-                  <h4>[풀무원] 탱탱쫄면 (4개입)</h4>
-                  <p class="price">4,980원</p>
-                  <p class="described">튀기지 않아 부드럽고 매콤한</p>
-                </div>
+              <img src="../../assets/icons/Icon/Direction=Down.svg" alt="아래화살표" />
+            </div>
+            <div class="food-wrap normal">
+              <div class="food-type">
+                <img src="../../assets/icons/Icon/Type=_Normal.svg" alt="상온식품" />
+                <span>상온 식품</span>
               </div>
-              <div class="product">
-                <div class="visual">
-                  <a href="#" class="product-image"><img src="/client/assets/jukkumi/thumbnail.jpg" alt="홍대 주꾸미" /></a>
-                  <button class="add-cart-button"><img src="../../assets/icons/Icon/cart.svg" alt="장바구니에 담기" /></button>
-                </div>
-                <div class="info">
-                  <p class="delivery">샛별배송</p>
-                  <h4>[홍대주꾸미] 주꾸미 볶음 300g (냉동)</h4>
-                  <p class="price"><span class="sale">13%</span>6,800원</p>
-                  <del class="pre-price">7,900원</del>
-                  <p class="described">매콤달콤한 마력의 밥도둑</p>
-                </div>
+              <img src="../../assets/icons/Icon/Direction=Down.svg" alt="아래화살표" />
+            </div>
+          </div>
+          <div class="cart-list-check bottom">
+            <input type="checkbox" class="a11yHidden" />
+            <img src="../../assets/icons/Icon/isChecked=false.svg" alt="체크아이콘" />
+            <p>전체선택 <span>(3/3)</span></p>
+            <div class="line"></div>
+            <button role="button" aria-label="선택삭제">
+              <span>선택삭제</span>
+            </button>
+          </div>
+        </div>
+        <div class="payment-information">
+          <h3 class="a11yHidden">결제정보</h3>
+          <div class="detail-payment">
+            <div class="shipping-wrap">
+              <div class="shipping">
+                <img src="../../assets/icons/Icon/Location.svg" alt="위치아이콘" />
+                <span>배송지</span>
               </div>
-            </article>
-            <nav class="page-navigation">
-              <div class="nav-button">
-                <button><img src="../../assets/icons/Icon/pre-pre.svg" alt="전전 페이지로 이동" /></button>
-                <button><img src="../../assets/icons/Icon/pre.svg" alt="이전 페이지로 이동" /></button>
-                <button><span>1</span></button>
-                <button class="next"><img src="../../assets/icons/Icon/pre.svg" alt="다음 페이지로 이동" /></button>
-                <button class="next"><img src="../../assets/icons/Icon/pre-pre.svg" alt="다다음 페이지로 이동" /></button>
+              <p class="shipping-address">서울 중랑구 면목로 42길11(행운빌딩)603호</p>
+              <p class="shipping-company">샛별배송</p>
+              <button class="change-address-btn" role="button" aria-label="배송지변경">
+                <span>배송지 변경</span>
+              </button>
+            </div>
+            <div class="finally-payment-detail">
+              <div class="payment-process">
+                <span>상품금액</span>
+                <span>40,660 원</span>
               </div>
-            </nav>
-          </section>
-        </section>
-      </div>
-
-      <!-- 장바구니 담기 -->
-      <div class="add-cart-shadow">
-        <div class="add-cart">
-          <div class="cart-product-info">
-            <span class="cart-product-name">[풀무원] 탱탱쫄면 (4개입)</span>
-            <div class="cart-product-cnt">
-              <span class="cart-product-price">1,980원</span>
-              <div class="cart-product-total">
-                <button class="minus-product" role="button" aria-label="장바구니 수량 빼기"></button>
-                <div class="product-total-count">1</div>
-                <button class="plus-product" role="button" aria-label="장바구니 수량 담기"></button>
+              <div class="payment-process">
+                <span>상품할인금액</span>
+                <span>-4,651 원</span>
+              </div>
+              <div class="payment-process shipping-fee">
+                <span>배송비</span>
+                <span>+3,000원</span>
+              </div>
+              <div class="dotted-line"></div>
+              <div class="payment-process expected-payment-amount">
+                <span>결제예정금액</span>
+                <p><span class="final-amount">40,680</span>원</p>
+              </div>
+              <div class="accumulation-benefits">
+                <div>적립</div>
+                <span>최대 36원 적립 일반 0.1%</span>
               </div>
             </div>
           </div>
-          <div class="cart-price-info">
-            <div class="product-total-price">
-              <span class="product-sum">합계</span>
-              <span class="cart-final-price">4,980원</span>
-            </div>
-            <div class="point-info">
-              <div class="accumulate">적립</div>
-              <span class="accumulation-info">구매 시 5원 적립</span>
-            </div>
-          </div>
-          <div class="cart-button">
-            <button class="cart-cancel">취소</button>
-            <button class="cart-add">장바구니 담기</button>
+          <button class="order-btn" role="button" aria-label="주문하기">
+            <span>주문하기</span>
+          </button>
+          <div class="cart-notice">
+            <span>쿠폰/적립금은 주문서에서 사용 가능합니다.</span>
+            <span>[주문완료] 상태일 경우에만 주문 취소 가능합니다.</span>
+            <span>[마켓컬리 &gt; 주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.</span>
+            <span>쿠폰,적립금 사용 금액을 제외한 실 결제 금액 기준으로 최종 산정됩니다.</span>
+            <span>상품별로 적립금 지급 기준이 다를 수 있습니다. (상품 상세 페이지에서 확인 가능합니다.)</span>
           </div>
         </div>
       </div>
-    </main>
-
-    <!-- footer -->
+    </div>
     <footer>
       <!-- footer-inner start -->
       <div class="footer-inner">
